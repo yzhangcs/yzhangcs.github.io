@@ -7,7 +7,7 @@ Email: [yzhang.cs@outlook.com](mailto:yzhang.cs@outlook.com)
 
 ### Thesis:
 
-* TreeCRF­-based High-­Order Syntactic Parsing. Master Thesis, Soochow Iniversity, 2021. [[pdf]](http://hlt.suda.edu.cn/~yzhang/master-thesis/treecrf-ho-syn-parsing.pdf) [[latex]](https://github.com/yzhangcs/master-thesis) 
+* TreeCRF­-based High-­Order Syntactic Parsing. Master Thesis, Soochow University, 2021. [[pdf]](http://hlt.suda.edu.cn/~yzhang/master-thesis/treecrf-ho-syn-parsing.pdf) [[latex]](https://github.com/yzhangcs/master-thesis) 
 
 ### Publications:
 
