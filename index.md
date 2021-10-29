@@ -1,5 +1,3 @@
-## Yu Zhang
-
 Hi, my name is Yu Zhang ([jy tʃɑŋ], 張宇/张宇 in traditional/simplified Chinese).
 I am a first-year PhD student at [HLT@SUDA](http://hlt.suda.edu.cn), advised by [Prof. Zhenghua Li](http://hlt.suda.edu.cn/~zhli) (expected to graduate in 2024). 
 Before this, I received my M. Eng. degree from Soochow University in 2021.
