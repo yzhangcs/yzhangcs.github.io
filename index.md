@@ -17,20 +17,20 @@ Email: [yzhang.cs@outlook.com](mailto:yzhang.cs@outlook.com)
 **Yu Zhang**, Qingrong Xia, Shilin Zhou, Yong Jiang, Zhenghua Li, Guohong Fu, Min Zhang. 2021.
 
 * Fast and Accurate Neural CRF Constituency Parsing. [[paper]](https://www.ijcai.org/Proceedings/2020/560/) [[code]](https://github.com/yzhangcs/crfpar) <br>
-**Yu Zhang**, Houquan Zhou, Zhenghua Lig. In _Proceedings of_ **IJCAI**, 2020.
+**Yu Zhang**, Houquan Zhou, Zhenghua Lig. In _Proceedings of IJCAI_, 2020.
 
 * Efficient Second-Order TreeCRF for Neural Dependency Parsing. [[paper]](https://aclanthology.org/2020.acl-main.302/) [[code]](https://github.com/yzhangcs/crfpar) <br>
-**Yu Zhang**, Zhenghua Li, Min Zhang. In _Proceedings of_ **ACL**, 2020.
+**Yu Zhang**, Zhenghua Li, Min Zhang. In _Proceedings of ACL_, 2020.
 
 * Is POS Tagging Necessary or Even Helpful for Neural Dependency Parsing? [[arxiv]](https://arxiv.org/abs/2003.03204) [[code]](https://github.com/Jacob-Zhou/stack-parser) <br>
-Houquan Zhou*, **Yu Zhang***, Zhenghua Li, Min Zhang. In _Proceedings of_ **NLPCC**, 2020. (<span style="color:red;">Best Paper Award</span>)
+Houquan Zhou*, **Yu Zhang***, Zhenghua Li, Min Zhang. In _Proceedings of NLPCC_, 2020. (<span style="color:red;">Best Paper Award</span>)
 
 * HLT@SUDA at SemEval-2019 Task 1: UCCA Graph Parsing as Constituent Tree Parsing. [[paper]](https://aclanthology.org/S19-2002) [[code]](https://github.com/Jacob-Zhou/stack-parser) <br>
-Wei Jiang, Zhenghua Li, **Yu Zhang**, Min Zhang. In _Proceedings of_ **SEMEVAL**, 2019.
+Wei Jiang, Zhenghua Li, **Yu Zhang**, Min Zhang. In _Proceedings of SEMEVAL_, 2019.
 
 ### Projects:
 
-* **SuPar**: :rocket: State-of-the-art syntactic/semantic parsers. [[code]](https://github.com/yzhangcs/parser) <br>
+* **SuPar**: State-of-the-art syntactic/semantic parsers. [[code]](https://github.com/yzhangcs/parser) <br>
 A Python package designed for structured prediction, including reproductions of many state-of-the-art syntactic/semantic parsers (with pretrained models for more than 19 languages), and highly-parallelized implementations of several well-known structured prediction algorithms.
 
 ### Experience
