@@ -30,7 +30,7 @@ Wei Jiang, Zhenghua Li, **Yu Zhang**, Min Zhang. In _Proceedings of SEMEVAL_, 20
 
 ### Projects:
 
-* **SuPar**: State-of-the-art syntactic/semantic parsers. [[code]](https://github.com/yzhangcs/parser) <br>
+* **SuPar**: State-of-the-art syntactic/semantic parsers. [[code]](https://github.com/yzhangcs/parser) [[docs]](https://parser.yzhang.site) <br>
 A Python package designed for structured prediction, including reproductions of many state-of-the-art syntactic/semantic parsers (with pretrained models for more than 19 languages), and highly-parallelized implementations of several well-known structured prediction algorithms.
 
 ### Experience
