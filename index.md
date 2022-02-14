@@ -11,10 +11,13 @@ Email: [yzhang.cs@outlook.com](mailto:yzhang.cs@outlook.com)
 
 ### Publications:
 
-[[Semantic Scholar]](https://www.semanticscholar.org/author/Yu-Zhang/49890808) [[Google Scholar]](https://scholar.google.com/citations?user=y3JK-1oAAAAJ) [[DBLP]](https://dblp.org/pid/50/671-92.html)
+[[Semantic Scholar]](https://www.semanticscholar.org/author/Yu-Zhang/49890808) [[Google Scholar]](https://scholar.google.com/citations?user=y3JK-1oAAAAJ) [[DBLP]](https://dblp.org/pid/50/671-92.html) (* denotes equal contributions)
 
 * Semantic Role Labeling as Dependency Parsing: Exploring Latent Tree Structures Inside Arguments. [[arxiv]](https://arxiv.org/abs/2110.06865) [[code]](https://github.com/yzhangcs/crfsrl) <br>
 **Yu Zhang**, Qingrong Xia, Shilin Zhou, Yong Jiang, Zhenghua Li, Guohong Fu, Min Zhang. 2021.
+
+* A Coarse-to-Fine Labeling Framework for Joint Word Segmentation, POS Tagging, and Constituent Parsing. [[paper]](https://aclanthology.org/2021.conll-1.23) [[code]](https://github.com/ironsword666/jointparser) <br>
+Yang Hou, Houquan Zhou, Zhenghua Li, **Yu Zhang**, Min Zhang, Zhefeng Wang, Baoxing Huai, Nicholas Jing Yuan. 2021.
 
 * Fast and Accurate Neural CRF Constituency Parsing. [[paper]](https://www.ijcai.org/Proceedings/2020/560/) [[code]](https://github.com/yzhangcs/crfpar) <br>
 **Yu Zhang**, Houquan Zhou, Zhenghua Lig. In _Proceedings of IJCAI_, 2020.
