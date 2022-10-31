@@ -19,22 +19,17 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Yu Zhang
-description:
-  PhD student [@HLT@SUDA](http://hlt.suda.edu.cn), Soochow University
 position: Ph.D. Student
 affiliation: Soochow University
-email: yzhang.cs@outlook.com
-remote_theme: yaoyao-liu/minimal-light
-plugins:
-  - jekyll-remote-theme
+email: yzhang.cs (at) outlook.com
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
 keywords: minimal academic
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light.yyliu.net/
+description:
+  PhD student [@SUDA-HLT](http://hlt.suda.edu.cn), Soochow University
+canonical: https://yzhang.site
 
-# Links
 semantic_scholar: https://www.semanticscholar.org/author/Yu-Zhang/49890808
 google_scholar: https://scholar.google.com/citations?user=y3JK-1oAAAAJ
 github_link: https://github.com/yzhangcs
