@@ -1,9 +1,5 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
-
 ---
 
 Hi, my name is Yu Zhang ([jy tʃɑŋ], 張宇/张宇 in traditional/simplified Chinese).
@@ -13,7 +9,7 @@ My main research interest focuses on structured prediction and latent variable m
 
 ### Thesis:
 
-* TreeCRF­-based High-­Order Syntactic Parsing. Master Thesis, Soochow University, 2021 <br>
+* TreeCRF-based High-Order Syntactic Parsing. Master Thesis, Soochow University, 2021 <br>
 [![pdf](https://img.shields.io/badge/pdf-d6d6d6?style=flat-square)](https://yzhang.site/assets/pubs/master-thesis.pdf)
 [![latex](https://img.shields.io/badge/latex-d6d6d6?style=flat-square&logo=github)](https://github.com/yzhangcs/master-thesis)
 <br>
@@ -86,7 +82,7 @@ Wei Jiang, Zhenghua Li, **Yu Zhang**, Min Zhang <br>
 
 * **SuPar**: State-of-the-art syntactic/semantic parsers <br>
 [![code](https://img.shields.io/badge/code-orange?style=flat-square&logo=github)](https://github.com/yzhangcs/parser)
-[![docs](https://readthedocs.org/projects/parser/badge/?version=latest&style=flat-square)](https://parser.yzhang.site)
+[![docs](https://img.shields.io/github/workflow/status/yzhangcs/parser/docs?label=docs&style=flat-square)](https://parser.yzhang.site)
 [![release](https://img.shields.io/github/v/release/yzhangcs/parser?style=flat-square)](https://github.com/yzhangcs/parser/releases)
 [![downloads](https://img.shields.io/github/downloads/yzhangcs/parser/total?style=flat-square)](https://pypistats.org/packages/supar)
 <br>
