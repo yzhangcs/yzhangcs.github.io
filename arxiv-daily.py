@@ -25,7 +25,7 @@ AUTHORS = ['Alexander M. Rush', 'André F. T. Martins', 'Bailin Wang', 'Caio Cor
            'David Chiang', 'David M. Blei', 'Eduard Hovy', 'Giorgio Satta', 'Graham Neubig', 'Ivan Titov', 'Jason Eisner',
            'Justin T. Chiu', 'Kevin Gimpel', 'Lifu Tu', 'Lingpeng Kong', 'Mathieu Blondel', 'Michael Collins',
            'Mirella Lapata', 'Noah A. Smith', 'Ryan Cotterell', 'Shay B. Cohen', 'Songlin Yang', 'Tim Vieira', 'Vlad Niculae',
-           'Xiang Lisa Li', 'Xuezhe Ma', 'Yao Fu', 'Yoon Kim', 'Yuntian Deng', 'Christopher D. Manning']
+           'Xiang Lisa Li', 'Xuezhe Ma', 'Yao Fu', 'Yoon Kim', 'Yuntian Deng', 'Christopher D. Manning', 'Percy Liang']
 
 CONFS = ['ACL', 'EMNLP', 'NAACL', 'COLING', 'ICLR', 'NIPS', 'NEURIPS', 'ICML', 'JMLR']
 CLASSES = ['cs.CL', 'cs.LG']
@@ -63,7 +63,7 @@ for name in CLASSES:
             comments, _ = match(paper.comment or '', CONFS)
             categories = '    '.join([code(c, 'gray') for c in paper.categories if c in CLASSES])
             titles[paper.title] = f'* **{title}** <br>\n'
-            titles[paper.title] += f'{authors} <br>\n'
+            titles[paper.title] += f'{code("[AUTHORS]")}{authors} <br>\n'
             if matched:
                 titles[paper.title] += f'{code("[ABSTRACT]")}{abstract} <br>\n'
             if comments:
