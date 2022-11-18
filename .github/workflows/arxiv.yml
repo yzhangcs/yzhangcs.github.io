@@ -2,7 +2,7 @@ name: arxiv
 
 on:
   schedule:
-    - cron:  '0 */12 * * *'
+    - cron:  '0 */4 * * *'
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
