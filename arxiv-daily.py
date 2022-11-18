@@ -46,7 +46,7 @@ def link(t: str) -> str:
 def match(t: str, keys: Iterable) -> Tuple[str, bool]:
     raw = t
     for key in keys:
-        t = re.sub(f'(?<=[- ])?{key}', lambda m: red(m.group()), t, flags=re.I)
+        t = re.sub(fr'\b{key}\b', lambda m: red(m.group()), t, flags=re.I)
     return t, (raw != t)
 
 
