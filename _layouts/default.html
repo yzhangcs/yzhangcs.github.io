@@ -104,17 +104,7 @@
 
       <br>
 
-     <!--
-     <small>Last Update:
-            <script>
-              const monthNames = ["January", "Februray", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
-              ];
-              var modiDate = new Date(document.lastModified);
-              var showAs = modiDate.getDate() + ". " + monthNames[modiDate.getMonth()] + " " + modiDate.getFullYear();
-              document.write(showAs);
-            </script>.
-      </small>
-      -->
+      <small><code>Last updated: {{ page.last_modified_at | date: '%R:%S, %d, %b, %Y'}}</code></small>
 
       <br>
       <p hidden><script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?&w=50&d=HV0rAUdAxpfEQLOsVs0FcJTR2rKVI5sEQUZIDM-N_HY"></script></p>

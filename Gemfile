@@ -36,3 +36,6 @@ gem "webrick", "~> 1.7"
 
 gem "jekyll-remote-theme"
 
+gem "jekyll-spaceship", group: :jekyll_plugins
+gem "jekyll-last-modified-at", group: :jekyll_plugins
+gem "jekyll-analytics", group: :jekyll_plugins
