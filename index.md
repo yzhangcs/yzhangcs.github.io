@@ -82,7 +82,7 @@ Wei Jiang, Zhenghua Li, **Yu Zhang**, Min Zhang <br>
 
 * **SuPar**: State-of-the-art syntactic/semantic parsers <br>
 [![code](https://img.shields.io/badge/code-orange?style=flat-square&logo=github)](https://github.com/yzhangcs/parser)
-[![docs](https://img.shields.io/github/workflow/status/yzhangcs/parser/docs?label=docs&style=flat-square)](https://parser.yzhang.site)
+[![docs](https://img.shields.io/github/actions/workflow/status/yzhangcs/parser/pages.yml?branch=main&label=docs&style=flat-square)](https://parser.yzhang.site)
 [![release](https://img.shields.io/github/v/release/yzhangcs/parser?style=flat-square)](https://github.com/yzhangcs/parser/releases)
 [![downloads](https://img.shields.io/github/downloads/yzhangcs/parser/total?style=flat-square)](https://pypistats.org/packages/supar)
 <br>
