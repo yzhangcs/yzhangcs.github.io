@@ -6,22 +6,30 @@ from typing import Iterable, Tuple
 
 import arxiv
 
-KEYS = ['adversarial', 'algebraic', 'algebratic', 'amr', 'auto-encoding', 'autoencoder', 'autoencoding', 'autoregressive',
-        'backward', 'bayesian', 'bayes', 'bethe', 'bilexical', 'bipartite', 'bregman', 'carlo', 'chomsky', 'circuit', 'clique',
-        'constituency', 'constituent', 'context-free', 'crf', 'dependency', 'differentiable', 'differential', 'differentiation',
-        'diffusion', 'discrete', 'discretized', 'duality', 'dynamic', 'energy', 'euclidean', 'expectation', 'exponential',
-        'fenchel-young', 'filter', 'flow', 'flowseq', 'forest', 'forward', 'frank-wolfe', 'gaussian', 'generation', 'grammar',
-        'gumbel', 'gumbel-softmax', 'high-order', 'higher-order', 'hmm', 'hsmm', 'hypergraph','induction', 'inside',
-        'invertible', 'lagrangian', 'latent', 'levenshtein', 'lexicalized', 'low-rank',
-        'marginal', 'markov', 'masking', 'mcmc', 'mean-field', 'message-passing', 'monte', 'mutual',
-        'non-projective', 'normalizing', 'optimal', 'outside', 'parse', 'parser', 'parsing',
-        'particle', 'partition', 'pcfg', 'perturb-and-map', 'perturb-and-parse', 'perturbation', 'posterior',
-        'probabilistic', 'probabilistically', 'programming', 'projection', 'prototype', 'proximal', 'randomized', 'ranking',
-        'rao-blackwell', 'regularization', 'regularized', 'relaxation', 'reorder', 'reparameterization', 'sample', 'sampling',
-        'second-order', 'semi-amortized', 'semiring', 'semi-markov', 'seq2seq', 'sequence', 'sequence-to-sequence',
-        'simplex', 'sinkhorn', 'sparse', 'sparsemap', 'sparsemax', 'state-space', 'stochastic', 'stochasticity',
-        'struct', 'structural', 'structure', 'structured', 'sum-product', 'syntax',
-        'transformer', 'translation', 'transport', 'tree', 'treecrf', 'variational', 'viterbi']
+KEYS = [
+    'adversarial', 'algebraic', 'algebratic', 'amr', 'auto-encoding', 'autoencoder', 'autoencoding', 'autoregressive',
+    'backward', 'bayesian', 'bayes', 'bethe', 'bilexical', 'bipartite', 'bregman',
+    'carlo', 'chomsky', 'circuit', 'clique', 'constituency', 'constituent', 'context-free', 'crf', 'ctc',
+    'dependency', 'differentiable', 'differential', 'differentiation', 'diffusion', 'discrete', 'discretized', 'duality',
+    'dynamic',
+    'energy', 'euclidean', 'expectation', 'exponential',
+    'fenchel-young', 'filter', 'flow', 'flowseq', 'forest', 'forward', 'frank-wolfe',
+    'gaussian', 'generation', 'grammar', 'gumbel', 'gumbel-softmax',
+    'high-order', 'higher-order', 'hmm', 'hsmm', 'hypergraph',
+    'induction', 'inside', 'invertible',
+    'lagrangian', 'latent', 'levenshtein', 'lexicalized', 'low-rank',
+    'marginal', 'markov', 'masking', 'mcmc', 'mean-field', 'message-passing', 'monte', 'monotonic', 'mutual',
+    'non-projective', 'normalizing',
+    'optimal', 'outside',
+    'parse', 'parser', 'parsing', 'particle', 'partition', 'pcfg', 'perturb-and-map', 'perturb-and-parse', 'perturbation',
+    'posterior', 'probabilistic', 'probabilistically', 'programming', 'projection', 'prototype', 'proximal',
+    'randomized', 'ranking', 'rao-blackwell', 'regularization', 'regularized', 'relaxation', 'reorder', 'reparameterization',
+    're-parameterization', 'rnnt', 'rnn-t',
+    'sample', 'sampling', 'second-order', 'semi-amortized', 'semiring', 'semi-markov', 'seq2seq', 'sequence',
+    'sequence-to-sequence', 'simplex', 'sinkhorn', 'sparse', 'sparsemap', 'sparsemax', 'state-space', 'stochastic',
+    'stochasticity', 'struct', 'structural', 'structure', 'structured', 'sum-product', 'syntax',
+    'transducer', 'transduction', 'transformer', 'translation', 'transport', 'tree', 'treecrf', 'variational', 'viterbi'
+]
 
 AUTHORS = ['Alexander M. Rush', 'André F. T. Martins', 'Bailin Wang', 'Caio Corro', 'Chris Dyer', 'Daniel Gildea',
            'David Chiang', 'David M. Blei', 'Eduard Hovy', 'Giorgio Satta', 'Graham Neubig', 'Ivan Titov', 'Jason Eisner',
