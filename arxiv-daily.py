@@ -10,8 +10,9 @@ KEYS = [
     'adversarial', 'algebraic', 'algebratic', 'amr', 'auto-encoding', 'autoencoder', 'autoencoding', 'autoregressive',
     'backward', 'bayesian', 'bayes', 'bethe', 'bilexical', 'bipartite', 'bregman',
     'carlo', 'chomsky', 'circuit', 'clique', 'constituency', 'constituent', 'context-free', 'crf', 'ctc',
+    'conditional independence', 'conditional-independence',
     'dependency', 'differentiable', 'differential', 'differentiation', 'diffusion', 'discrete', 'discretized', 'duality',
-    'dynamic',
+    'dynamic', 'dynamic programming',
     'energy', 'euclidean', 'expectation', 'exponential',
     'fenchel-young', 'filter', 'flow', 'flowseq', 'forest', 'forward', 'frank-wolfe',
     'gaussian', 'generation', 'grammar', 'gumbel', 'gumbel-softmax',
@@ -25,8 +26,9 @@ KEYS = [
     'posterior', 'probabilistic', 'probabilistically', 'programming', 'projection', 'prototype', 'proximal',
     'randomized', 'ranking', 'rao-blackwell', 'regularization', 'regularized', 'relaxation', 'reorder', 'reparameterization',
     're-parameterization', 'rnnt', 'rnn-t',
-    'sample', 'sampling', 'second-order', 'semi-amortized', 'semiring', 'semi-markov', 'seq2seq', 'sequence',
-    'sequence-to-sequence', 'simplex', 'sinkhorn', 'sparse', 'sparsemap', 'sparsemax', 'state-space', 'stochastic',
+    'sample', 'sampling', 'second-order', 'semi-amortized', 'semiring', 'semi-markov',
+    'seq2seq', 'sequence', 'sequence to sequence', 'sequence-to-sequence',
+    'simplex', 'sinkhorn', 'sparse', 'sparsemap', 'sparsemax', 'state-space', 'stochastic',
     'stochasticity', 'struct', 'structural', 'structure', 'structured', 'sum-product', 'syntax',
     'transducer', 'transduction', 'transformer', 'translation', 'transport', 'tree', 'treecrf', 'variational', 'viterbi'
 ]
