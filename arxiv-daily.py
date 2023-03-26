@@ -37,10 +37,10 @@ KEYS = [
     'variational', 'viterbi'
 ]
 
-AUTHORS = ['Alexander M. Rush', 'André F. T. Martins', 
+AUTHORS = ['Albert Gu', 'Alexander M. Rush', 'André F. T. Martins', 
            'Bailin Wang', 
-           'Caio Corro', 'Chris Dyer', 'Christopher D. Manning',
-           'Daniel Gildea', 'David Chiang', 'David M. Blei', 
+           'Caio Corro', 'Chris Dyer', 'Christopher D. Manning', 'Christopher Ré',
+           'Daniel Gildea', 'Daniel Y. Fu', 'David Chiang', 'David M. Blei', 
            'Eduard Hovy',
            'Fei Huang',
            'Hao Zhou',
@@ -54,7 +54,7 @@ AUTHORS = ['Alexander M. Rush', 'André F. T. Martins',
            'Percy Liang'
            'Ryan Cotterell',
            'Shay B. Cohen', 'Songlin Yang', 
-           'Tim Vieira',
+           'Tim Vieira', 'Tri Dao',
            'Vlad Niculae',
            'Xiang Lisa Li', 'Xuezhe Ma', 
            'Yao Fu', 'Yang Feng', 'Yoon Kim', 'Yuntian Deng'
