@@ -29,7 +29,7 @@ KEYS = [
     'posterior', 'probabilistic', 'probabilistically', 'programming', 'projection', 'prototype', 'proximal',
     'randomized', 'ranking', 'rao-blackwell', 'regularization', 'regularized', 'relaxation', 'reorder', 
     'reparameterization', 're-parameterization', 'rnnt', 'rnn-t',
-    'sample', 'sampling', 'second-order', 'semi-amortized', 'semiring', 'semi-markov',
+    'sample', 'sampling', 'scaling', 'second-order', 'semi-amortized', 'semiring', 'semi-markov',
     'seq2seq', 'sequence', 'sequence to sequence', 'sequence-to-sequence',
     'simplex', 'sinkhorn', 'sparse', 'sparsemap', 'sparsemax', 'state-space', 'stochastic',
     'stochasticity', 'struct', 'structural', 'structure', 'structured', 'sum-product', 'syntax',
