@@ -27,37 +27,38 @@ KEYS = [
     'parse', 'parser', 'parsing', 'particle', 'partition', 'pcfg', 'perturb-and-map', 'perturb-and-parse',
     'perturbation',
     'posterior', 'probabilistic', 'probabilistically', 'programming', 'projection', 'prototype', 'proximal',
-    'randomized', 'ranking', 'rao-blackwell', 'regularization', 'regularized', 'relaxation', 'reorder', 
+    'randomized', 'ranking', 'rao-blackwell', 'regularization', 'regularized', 'relaxation', 'reorder',
     'reparameterization', 're-parameterization', 'rnnt', 'rnn-t',
     'sample', 'sampling', 'scaling', 'second-order', 'semi-amortized', 'semiring', 'semi-markov',
     'seq2seq', 'sequence', 'sequence to sequence', 'sequence-to-sequence',
     'simplex', 'sinkhorn', 'sparse', 'sparsemap', 'sparsemax', 'state-space', 'stochastic',
     'stochasticity', 'struct', 'structural', 'structure', 'structured', 'sum-product', 'syntax',
-    'transducer', 'transduction', 'transformer', 'translation', 'transport', 'tree', 'treecrf', 
+    'transducer', 'transduction', 'transformer', 'translation', 'transport', 'tree', 'treecrf',
     'variational', 'viterbi'
 ]
 
-AUTHORS = ['Albert Gu', 'Alexander M. Rush', 'André F. T. Martins', 
-           'Bailin Wang', 
-           'Caio Corro', 'Chris Dyer', 'Christopher D. Manning', 'Christopher Ré',
-           'Daniel Gildea', 'Daniel Y. Fu', 'David Chiang', 'David M. Blei', 
-           'Eduard Hovy',
-           'Fei Huang',
-           'Hao Zhou',
-           'Giorgio Satta', 'Graham Neubig', 
-           'Ivan Titov', 
-           'Jason Eisner', 'Justin T. Chiu',
-           'Kevin Gimpel',
-           'Lifu Tu', 'Lingpeng Kong',
-           'Mathieu Blondel', 'Michael Collins', 'Mirella Lapata',
-           'Noah A. Smith',
-           'Percy Liang'
-           'Ryan Cotterell',
-           'Shay B. Cohen', 'Songlin Yang', 
-           'Tim Vieira', 'Tri Dao',
-           'Vlad Niculae',
-           'Xiang Lisa Li', 'Xuezhe Ma', 
-           'Yao Fu', 'Yang Feng', 'Yoon Kim', 'Yuntian Deng'
+AUTHORS = [
+    'Albert Gu', 'Alexander M. Rush', 'André F. T. Martins',
+    'Bailin Wang',
+    'Caio Corro', 'Chris Dyer', 'Christopher D. Manning', 'Christopher Ré',
+    'Daniel Gildea', 'Daniel Y. Fu', 'David Chiang', 'David M. Blei',
+    'Eduard Hovy',
+    'Fei Huang',
+    'Hao Zhou',
+    'Giorgio Satta', 'Graham Neubig',
+    'Ivan Titov',
+    'Jason Eisner', 'Justin T. Chiu',
+    'Kevin Gimpel',
+    'Lifu Tu', 'Lingpeng Kong',
+    'Mathieu Blondel', 'Michael Collins', 'Mirella Lapata',
+    'Noah A. Smith',
+    'Percy Liang'
+    'Ryan Cotterell',
+    'Shay B. Cohen', 'Songlin Yang',
+    'Tim Vieira', 'Tri Dao',
+    'Vlad Niculae',
+    'Xiang Lisa Li', 'Xuezhe Ma',
+    'Yao Fu', 'Yang Feng', 'Yoon Kim', 'Yuntian Deng'
 ]
 
 CONFS = ['ACL', 'EMNLP', 'NAACL', 'COLING', 'ICLR', 'NIPS', 'NEURIPS', 'ICML', 'JMLR']
@@ -85,25 +86,26 @@ def match(t: str, keys: Iterable) -> Tuple[str, bool]:
 
 papers = dict()
 for name in CLASSES:
-    search = arxiv.Search(query=name, max_results=100, sort_by=arxiv.SortCriterion.LastUpdatedDate)
+    search = arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate)
     for paper in search.results():
         if paper.title in papers:
             continue
-        if paper.updated >= datetime.now(paper.updated.tzinfo) - timedelta(2) or len(papers) < 20:
-            title, _ = match(paper.title, KEYS)
-            authors, _ = match(', '.join([f"{author}" for author in paper.authors]), AUTHORS)
-            abstract, matched = match(paper.summary, KEYS)
-            comments, _ = match(paper.comment or '', CONFS)
-            categories = '    '.join([code(c, 'gray') for c in paper.categories if c in CLASSES])
-            papers[paper.title] = f'* **{title}** <br>\n'
-            papers[paper.title] += f'{code("[AUTHORS]")}{authors} <br>\n'
-            if matched:
-                papers[paper.title] += f'{code("[ABSTRACT]")}{abstract} <br>\n'
-            if comments:
-                papers[paper.title] += f'{code("[COMMENTS]")}{comments} <br>\n'
-            papers[paper.title] += f'{code("[LINK]")}{link(paper.entry_id)} <br>\n'
-            papers[paper.title] += f'{code("[DATE]")}{paper.updated} <br>\n'
-            papers[paper.title] += f'{code("[CATEGORIES]")}{categories} <br>\n'
+        if paper.updated < datetime.now(paper.updated.tzinfo) - timedelta(3):
+            break
+        title, _ = match(paper.title, KEYS)
+        authors, _ = match(', '.join([f"{author}" for author in paper.authors]), AUTHORS)
+        abstract, matched = match(paper.summary, KEYS)
+        comments, _ = match(paper.comment or '', CONFS)
+        categories = '    '.join([code(c, 'gray') for c in paper.categories if c in CLASSES])
+        papers[paper.title] = f'* **{title}** <br>\n'
+        papers[paper.title] += f'{code("[AUTHORS]")}{authors} <br>\n'
+        if matched:
+            papers[paper.title] += f'{code("[ABSTRACT]")}{abstract} <br>\n'
+        if comments:
+            papers[paper.title] += f'{code("[COMMENTS]")}{comments} <br>\n'
+        papers[paper.title] += f'{code("[LINK]")}{link(paper.entry_id)} <br>\n'
+        papers[paper.title] += f'{code("[DATE]")}{paper.updated} <br>\n'
+        papers[paper.title] += f'{code("[CATEGORIES]")}{categories} <br>\n'
 
 with open('arxiv.md', 'w') as f:
     f.write('---\nlayout: default\n---\n\n')
