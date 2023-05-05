@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import re
+from collections import defaultdict
 from datetime import datetime, timedelta
 from typing import Iterable, Tuple
 
@@ -84,32 +85,40 @@ def match(t: str, keys: Iterable) -> Tuple[str, bool]:
     return t, (raw != t)
 
 
-papers = dict()
+papers = defaultdict(dict)
 for day in range(1, 3):
     for name in CLASSES:
         search = arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate)
         for paper in search.results():
-            if paper.title in papers:
-                continue
-            if paper.updated < datetime.now(paper.updated.tzinfo) - timedelta(day):
+            date = datetime.now(paper.updated.tzinfo) - timedelta(day)
+            if paper.updated < date:
                 break
+            date = date.strftime("%a, %d %b %Y")
+            if paper.title in papers[date]:
+                continue
             title, _ = match(paper.title, KEYS)
             authors, _ = match(', '.join([f"{author}" for author in paper.authors]), AUTHORS)
             abstract, matched = match(paper.summary, KEYS)
             comments, _ = match(paper.comment or '', CONFS)
             categories = '    '.join([code(c, 'gray') for c in paper.categories if c in CLASSES])
-            papers[paper.title] = f'* **{title}** <br>\n'
-            papers[paper.title] += f'{code("[AUTHORS]")}{authors} <br>\n'
+            papers[date][paper.title] = f'* **{title}** <br>\n'
+            papers[date][paper.title] += f'{code("[AUTHORS]")}{authors} <br>\n'
             if matched:
-                papers[paper.title] += f'{code("[ABSTRACT]")}{abstract} <br>\n'
+                papers[date][paper.title] += f'{code("[ABSTRACT]")}{abstract} <br>\n'
             if comments:
-                papers[paper.title] += f'{code("[COMMENTS]")}{comments} <br>\n'
-            papers[paper.title] += f'{code("[LINK]")}{link(paper.entry_id)} <br>\n'
-            papers[paper.title] += f'{code("[DATE]")}{paper.updated} <br>\n'
-            papers[paper.title] += f'{code("[CATEGORIES]")}{categories} <br>\n'
+                papers[date][paper.title] += f'{code("[COMMENTS]")}{comments} <br>\n'
+            papers[date][paper.title] += f'{code("[LINK]")}{link(paper.entry_id)} <br>\n'
+            papers[date][paper.title] += f'{code("[DATE]")}{paper.updated} <br>\n'
+            papers[date][paper.title] += f'{code("[CATEGORIES]")}{categories} <br>\n'
 
 with open('arxiv.md', 'w') as f:
     f.write('---\nlayout: default\n---\n\n')
-    f.write('<style type="text/css"> code { width: 120px; display: inline-block;} </style>')
-    for title, paper in papers.items():
-        f.write(paper + '\n\n')
+    f.write('<style type="text/css"> code { width: 120px; display: inline-block;} </style>\n\n')
+    f.write('<details><summary>Contents</summary><ul>')
+    for date in papers:
+        f.write(f'<li><a href="#{date.replace(" ", "-").replace(",", "").lower()}">{date}</a></li>')
+    f.write('</ul></details><br>\n')
+    for date in papers:
+        f.write(f'#### {date}\n\n')
+        for title, paper in papers[date].items():
+            f.write(paper + '\n\n')
