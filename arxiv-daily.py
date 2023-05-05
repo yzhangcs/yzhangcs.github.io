@@ -85,27 +85,28 @@ def match(t: str, keys: Iterable) -> Tuple[str, bool]:
 
 
 papers = dict()
-for name in CLASSES:
-    search = arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate)
-    for paper in search.results():
-        if paper.title in papers:
-            continue
-        if paper.updated < datetime.now(paper.updated.tzinfo) - timedelta(3):
-            break
-        title, _ = match(paper.title, KEYS)
-        authors, _ = match(', '.join([f"{author}" for author in paper.authors]), AUTHORS)
-        abstract, matched = match(paper.summary, KEYS)
-        comments, _ = match(paper.comment or '', CONFS)
-        categories = '    '.join([code(c, 'gray') for c in paper.categories if c in CLASSES])
-        papers[paper.title] = f'* **{title}** <br>\n'
-        papers[paper.title] += f'{code("[AUTHORS]")}{authors} <br>\n'
-        if matched:
-            papers[paper.title] += f'{code("[ABSTRACT]")}{abstract} <br>\n'
-        if comments:
-            papers[paper.title] += f'{code("[COMMENTS]")}{comments} <br>\n'
-        papers[paper.title] += f'{code("[LINK]")}{link(paper.entry_id)} <br>\n'
-        papers[paper.title] += f'{code("[DATE]")}{paper.updated} <br>\n'
-        papers[paper.title] += f'{code("[CATEGORIES]")}{categories} <br>\n'
+for day in range(1, 3):
+    for name in CLASSES:
+        search = arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate)
+        for paper in search.results():
+            if paper.title in papers:
+                continue
+            if paper.updated < datetime.now(paper.updated.tzinfo) - timedelta(day):
+                break
+            title, _ = match(paper.title, KEYS)
+            authors, _ = match(', '.join([f"{author}" for author in paper.authors]), AUTHORS)
+            abstract, matched = match(paper.summary, KEYS)
+            comments, _ = match(paper.comment or '', CONFS)
+            categories = '    '.join([code(c, 'gray') for c in paper.categories if c in CLASSES])
+            papers[paper.title] = f'* **{title}** <br>\n'
+            papers[paper.title] += f'{code("[AUTHORS]")}{authors} <br>\n'
+            if matched:
+                papers[paper.title] += f'{code("[ABSTRACT]")}{abstract} <br>\n'
+            if comments:
+                papers[paper.title] += f'{code("[COMMENTS]")}{comments} <br>\n'
+            papers[paper.title] += f'{code("[LINK]")}{link(paper.entry_id)} <br>\n'
+            papers[paper.title] += f'{code("[DATE]")}{paper.updated} <br>\n'
+            papers[paper.title] += f'{code("[CATEGORIES]")}{categories} <br>\n'
 
 with open('arxiv.md', 'w') as f:
     f.write('---\nlayout: default\n---\n\n')
