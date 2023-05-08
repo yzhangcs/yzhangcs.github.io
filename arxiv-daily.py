@@ -86,7 +86,7 @@ def match(t: str, keys: Iterable) -> Tuple[str, bool]:
 
 
 papers = defaultdict(dict)
-for day in range(1, 3):
+for day in range(4):
     for name in CLASSES:
         search = arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate)
         for paper in search.results():
