@@ -94,7 +94,7 @@ for day in range(4):
             if paper.updated < date:
                 break
             date = date.strftime("%a, %d %b %Y")
-            if paper.title in papers[date]:
+            if any(paper.title in i for i in papers.values()):
                 continue
             title, _ = match(paper.title, KEYS)
             authors, _ = match(', '.join([f"{author}" for author in paper.authors]), AUTHORS)
