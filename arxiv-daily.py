@@ -90,10 +90,9 @@ for day in range(4):
     for name in CLASSES:
         search = arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate)
         for paper in search.results():
-            date = datetime.now(paper.updated.tzinfo) - timedelta(day)
-            if paper.updated < date:
+            date = (datetime.now(paper.updated.tzinfo) - timedelta(day)).strftime("%a, %d %b %Y")
+            if paper.updated.strftime("%a, %d %b %Y") < date:
                 break
-            date = date.strftime("%a, %d %b %Y")
             if any(paper.title in i for i in papers.values()):
                 continue
             title, _ = match(paper.title, KEYS)
