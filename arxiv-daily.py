@@ -18,7 +18,7 @@ KEYS = [
     'dynamic', 'dynamic programming',
     'energy', 'euclidean', 'expectation', 'exponential',
     'fenchel-young', 'filter', 'flow', 'flowseq', 'forest', 'forward', 'frank-wolfe',
-    'gaussian', 'generation', 'grammar', 'gumbel', 'gumbel-softmax',
+    'gaussian', 'generation', 'grammar', 'grammars', 'gumbel', 'gumbel-softmax',
     'high-order', 'higher-order', 'hmm', 'hsmm', 'hypergraph',
     'induction', 'inside', 'invertible',
     'lagrangian', 'latent', 'levenshtein', 'lexicalized', 'low-rank',
@@ -48,7 +48,7 @@ AUTHORS = [
     'Hao Zhou',
     'Giorgio Satta', 'Graham Neubig',
     'Ivan Titov',
-    'Jason Eisner', 'Justin T. Chiu',
+    'Jan Buys', 'Jason Eisner', 'Justin T. Chiu',
     'Kevin Gimpel',
     'Lifu Tu', 'Lingpeng Kong',
     'Mathieu Blondel', 'Michael Collins', 'Mirella Lapata',
@@ -90,11 +90,12 @@ for day in range(4):
     for name in CLASSES:
         search = arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate)
         for paper in search.results():
-            date = (datetime.now(paper.updated.tzinfo) - timedelta(day)).strftime("%a, %d %b %Y")
-            if paper.updated.strftime("%a, %d %b %Y") < date:
+            date = datetime.now(paper.updated.tzinfo) - timedelta(day)
+            if paper.updated.date() < date.date():
                 break
             if any(paper.title in i for i in papers.values()):
                 continue
+            date = date.strftime("%a, %d %b %Y")
             title, _ = match(paper.title, KEYS)
             authors, _ = match(', '.join([f"{author}" for author in paper.authors]), AUTHORS)
             abstract, matched = match(paper.summary, KEYS)
@@ -116,7 +117,7 @@ with open('arxiv.md', 'w') as f:
     f.write('<details><summary>Contents</summary><ul>')
     for date in papers:
         f.write(f'<li><a href="#{date.replace(" ", "-").replace(",", "").lower()}">{date}</a></li>')
-    f.write('</ul></details><br>\n')
+    f.write('</ul></details><br>\n\n')
     for date in papers:
         f.write(f'#### {date}\n\n')
         for title, paper in papers[date].items():
