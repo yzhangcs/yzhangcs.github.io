@@ -121,4 +121,4 @@ with open('arxiv.md', 'w') as f:
     for date in papers:
         f.write(f'#### {date}\n\n')
         for title, paper in papers[date].items():
-            f.write(paper + '\n\n')
+            f.write(paper.replace('{', '\{').replace('}', '\}') + '\n\n')
