@@ -90,6 +90,7 @@ A Python package designed for structured prediction, including reproductions of 
 
 ### Experience
 
+* 2023 - present. Research Intern at Tencent AI Lab, mentored by [Wei Bi](https://scholar.google.com/citations?user=aSJcgQMAAAAJ&hl=en).
 * 2021 - present. PhD student at Soochow University, co-advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/) and [Prof. Zhenghua Li](http://hlt.suda.edu.cn/~zhli).
 * 2020 - 2021. Research Intern at Alibaba DAMO Academy, mentored by [Yong Jiang](http://jiangyong.site).
 * 2018 - 2021: M.S. student at Soochow University, advised by [Prof. Zhenghua Li](http://hlt.suda.edu.cn/~zhli).
