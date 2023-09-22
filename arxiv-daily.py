@@ -2,7 +2,7 @@
 
 import re
 from collections import defaultdict
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Iterable, Tuple
 
 import arxiv
@@ -55,7 +55,7 @@ AUTHORS = [
     'Noah A. Smith',
     'Percy Liang'
     'Ryan Cotterell',
-    'Shay B. Cohen', 'Songlin Yang',
+    'Shaolei Zhang', 'Shay B. Cohen', 'Songlin Yang',
     'Tim Vieira', 'Tri Dao',
     'Vlad Niculae',
     'Xiang Lisa Li', 'Xuezhe Ma',
@@ -85,31 +85,40 @@ def match(t: str, keys: Iterable) -> Tuple[str, bool]:
     return t, (raw != t)
 
 
-papers = defaultdict(dict)
-for day in range(7):
-    for name in CLASSES:
-        search = arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate)
-        for paper in search.results():
-            date = datetime.now(paper.updated.tzinfo) - timedelta(day)
-            if paper.updated.date() < date.date():
-                break
-            if any(paper.title in i for i in papers.values()):
-                continue
-            date = date.strftime("%a, %d %b %Y")
-            title, _ = match(paper.title, KEYS)
-            authors, _ = match(', '.join([f"{author}" for author in paper.authors]), AUTHORS)
-            abstract, matched = match(paper.summary, KEYS)
-            comments, _ = match(paper.comment or '', CONFS)
-            categories = '    '.join([code(c, 'gray') for c in paper.categories if c in CLASSES])
-            papers[date][paper.title] = f'* **{title}** <br>\n'
-            papers[date][paper.title] += f'{code("[AUTHORS]")}{authors} <br>\n'
-            if matched:
-                papers[date][paper.title] += f'{code("[ABSTRACT]")}{abstract} <br>\n'
-            if comments:
-                papers[date][paper.title] += f'{code("[COMMENTS]")}{comments} <br>\n'
-            papers[date][paper.title] += f'{code("[LINK]")}{link(paper.entry_id)} <br>\n'
-            papers[date][paper.title] += f'{code("[DATE]")}{paper.updated} <br>\n'
-            papers[date][paper.title] += f'{code("[CATEGORIES]")}{categories} <br>\n'
+def cover_timezones(date: datetime) -> datetime:
+    # to UTF+8
+    return date.astimezone(timezone(timedelta(hours=8)))
+
+
+max_day, papers = 7, defaultdict(dict)
+for name in CLASSES:
+    search = arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate)
+    for paper in search.results():
+        date = datetime.now(paper.updated.tzinfo) - timedelta(max_day)
+        if paper.updated.date() < date.date():
+            break
+        date = cover_timezones(paper.updated).strftime("%a, %d %b %Y")
+        any_match = False
+        title, matched = match(paper.title, KEYS)
+        any_match = any_match or matched
+        authors, matched = match(', '.join([f"{author}" for author in paper.authors]), AUTHORS)
+        any_match = any_match or matched
+        abstract, matched = match(paper.summary, KEYS)
+        any_match = any_match or matched
+        comments, comment_matched = match(paper.comment or '', CONFS)
+        any_match = any_match or comment_matched
+        if not any_match:
+            continue
+        papers[date][paper.title] = f'* **{title}** <br>\n'
+        papers[date][paper.title] += f'{code("[AUTHORS]")}{authors} <br>\n'
+        if matched:
+            papers[date][paper.title] += f'{code("[ABSTRACT]")}{abstract} <br>\n'
+        if comments:
+            papers[date][paper.title] += f'{code("[COMMENTS]")}{comments} <br>\n'
+        papers[date][paper.title] += f'{code("[LINK]")}{link(paper.entry_id)} <br>\n'
+        papers[date][paper.title] += f'{code("[DATE]")}{cover_timezones(paper.updated)} <br>\n'
+        categories = '    '.join([code(c, 'gray') for c in paper.categories if c in CLASSES])
+        papers[date][paper.title] += f'{code("[CATEGORIES]")}{categories} <br>\n'
 
 with open('arxiv.md', 'w') as f:
     f.write('---\nlayout: default\n---\n\n')
