@@ -18,7 +18,7 @@ My main research interest focuses on structured prediction and latent variable m
 
 [[Semantic Scholar](https://www.semanticscholar.org/author/Yu-Zhang/49890808)] [[Google Scholar](https://scholar.google.com/citations?user=y3JK-1oAAAAJ)] [[DBLP](https://dblp.org/pid/50/671-92.html)] (\* denotes equal contributions)
 
-* Non-autoregressive Text Editing with Copy-aware Latent Alignments}  <br>
+* Non-autoregressive Text Editing with Copy-aware Latent Alignments  <br>
 **Yu Zhang**\*, Yue Zhang\*, Leyang Cui, Guohong Fu <br>
 **EMNLP 2023** <br>
 [![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/ctc-copy.pdf)
@@ -42,14 +42,6 @@ Shilin Zhou, Qingrong Xia, Zhenghua Li, **Yu Zhang**, Yu Hong, Min Zhang <br>
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/zsLin177/SRL-as-GP)
 [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fea9a2d14672c3cc0ff92510386f46fb2b152570c%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Fast-and-Accurate-End-to-End-Span-based-Semantic-as-Zhou-Xia/ea9a2d14672c3cc0ff92510386f46fb2b152570c)
 
-* A Coarse-to-Fine Labeling Framework for Joint Word Segmentation, POS Tagging, and Constituent Parsing <br>
-Yang Hou, Houquan Zhou, Zhenghua Li, **Yu Zhang**, Min Zhang, Zhefeng Wang, Baoxing Huai, Nicholas Jing Yuan <br>
-**CoNLL 2021** <br>
-[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://aclanthology.org/2021.conll-1.23/)
-[![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://aclanthology.org/2021.conll-1.23.bib)
-[![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/ironsword666/jointparser)
-[![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F7a78d8adc8c10a66e4c04bc28351f4fd865fd409%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/A-Coarse-to-Fine-Labeling-Framework-for-Joint-Word-Hou-Zhou/7a78d8adc8c10a66e4c04bc28351f4fd865fd409)
-
 * Fast and Accurate Neural CRF Constituency Parsing <br>
 **Yu Zhang**\*, Houquan Zhou\*, Zhenghua Li <br>
 **IJCAI 2020** <br>
@@ -71,7 +63,9 @@ Yang Hou, Houquan Zhou, Zhenghua Li, **Yu Zhang**, Min Zhang, Zhefeng Wang, Baox
 * Is POS Tagging Necessary or Even Helpful for Neural Dependency Parsing?<br>
 Houquan Zhou\*, **Yu Zhang**\*, Zhenghua Li, Min Zhang <br>
 **NLPCC 2020** (<strong><i style="color:#e74d3c">Best Paper Award</i></strong>)<br>
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://link.springer.com/chapter/10.1007/978-3-030-60450-9_15#:~:text=In%20contrast%2C%20recent%20studies%20suggest,issue%2C%20both%20empirically%20and%20linguistically.)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2003.03204)
+[![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://dblp.org/rec/conf/nlpcc/ZhouZLZ20.html?view=bibtex)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/Jacob-Zhou/stack-parser)
 [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F3bb577d87ae8e0d45a223f65db24ab479fbda174%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Is-POS-Tagging-Necessary-or-Even-Helpful-for-Neural-Zhang-Li/3bb577d87ae8e0d45a223f65db24ab479fbda174)
 
