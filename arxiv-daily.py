@@ -104,7 +104,7 @@ for name in CLASSES:
         date = datetime.now(paper.updated.tzinfo) - timedelta(max_day)
         if paper.updated.date() < date.date():
             break
-        date = cover_timezones(paper.updated).strftime("%a, %d %b %Y")
+        date = cover_timezones(paper.updated).strftime("%Y %b %d, %a")
         any_match = False
         title, matched = match(paper.title, KEYS)
         any_match = any_match or matched
