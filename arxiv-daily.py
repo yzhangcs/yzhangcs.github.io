@@ -90,10 +90,17 @@ def cover_timezones(date: datetime) -> datetime:
     return date.astimezone(timezone(timedelta(hours=8)))
 
 
+def collect(name: str) -> Iterable:
+    try:
+        for paper in arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate).results():
+            yield paper
+    except arxiv.arxiv.UnexpectedEmptyPageError:
+        pass
+
+
 max_day, papers = 7, defaultdict(dict)
 for name in CLASSES:
-    search = arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate)
-    for paper in search.results():
+    for paper in collect(name):
         date = datetime.now(paper.updated.tzinfo) - timedelta(max_day)
         if paper.updated.date() < date.date():
             break
