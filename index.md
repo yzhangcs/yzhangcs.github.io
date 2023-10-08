@@ -16,7 +16,13 @@ My main research interest focuses on structured prediction and latent variable m
 
 ### Publications:
 
-[[Semantic Scholar](https://www.semanticscholar.org/author/Yu-Zhang/49890808)] [[Google Scholar](https://scholar.google.com/citations?user=y3JK-1oAAAAJ)] [[DBLP](https://dblp.org/pid/50/671-92.html)] (* denotes equal contributions)
+[[Semantic Scholar](https://www.semanticscholar.org/author/Yu-Zhang/49890808)] [[Google Scholar](https://scholar.google.com/citations?user=y3JK-1oAAAAJ)] [[DBLP](https://dblp.org/pid/50/671-92.html)] (\* denotes equal contributions)
+
+* Non-autoregressive Text Editing with Copy-aware Latent Alignments}  <br>
+**Yu Zhang**\*, Yue Zhang\*, Leyang Cui, Guohong Fu <br>
+**EMNLP 2023** <br>
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/ctc-copy.pdf)
+[![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/yzhangcs/ctc-copy)
 
 * Semantic Role Labeling as Dependency Parsing: Exploring Latent Tree Structures Inside Arguments <br>
 **Yu Zhang**, Qingrong Xia, Shilin Zhou, Yong Jiang, Guohong Fu, Min Zhang <br>
@@ -45,7 +51,7 @@ Yang Hou, Houquan Zhou, Zhenghua Li, **Yu Zhang**, Min Zhang, Zhefeng Wang, Baox
 [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F7a78d8adc8c10a66e4c04bc28351f4fd865fd409%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/A-Coarse-to-Fine-Labeling-Framework-for-Joint-Word-Hou-Zhou/7a78d8adc8c10a66e4c04bc28351f4fd865fd409)
 
 * Fast and Accurate Neural CRF Constituency Parsing <br>
-**Yu Zhang***, Houquan Zhou\*, Zhenghua Li <br>
+**Yu Zhang**\*, Houquan Zhou\*, Zhenghua Li <br>
 **IJCAI 2020** <br>
 [![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://www.ijcai.org/Proceedings/2020/560/)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2008.03736)
@@ -63,7 +69,7 @@ Yang Hou, Houquan Zhou, Zhenghua Li, **Yu Zhang**, Min Zhang, Zhefeng Wang, Baox
 [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fce18780963b067a1295fc847e7ab33f2fcbfaca1%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Efficient-Second-Order-TreeCRF-for-Neural-Parsing-Zhang-Li/ce18780963b067a1295fc847e7ab33f2fcbfaca1)
 
 * Is POS Tagging Necessary or Even Helpful for Neural Dependency Parsing?<br>
-Houquan Zhou\*, **Yu Zhang***, Zhenghua Li, Min Zhang <br>
+Houquan Zhou\*, **Yu Zhang**\*, Zhenghua Li, Min Zhang <br>
 **NLPCC 2020** (<strong><i style="color:#e74d3c">Best Paper Award</i></strong>)<br>
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2003.03204)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/Jacob-Zhou/stack-parser)
