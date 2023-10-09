@@ -21,13 +21,13 @@ My main research interest focuses on structured prediction and latent variable m
 * Non-autoregressive Text Editing with Copy-aware Latent Alignments  <br>
 **Yu Zhang**\*, Yue Zhang\*, Leyang Cui, Guohong Fu <br>
 **EMNLP 2023** <br>
-[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/ctc-copy.pdf)
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/emnlp23ctc.pdf)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/yzhangcs/ctc-copy)
 
 * Semantic Role Labeling as Dependency Parsing: Exploring Latent Tree Structures Inside Arguments <br>
 **Yu Zhang**, Qingrong Xia, Shilin Zhou, Yong Jiang, Guohong Fu, Min Zhang <br>
 **COLING 2022** <br>
-[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://aclanthology.org/2022.coling-1.370/)
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/coling22crfsrl.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2110.06865)
 [![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://aclanthology.org/2022.coling-1.370.bib)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/yzhangcs/crfsrl)
@@ -36,7 +36,7 @@ My main research interest focuses on structured prediction and latent variable m
 * Fast and Accurate End-to-End Span-based Semantic Role Labeling as Word-based Graph Parsing <br>
 Shilin Zhou, Qingrong Xia, Zhenghua Li, **Yu Zhang**, Yu Hong, Min Zhang <br>
 **COLING 2022** (<strong><i style="color:#e74d3c">Best Paper Award</i></strong>)<br>
-[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://aclanthology.org/2022.coling-1.365/)
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/coling22graphsrl.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2112.02970)
 [![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://aclanthology.org/2022.coling-1.365.bib)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/zsLin177/SRL-as-GP)
@@ -45,7 +45,7 @@ Shilin Zhou, Qingrong Xia, Zhenghua Li, **Yu Zhang**, Yu Hong, Min Zhang <br>
 * Fast and Accurate Neural CRF Constituency Parsing <br>
 **Yu Zhang**\*, Houquan Zhou\*, Zhenghua Li <br>
 **IJCAI 2020** <br>
-[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://www.ijcai.org/Proceedings/2020/560/)
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/ijcai20crfpar.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2008.03736)
 [![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://www.ijcai.org/proceedings/2020/bibtex/560)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/yzhangcs/crfpar)
@@ -54,7 +54,7 @@ Shilin Zhou, Qingrong Xia, Zhenghua Li, **Yu Zhang**, Yu Hong, Min Zhang <br>
 * Efficient Second-Order TreeCRF for Neural Dependency Parsing <br>
 **Yu Zhang**, Zhenghua Li, Min Zhang <br>
 **ACL 2020** <br>
-[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://aclanthology.org/2020.acl-main.302/)
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/acl20crfpar.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2005.00975)
 [![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://aclanthology.org/2020.acl-main.302.bib)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/yzhangcs/crfpar)
@@ -63,7 +63,7 @@ Shilin Zhou, Qingrong Xia, Zhenghua Li, **Yu Zhang**, Yu Hong, Min Zhang <br>
 * Is POS Tagging Necessary or Even Helpful for Neural Dependency Parsing?<br>
 Houquan Zhou\*, **Yu Zhang**\*, Zhenghua Li, Min Zhang <br>
 **NLPCC 2020** (<strong><i style="color:#e74d3c">Best Paper Award</i></strong>)<br>
-[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://link.springer.com/chapter/10.1007/978-3-030-60450-9_15#:~:text=In%20contrast%2C%20recent%20studies%20suggest,issue%2C%20both%20empirically%20and%20linguistically.)
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/nlpcc20posdep.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2003.03204)
 [![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://dblp.org/rec/conf/nlpcc/ZhouZLZ20.html?view=bibtex)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/Jacob-Zhou/stack-parser)
@@ -72,7 +72,7 @@ Houquan Zhou\*, **Yu Zhang**\*, Zhenghua Li, Min Zhang <br>
 * HLT@SUDA at SemEval-2019 Task 1: UCCA Graph Parsing as Constituent Tree Parsing <br>
 Wei Jiang, Zhenghua Li, **Yu Zhang**, Min Zhang <br>
 **SemEval 2019** <br>
-[![paper](https://img.shields.io/badge/paper-d6d6d6?style=flat-square)](https://aclanthology.org/S19-2002/)
+[![paper](https://img.shields.io/badge/paper-d6d6d6?style=flat-square)](https://yzhang.site/assets/pubs/semeval19const.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/1903.04153)
 [![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://aclanthology.org/S19-2002.bib)
 [![code](https://img.shields.io/badge/code-d6d6d6?style=flat-square&logo=github)](https://github.com/SUDA-LA/ucca-parser)
