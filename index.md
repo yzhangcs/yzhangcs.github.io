@@ -22,7 +22,9 @@ My main research interest focuses on structured prediction and latent variable m
 **Yu Zhang**\*, Yue Zhang\*, Leyang Cui, Guohong Fu <br>
 **EMNLP 2023** <br>
 [![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/emnlp23ctc.pdf)
+[![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2310.07821)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/yzhangcs/ctc-copy)
+[![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F116277fd27c97d50bba2d8023d3c590c1ea8187b%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Non-autoregressive-Text-Editing-with-Copy-aware-Zhang-Zhang/116277fd27c97d50bba2d8023d3c590c1ea8187b)
 
 * Semantic Role Labeling as Dependency Parsing: Exploring Latent Tree Structures Inside Arguments <br>
 **Yu Zhang**, Qingrong Xia, Shilin Zhou, Yong Jiang, Guohong Fu, Min Zhang <br>
