@@ -29,7 +29,7 @@ KEYS = [
     'perturbation',
     'posterior', 'probabilistic', 'probabilistically', 'programming', 'projection', 'prototype', 'proximal',
     'randomized', 'ranking', 'rao-blackwell', 'regularization', 'regularized', 'relaxation', 'reorder',
-    'recurrence', 'recurrent', 'reparameterization', 're-parameterization', 'rnn', 'rnnt', 'rnn-t',
+    'recurrence', 'recurrent', 'reparameterization', 're-parameterization', 'rnn', 'rnns', 'rnnt', 'rnn-t',
     'sample', 'sampling', 'scaling', 'second-order', 'semi-amortized', 'semiring', 'semi-markov',
     'seq2seq', 'sequence', 'sequence to sequence', 'sequence-to-sequence',
     'simplex', 'sinkhorn', 'sparse', 'sparsemap', 'sparsemax', 'state-space', 'stochastic',
@@ -40,7 +40,7 @@ KEYS = [
 
 AUTHORS = [
     'Albert Gu', 'Alexander M. Rush', 'André F. T. Martins',
-    'Bailin Wang',
+    'Bailin Wang', 'Beidi Chen',
     'Caio Corro', 'Chris Dyer', 'Christopher D. Manning', 'Christopher Ré',
     'Daniel Gildea', 'Daniel Y. Fu', 'David Chiang', 'David M. Blei',
     'Eduard Hovy',
@@ -50,7 +50,7 @@ AUTHORS = [
     'Ivan Titov',
     'Jan Buys', 'Jason Eisner', 'Justin T. Chiu',
     'Kevin Gimpel',
-    'Lifu Tu', 'Lingpeng Kong',
+    'Li Dong', 'Lifu Tu', 'Lingpeng Kong',
     'Mathieu Blondel', 'Michael Collins', 'Mirella Lapata',
     'Noah A. Smith',
     'Percy Liang'
@@ -59,7 +59,8 @@ AUTHORS = [
     'Tim Vieira', 'Tri Dao',
     'Vlad Niculae',
     'Xiang Lisa Li', 'Xuezhe Ma',
-    'Yao Fu', 'Yang Feng', 'Yoon Kim', 'Yuntian Deng'
+    'Yao Fu', 'Yang Feng', 'Yoon Kim', 'Yuntian Deng',
+    'Zhen Qin'
 ]
 
 CONFS = ['ACL', 'EMNLP', 'NAACL', 'COLING', 'ICLR', 'NIPS', 'NEURIPS', 'ICML', 'JMLR']
@@ -137,4 +138,6 @@ with open('arxiv.md', 'w') as f:
     for date in papers:
         f.write(f'#### {date}\n\n')
         for title, paper in papers[date].items():
-            f.write(paper.replace('{', '\{').replace('}', '\}') + '\n\n')
+            paper = paper.replace('{', '\{').replace('}', '\}')
+            paper = re.sub(r"``(.*?)''", lambda x: "“" + x.group(1) + "”", paper)
+            f.write(paper + '\n\n')
