@@ -19,7 +19,7 @@ KEYS = [
     'energy', 'euclidean', 'expectation', 'exponential',
     'fenchel-young', 'filter', 'flow', 'flowseq', 'forest', 'forward', 'frank-wolfe',
     'gaussian', 'generation', 'grammar', 'grammars', 'gumbel', 'gumbel-softmax',
-    'high-order', 'higher-order', 'hmm', 'hsmm', 'hypergraph',
+    'hardware-aware', 'high-order', 'higher-order', 'hmm', 'hsmm', 'hypergraph',
     'induction', 'inside', 'invertible',
     'lagrangian', 'latent', 'levenshtein', 'lexicalized', 'low-rank',
     'marginal', 'markov', 'masking', 'mcmc', 'mean-field', 'message-passing', 'monte', 'monotonic', 'mutual',
