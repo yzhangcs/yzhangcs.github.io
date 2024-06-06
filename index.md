@@ -3,9 +3,14 @@ layout: default
 ---
 
 Hi, my name is Yu Zhang ([jy tʃɑŋ], 張宇/张宇 in traditional/simplified Chinese).
-I am a second-year PhD student at [HLT@SUDA](http://hlt.suda.edu.cn), co-advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/) and [Prof. Zhenghua Li](http://hlt.suda.edu.cn/~zhli) (expected to graduate in 2024). 
-Before this, I received my M. Eng. degree from Soochow University in 2021.
-My main research interest focuses on structured prediction and latent variable models.
+I am currently a third-year PhD student at [HLT@SUDA](http://hlt.suda.edu.cn), advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/).
+I expect to graduate in 2025. 
+Prior to this, I received my M. Eng. degree from Soochow University in 2021.
+  
+My early research focused on structured prediction tasks, specifically dependency parsing and constituency parsing. 
+Currently, my research interests have evolved to focus on developing efficient text generation models. 
+I am particularly intrigued by the prospect of developing hardware-efficient methods for linear-time sequence modeling. 
+As a disciple of parallel programming, I am passionate about exploring techniques that harness the power of parallel computing to develop scalable subquadratic models.
 
 ### Thesis:
 
@@ -83,6 +88,11 @@ Wei Jiang, Zhenghua Li, **Yu Zhang**, Min Zhang <br>
 
 ### Projects:
 
+* **FLA**:<br>
+[![code](https://img.shields.io/badge/code-orange?style=flat-square&logo=github)](https://github.com/sustcsonglin/flash-linear-attention)
+<br>
+A Triton-Based Library for Hardware-Efficient Implementations of Linear Attention Mechanism.
+
 * **SuPar**: State-of-the-art syntactic/semantic parsers <br>
 [![code](https://img.shields.io/badge/code-orange?style=flat-square&logo=github)](https://github.com/yzhangcs/parser)
 [![docs](https://img.shields.io/github/actions/workflow/status/yzhangcs/parser/pages.yml?branch=main&label=docs&style=flat-square)](https://parser.yzhang.site)
@@ -94,6 +104,6 @@ A Python package designed for structured prediction, including reproductions of 
 ### Experience
 
 * 2023 - present. Research Intern at Tencent AI Lab, mentored by [Wei Bi](https://scholar.google.com/citations?user=aSJcgQMAAAAJ&hl=en).
-* 2021 - present. PhD student at Soochow University, co-advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/) and [Prof. Zhenghua Li](http://hlt.suda.edu.cn/~zhli).
+* 2021 - present. PhD student at Soochow University, advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/).
 * 2020 - 2021. Research Intern at Alibaba DAMO Academy, mentored by [Yong Jiang](http://jiangyong.site).
 * 2018 - 2021: M.S. student at Soochow University, advised by [Prof. Zhenghua Li](http://hlt.suda.edu.cn/~zhli).
