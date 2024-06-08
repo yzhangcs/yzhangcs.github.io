@@ -23,7 +23,13 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 [[Semantic Scholar](https://www.semanticscholar.org/author/Yu-Zhang/49890808)] [[Google Scholar](https://scholar.google.com/citations?user=y3JK-1oAAAAJ)] [[DBLP](https://dblp.org/pid/50/671-92.html)] (\* denotes equal contributions)
 
-* Non-autoregressive Text Editing with Copy-aware Latent Alignments  <br>
+* Scalable MatMul-free Language Modeling <br>
+Rui-Jie Zhu, **Yu Zhang**, Ethan Sifferman, Tyler Sheaves, Yiqiao Wang, Dustin Richmond, Peng Zhou, Jason K. Eshraghian <br>
+[![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2406.02528)
+[![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/ridgerchu/matmulfreellm/)
+[![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F401c4147375b016d4758cf2dd859232a8271fdcd%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Scalable-MatMul-free-Language-Modeling-Zhu-Zhang/401c4147375b016d4758cf2dd859232a8271fdcd)
+
+* Non-autoregressive Text Editing with Copy-aware Latent Alignments <br>
 **Yu Zhang**\*, Yue Zhang\*, Leyang Cui, Guohong Fu <br>
 **EMNLP 2023** <br>
 [![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/emnlp/2023/ctc.pdf)
