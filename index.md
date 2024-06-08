@@ -88,10 +88,9 @@ Wei Jiang, Zhenghua Li, **Yu Zhang**, Min Zhang <br>
 
 ### Projects:
 
-* **FLA**:<br>
+* **FLA**: A Triton-Based Library for Hardware-Efficient Implementations of Linear Attention Mechanism <br>
 [![code](https://img.shields.io/badge/code-orange?style=flat-square&logo=github)](https://github.com/sustcsonglin/flash-linear-attention)
 <br>
-A Triton-Based Library for Hardware-Efficient Implementations of Linear Attention Mechanism.
 
 * **SuPar**: State-of-the-art syntactic/semantic parsers <br>
 [![code](https://img.shields.io/badge/code-orange?style=flat-square&logo=github)](https://github.com/yzhangcs/parser)
