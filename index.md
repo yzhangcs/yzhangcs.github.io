@@ -23,6 +23,12 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 [[Semantic Scholar](https://www.semanticscholar.org/author/Yu-Zhang/49890808)] [[Google Scholar](https://scholar.google.com/citations?user=y3JK-1oAAAAJ)] [[DBLP](https://dblp.org/pid/50/671-92.html)] (\* denotes equal contributions)
 
+* Parallelizing Linear Transformers with the Delta Rule over Sequence Length <br>
+Songlin Yang, Bailin Wang, **Yu Zhang**, Yikang Shen, Yoon Kim <br>
+[![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2406.06484)
+[![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/sustcsonglin/flash-linear-attention)
+[![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fd3d1acfe37fe8d98e06dcf63b6e6dbe90cca061d%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Parallelizing-Linear-Transformers-with-the-Delta-Yang-Wang/d3d1acfe37fe8d98e06dcf63b6e6dbe90cca061d)
+
 * Scalable MatMul-free Language Modeling <br>
 Rui-Jie Zhu, **Yu Zhang**, Ethan Sifferman, Tyler Sheaves, Yiqiao Wang, Dustin Richmond, Peng Zhou, Jason K. Eshraghian <br>
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2406.02528)
