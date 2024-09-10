@@ -23,6 +23,11 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 [[Semantic Scholar](https://www.semanticscholar.org/author/Yu-Zhang/49890808)] [[Google Scholar](https://scholar.google.com/citations?user=y3JK-1oAAAAJ)] [[DBLP](https://dblp.org/pid/50/671-92.html)] (\* denotes equal contributions)
 
+* Gated Slot Attention for Efficient Linear-Time Sequence Modeling <br>
+**Yu Zhang**\*, Songlin Yang\*, Ruijie Zhu, Yue Zhang, Leyang Cui, Yiqiao Wang, Bolun Wang, Freda Shi, Bailin Wang, Wei Bi, Peng Zhou, Guohong Fu<br>
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/gsa.pdf)
+[![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/sustcsonglin/flash-linear-attention)
+
 * Parallelizing Linear Transformers with the Delta Rule over Sequence Length <br>
 Songlin Yang, Bailin Wang, **Yu Zhang**, Yikang Shen, Yoon Kim <br>
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2406.06484)
