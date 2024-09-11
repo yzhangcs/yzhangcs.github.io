@@ -12,13 +12,6 @@ Currently, my research interests have evolved to focus on developing efficient t
 I am particularly intrigued by the prospect of developing hardware-efficient methods for linear-time sequence modeling. 
 As a disciple of parallel programming, I am passionate about exploring techniques that harness the power of parallel computing to develop scalable subquadratic models.
 
-### Thesis:
-
-* TreeCRF-based High-Order Syntactic Parsing. Master Thesis, Soochow University, 2021 <br>
-[![pdf](https://img.shields.io/badge/pdf-d6d6d6?style=flat-square)](https://yzhang.site/assets/pubs/master-thesis.pdf)
-[![latex](https://img.shields.io/badge/latex-d6d6d6?style=flat-square&logo=github)](https://github.com/yzhangcs/master-thesis)
-<br>
-
 ### Publications:
 
 [[Semantic Scholar](https://www.semanticscholar.org/author/Yu-Zhang/49890808)] [[Google Scholar](https://scholar.google.com/citations?user=y3JK-1oAAAAJ)] [[DBLP](https://dblp.org/pid/50/671-92.html)] (\* denotes equal contributions)
@@ -117,9 +110,16 @@ Wei Jiang, Zhenghua Li, **Yu Zhang**, Min Zhang <br>
 <br>
 A Python package designed for structured prediction, including reproductions of many state-of-the-art syntactic/semantic parsers (with pretrained models for more than 19 languages), and highly-parallelized implementations of several well-known structured prediction algorithms.
 
+### Thesis:
+
+* TreeCRF-based High-Order Syntactic Parsing. Master Thesis, Soochow University, 2021 <br>
+[![pdf](https://img.shields.io/badge/pdf-d6d6d6?style=flat-square)](https://yzhang.site/assets/pubs/master-thesis.pdf)
+[![latex](https://img.shields.io/badge/latex-d6d6d6?style=flat-square&logo=github)](https://github.com/yzhangcs/master-thesis)
+<br>
+
 ### Experience
 
-* 2023 - present. Research Intern at Tencent AI Lab, mentored by [Wei Bi](https://scholar.google.com/citations?user=aSJcgQMAAAAJ&hl=en).
 * 2021 - present. PhD student at Soochow University, advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/).
+* 2023 - 2024. Research Intern at Tencent AI Lab, mentored by [Wei Bi](https://scholar.google.com/citations?user=aSJcgQMAAAAJ&hl=en).
 * 2020 - 2021. Research Intern at Alibaba DAMO Academy, mentored by [Yong Jiang](http://jiangyong.site).
 * 2018 - 2021: M.S. student at Soochow University, advised by [Prof. Zhenghua Li](http://hlt.suda.edu.cn/~zhli).
