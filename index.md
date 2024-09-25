@@ -17,7 +17,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 [[Semantic Scholar](https://www.semanticscholar.org/author/Yu-Zhang/49890808)] [[Google Scholar](https://scholar.google.com/citations?user=y3JK-1oAAAAJ)] [[DBLP](https://dblp.org/pid/50/671-92.html)] (\* denotes equal contributions)
 
 * Gated Slot Attention for Efficient Linear-Time Sequence Modeling <br>
-**Yu Zhang**\*, Songlin Yang\*, Ruijie Zhu, Yue Zhang, Leyang Cui, Yiqiao Wang, Bolun Wang, Freda Shi, Bailin Wang, Wei Bi, Peng Zhou, Guohong Fu<br>
+**Yu Zhang**\*, [Songlin Yang\*](https://sustcsonglin.github.io), [Ruijie Zhu](https://ruijie-zhu.github.io), [Yue Zhang](https://hillzhang1999.github.io), [Leyang Cui](https://nealcly.github.io), Yiqiao Wang, Bolun Wang, [Freda Shi](https://home.ttic.edu/~freda), [Bailin Wang](https://berlino.github.io/), Wei Bi, Peng Zhou, Guohong Fu<br>
 **NIPS 2024** (Poster) <br>
 [![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/gsa.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2409.07146)
@@ -25,20 +25,20 @@ As a disciple of parallel programming, I am passionate about exploring technique
 [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F3d3b13ae755b87aa1425e2294263186bc8723740%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Gated-Slot-Attention-for-Efficient-Linear-Time-Zhang-Yang/3d3b13ae755b87aa1425e2294263186bc8723740)
 
 * Parallelizing Linear Transformers with the Delta Rule over Sequence Length <br>
-Songlin Yang, Bailin Wang, **Yu Zhang**, Yikang Shen, Yoon Kim <br>
+[Songlin Yang](https://sustcsonglin.github.io), [Bailin Wang](https://berlino.github.io), **Yu Zhang**, [Yikang Shen](https://mitibmwatsonailab.mit.edu/people/yikang-shen), [Yoon Kim](https://people.csail.mit.edu/yoonkim) <br>
 **NIPS 2024** (Poster) <br>
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2406.06484)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/sustcsonglin/flash-linear-attention)
 [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fd3d1acfe37fe8d98e06dcf63b6e6dbe90cca061d%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Parallelizing-Linear-Transformers-with-the-Delta-Yang-Wang/d3d1acfe37fe8d98e06dcf63b6e6dbe90cca061d)
 
 * Scalable MatMul-free Language Modeling <br>
-Rui-Jie Zhu, **Yu Zhang**, Ethan Sifferman, Tyler Sheaves, Yiqiao Wang, Dustin Richmond, Peng Zhou, Jason K. Eshraghian <br>
+[Ruijie Zhu](https://ruijie-zhu.github.io), **Yu Zhang**, Ethan Sifferman, Tyler Sheaves, Yiqiao Wang, Dustin Richmond, Peng Zhou, Jason K. Eshraghian <br>
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2406.02528)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/ridgerchu/matmulfreellm/)
 [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F401c4147375b016d4758cf2dd859232a8271fdcd%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Scalable-MatMul-free-Language-Modeling-Zhu-Zhang/401c4147375b016d4758cf2dd859232a8271fdcd)
 
 * Non-autoregressive Text Editing with Copy-aware Latent Alignments <br>
-**Yu Zhang**\*, Yue Zhang\*, Leyang Cui, Guohong Fu <br>
+**Yu Zhang**\*, [Yue Zhang\*](https://hillzhang1999.github.io), [Leyang Cui](https://nealcly.github.io), Guohong Fu <br>
 **EMNLP 2023** <br>
 [![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/emnlp/2023/ctc.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2310.07821)
@@ -47,7 +47,7 @@ Rui-Jie Zhu, **Yu Zhang**, Ethan Sifferman, Tyler Sheaves, Yiqiao Wang, Dustin R
 [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F116277fd27c97d50bba2d8023d3c590c1ea8187b%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Non-autoregressive-Text-Editing-with-Copy-aware-Zhang-Zhang/116277fd27c97d50bba2d8023d3c590c1ea8187b)
 
 * Semantic Role Labeling as Dependency Parsing: Exploring Latent Tree Structures Inside Arguments <br>
-**Yu Zhang**, Qingrong Xia, Shilin Zhou, Yong Jiang, Guohong Fu, Min Zhang <br>
+**Yu Zhang**, Qingrong Xia, Shilin Zhou, [Yong Jiang](https://jiangyong.site), Guohong Fu, Min Zhang <br>
 **COLING 2022** <br>
 [![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/coling/2022/crfsrl.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2110.06865)
@@ -65,7 +65,7 @@ Shilin Zhou, Qingrong Xia, Zhenghua Li, **Yu Zhang**, Yu Hong, Min Zhang <br>
 [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fea9a2d14672c3cc0ff92510386f46fb2b152570c%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Fast-and-Accurate-End-to-End-Span-based-Semantic-as-Zhou-Xia/ea9a2d14672c3cc0ff92510386f46fb2b152570c)
 
 * Fast and Accurate Neural CRF Constituency Parsing <br>
-**Yu Zhang**\*, Houquan Zhou\*, Zhenghua Li <br>
+**Yu Zhang**\*, [Houquan Zhou\*](https://cv.hqzhou.com), Zhenghua Li <br>
 **IJCAI 2020** <br>
 [![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/ijcai/2020/crfpar.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2008.03736)
@@ -83,7 +83,7 @@ Shilin Zhou, Qingrong Xia, Zhenghua Li, **Yu Zhang**, Yu Hong, Min Zhang <br>
 [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2Fce18780963b067a1295fc847e7ab33f2fcbfaca1%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Efficient-Second-Order-TreeCRF-for-Neural-Parsing-Zhang-Li/ce18780963b067a1295fc847e7ab33f2fcbfaca1)
 
 * Is POS Tagging Necessary or Even Helpful for Neural Dependency Parsing?<br>
-Houquan Zhou\*, **Yu Zhang**\*, Zhenghua Li, Min Zhang <br>
+[Houquan Zhou\*](https://cv.hqzhou.com), **Yu Zhang**\*, Zhenghua Li, Min Zhang <br>
 **NLPCC 2020** (<strong><i style="color:#e74d3c">Best Paper Award</i></strong>)<br>
 [![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/nlpcc/2020/posdep.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2003.03204)
