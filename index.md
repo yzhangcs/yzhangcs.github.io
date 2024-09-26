@@ -7,7 +7,7 @@ I am currently a third-year PhD student at [HLT@SUDA](http://hlt.suda.edu.cn), a
 I expect to graduate in 2025. 
 Prior to this, I received my M. Eng. degree from Soochow University in 2021.
   
-My early research focused on structured prediction tasks, specifically dependency parsing and constituency parsing. 
+~~*My early research focused on structured prediction tasks, specifically dependency parsing and constituency parsing.*~~
 Currently, my research interests have evolved to focus on developing efficient text generation models. 
 I am particularly intrigued by the prospect of developing hardware-efficient methods for linear-time sequence modeling. 
 As a disciple of parallel programming, I am passionate about exploring techniques that harness the power of parallel computing to develop scalable subquadratic models.
