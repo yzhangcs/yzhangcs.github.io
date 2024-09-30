@@ -19,7 +19,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 * Gated Slot Attention for Efficient Linear-Time Sequence Modeling <br>
 **Yu Zhang**\*, [Songlin Yang\*](https://sustcsonglin.github.io), [Ruijie Zhu](https://ruijie-zhu.github.io), [Yue Zhang](https://hillzhang1999.github.io), [Leyang Cui](https://nealcly.github.io), Yiqiao Wang, Bolun Wang, [Freda Shi](https://home.ttic.edu/~freda), [Bailin Wang](https://berlino.github.io/), Wei Bi, Peng Zhou, Guohong Fu<br>
 **NeurIPS 2024**<br>
-[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/gsa.pdf)
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/neurips/2024/gsa.pdf)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square)](https://arxiv.org/abs/2409.07146)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github)](https://github.com/sustcsonglin/flash-linear-attention)
 [![citation](https://img.shields.io/badge/dynamic/json?label=citation&query=citationCount&url=https%3A%2F%2Fapi.semanticscholar.org%2Fgraph%2Fv1%2Fpaper%2F3d3b13ae755b87aa1425e2294263186bc8723740%3Ffields%3DcitationCount&color=d6d6d6&style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Gated-Slot-Attention-for-Efficient-Linear-Time-Zhang-Yang/3d3b13ae755b87aa1425e2294263186bc8723740)
