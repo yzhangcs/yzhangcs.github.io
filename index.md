@@ -20,6 +20,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 **Yu Zhang**\*, [Songlin Yang\*](https://sustcsonglin.github.io), [Ruijie Zhu](https://ruijie-zhu.github.io), [Yue Zhang](https://hillzhang1999.github.io), [Leyang Cui](https://nealcly.github.io), Yiqiao Wang, Bolun Wang, [Freda Shi](https://home.ttic.edu/~freda), [Bailin Wang](https://berlino.github.io/), Wei Bi, Peng Zhou, Guohong Fu<br>
 **NeurIPS 2024**<br>
 [![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square&logo=overleaf)](https://yzhang.site/assets/pubs/neurips/2024/gsa.pdf)
+[![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/neurips/2024/gsa.bib)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square&logo=arxiv&logoColor=b31b1b)](https://arxiv.org/abs/2409.07146)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github&logoColor=181717)](https://github.com/sustcsonglin/flash-linear-attention)
 [![citation](https://img.shields.io/badge/citation-0-d6d6d6.svg?style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Gated-Slot-Attention-for-Efficient-Linear-Time-Zhang-Yang/3d3b13ae755b87aa1425e2294263186bc8723740)
@@ -27,12 +28,16 @@ As a disciple of parallel programming, I am passionate about exploring technique
 * Parallelizing Linear Transformers with the Delta Rule over Sequence Length <br>
 [Songlin Yang](https://sustcsonglin.github.io), [Bailin Wang](https://berlino.github.io), **Yu Zhang**, [Yikang Shen](https://mitibmwatsonailab.mit.edu/people/yikang-shen), [Yoon Kim](https://people.csail.mit.edu/yoonkim) <br>
 **NeurIPS 2024**<br>
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square&logo=overleaf)](https://yzhang.site/assets/pubs/neurips/2024/deltanet.pdf)
+[![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/neurips/2024/deltanet.bib)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square&logo=arxiv&logoColor=b31b1b)](https://arxiv.org/abs/2406.06484)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github&logoColor=181717)](https://github.com/sustcsonglin/flash-linear-attention)
 [![citation](https://img.shields.io/badge/citation-0-d6d6d6.svg?style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Parallelizing-Linear-Transformers-with-the-Delta-Yang-Wang/d3d1acfe37fe8d98e06dcf63b6e6dbe90cca061d)
 
 * Scalable MatMul-free Language Modeling <br>
 [Ruijie Zhu](https://ruijie-zhu.github.io), **Yu Zhang**, Ethan Sifferman, Tyler Sheaves, Yiqiao Wang, Dustin Richmond, Peng Zhou, Jason K. Eshraghian <br>
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square&logo=overleaf)](https://yzhang.site/assets/pubs/neurips/2024/mmf.pdf)
+[![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/neurips/2024/mmf.bib)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square&logo=arxiv&logoColor=b31b1b)](https://arxiv.org/abs/2406.02528)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github&logoColor=181717)](https://github.com/ridgerchu/matmulfreellm/)
 [![citation](https://img.shields.io/badge/citation-0-d6d6d6.svg?style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Scalable-MatMul-free-Language-Modeling-Zhu-Zhang/401c4147375b016d4758cf2dd859232a8271fdcd)
