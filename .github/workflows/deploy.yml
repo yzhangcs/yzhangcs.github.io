@@ -1,4 +1,4 @@
-name: arxiv
+name: deploy
 
 on:
   schedule:
@@ -43,6 +43,10 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
+      - name: Update citations
+        run: |
+          pip install -U semanticscholar
+          python citation.py
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: |
