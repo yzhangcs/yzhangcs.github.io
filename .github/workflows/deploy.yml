@@ -30,7 +30,7 @@ jobs:
         python-version: [3.8]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
@@ -47,6 +47,12 @@ jobs:
         run: |
           pip install -U semanticscholar
           python citation.py
+      - name: Compile CV files
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: assets/files
+          root_file: cv.tex
+          latexmk_use_xelatex: true
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: |
