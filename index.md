@@ -12,6 +12,10 @@ Currently, my research interests have evolved to focus on developing efficient t
 I am particularly intrigued by the prospect of developing hardware-efficient methods for linear-time sequence modeling. 
 As a disciple of parallel programming, I am passionate about exploring techniques that harness the power of parallel computing to develop scalable subquadratic models.
 
+### News:
+
+* :rocket::rocket: [GSA]((https://arxiv.org/abs/2409.07146)) and [DeltaNet](https://arxiv.org/abs/2406.06484) have been accepted by NeurIPS'24 :fire::fire: 
+
 ### Publications:
 
 [[Semantic Scholar](https://www.semanticscholar.org/author/Yu-Zhang/49890808)] [[Google Scholar](https://scholar.google.com/citations?user=y3JK-1oAAAAJ)] [[DBLP](https://dblp.org/pid/50/671-92.html)] (\* denotes equal contributions)
@@ -36,6 +40,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 * Scalable MatMul-free Language Modeling <br>
 [Ruijie Zhu](https://ruijie-zhu.github.io), **Yu Zhang**, Ethan Sifferman, Tyler Sheaves, Yiqiao Wang, Dustin Richmond, Peng Zhou, Jason K. Eshraghian <br>
+**Preprint**<br>
 [![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square&logo=overleaf)](https://yzhang.site/assets/pubs/neurips/2024/mmf.pdf)
 [![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/neurips/2024/mmf.bib)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square&logo=arxiv&logoColor=b31b1b)](https://arxiv.org/abs/2406.02528)
