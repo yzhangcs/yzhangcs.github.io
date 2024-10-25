@@ -63,7 +63,7 @@ AUTHORS = [
     'Zhen Qin'
 ]
 
-CONFS = ['ACL', 'EMNLP', 'NAACL', 'COLING', 'ICLR', 'NIPS', 'NEURIPS', 'ICML', 'JMLR']
+CONFS = ['ACL', 'COLING', 'COLM', 'EMNLP', 'ICLR', 'ICML', 'JMLR', 'NAACL', 'NEURIPS', 'NIPS']
 CLASSES = ['cs.CL', 'cs.LG']
 
 
