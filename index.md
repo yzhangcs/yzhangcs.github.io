@@ -36,7 +36,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 [![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/neurips/2024/deltanet.bib)
 [![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square&logo=arxiv&logoColor=b31b1b)](https://arxiv.org/abs/2406.06484)
 [![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github&logoColor=181717)](https://github.com/sustcsonglin/flash-linear-attention)
-[![citation](https://img.shields.io/badge/citation-0-d6d6d6.svg?style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Parallelizing-Linear-Transformers-with-the-Delta-Yang-Wang/d3d1acfe37fe8d98e06dcf63b6e6dbe90cca061d)
+[![citation](https://img.shields.io/badge/citation-0-d6d6d6.svg?style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Parallelizing-Linear-Transformers-with-the-Delta-Yang-Wang/7afaabb73bec969c0937be46b9f0f757e07c8534)
 
 * Scalable MatMul-free Language Modeling <br>
 [Ruijie Zhu](https://ruijie-zhu.github.io), **Yu Zhang**, Ethan Sifferman, Tyler Sheaves, Yiqiao Wang, Dustin Richmond, Peng Zhou, Jason K. Eshraghian <br>
