@@ -49,7 +49,7 @@ AUTHORS = [
     'Giorgio Satta', 'Graham Neubig',
     'Imanol Schlag', 'Ivan Titov',
     'Jan Buys', 'Jason Eisner', 'Justin T. Chiu',
-    'Kazuki Irie', 'Kevin Gimpel', 
+    'Kazuki Irie', 'Kevin Gimpel',
     'Li Dong', 'Lifu Tu', 'Lingpeng Kong',
     'Mathieu Blondel', 'Michael Collins', 'Michael Zhang', 'Mirella Lapata',
     'Noah A. Smith',
@@ -95,7 +95,7 @@ def collect(name: str) -> Iterable:
     try:
         for paper in arxiv.Search(query=name, sort_by=arxiv.SortCriterion.LastUpdatedDate).results():
             yield paper
-    except arxiv.arxiv.UnexpectedEmptyPageError:
+    except arxiv.UnexpectedEmptyPageError:
         pass
 
 
