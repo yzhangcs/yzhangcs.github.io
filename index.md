@@ -112,23 +112,15 @@ Wei Jiang, Zhenghua Li, **Yu Zhang**, Min Zhang <br>
 ### Projects:
 
 * **FLA**: A Triton-Based Library for Hardware-Efficient Implementations of Linear Attention Mechanism <br>
-[![code](https://img.shields.io/badge/code-orange?style=flat-square&logo=github)](https://github.com/sustcsonglin/flash-linear-attention)
+[![code](https://img.shields.io/badge/code-orange?style=flat-square&logo=github)](https://github.com/fla-org/flash-linear-attention)
+[![release](https://img.shields.io/github/v/release/fla-org/flash-linear-attention?style=flat-square)](https://github.com/fla-org/flash-linear-attention/releases)
 <br>
 
 * **SuPar**: State-of-the-art syntactic/semantic parsers <br>
 [![code](https://img.shields.io/badge/code-orange?style=flat-square&logo=github)](https://github.com/yzhangcs/parser)
-[![docs](https://img.shields.io/github/actions/workflow/status/yzhangcs/parser/pages.yml?branch=main&label=docs&style=flat-square)](https://parser.yzhang.site)
 [![release](https://img.shields.io/github/v/release/yzhangcs/parser?style=flat-square)](https://github.com/yzhangcs/parser/releases)
-[![downloads](https://img.shields.io/github/downloads/yzhangcs/parser/total?style=flat-square)](https://pypistats.org/packages/supar)
 <br>
 A Python package designed for structured prediction, including reproductions of many state-of-the-art syntactic/semantic parsers (with pretrained models for more than 19 languages), and highly-parallelized implementations of several well-known structured prediction algorithms.
-
-### Thesis:
-
-* TreeCRF-based High-Order Syntactic Parsing. Master Thesis, Soochow University, 2021 <br>
-[![pdf](https://img.shields.io/badge/pdf-d6d6d6?style=flat-square)](https://yzhang.site/assets/pubs/master-thesis.pdf)
-[![latex](https://img.shields.io/badge/latex-d6d6d6?style=flat-square&logo=github&logoColor=181717)](https://github.com/yzhangcs/master-thesis)
-<br>
 
 ### Experience
 
