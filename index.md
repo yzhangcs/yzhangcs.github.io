@@ -12,10 +12,6 @@ Currently, my research interests have evolved to focus on developing efficient t
 I am particularly intrigued by the prospect of developing hardware-efficient methods for linear-time sequence modeling. 
 As a disciple of parallel programming, I am passionate about exploring techniques that harness the power of parallel computing to develop scalable subquadratic models.
 
-### News:
-
-* :rocket::rocket: [GSA]((https://arxiv.org/abs/2409.07146)) and [DeltaNet](https://arxiv.org/abs/2406.06484) have been accepted by NeurIPS'24 :fire::fire: 
-
 ### Publications:
 
 [[Semantic Scholar](https://www.semanticscholar.org/author/Yu-Zhang/49890808)] [[Google Scholar](https://scholar.google.com/citations?user=y3JK-1oAAAAJ)] [[DBLP](https://dblp.org/pid/50/671-92.html)] (\* denotes equal contributions)
