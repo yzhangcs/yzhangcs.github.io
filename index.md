@@ -16,6 +16,9 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 [[Semantic Scholar](https://www.semanticscholar.org/author/Yu-Zhang/49890808)] [[Google Scholar](https://scholar.google.com/citations?user=y3JK-1oAAAAJ)] [[DBLP](https://dblp.org/pid/50/671-92.html)] (\* denotes equal contributions)
 
+* Kimi Linear: An Expressive, Eﬀicient Attention Architecture <br>
+**Yu Zhang**, [Zongyu Lin](https://rafa-zy.github.io), [Xingcheng Yao](https://yaoxingcheng.github.io), Jiaxi Hu, Fanqing Meng, Chengyin Liu, Xin Men, [Songlin Yang](https://sustcsonglin.github.io), Zhiyuan Li, Wentao Li, Enzhe Lu, Weizhou Liu, Yanru Chen, Weixin Xu, Longhui Yu, Yejie Wang, Yu Fan, Longguang Zhong, Enming Yuan, Dehao Zhang, Yizhi Zhang, TY Liu, Haiming Wang, Shengjun Fang, Weiran He, Shaowei Liu, Yiwei Li, Jianlin Su, Jiezhong Qiu, Bo Pang, Junjie Yan, Zhejun Jiang, Weixiao Huang, Bohong Yin, Jiacheng You, Chu Wei, Zhengtao Wang, Chao Hong, Yutian Chen, Guanduo Chen, Yucheng Wang, Huabin Zheng, Feng Wang, Yibo Liu, Mengnan Dong, Zheng Zhang, Siyuan Pan, Wenhao Wu, Yuhao Wu, Longyu Guan, Jiawen Tao, Guohong Fu, Xinran Xu, Yuzhi Wang, Guokun Lai, Yuxin Wu, Xinyu Zhou, Zhilin Yang, Yulun Du<br>
+
 * Gated Slot Attention for Efficient Linear-Time Sequence Modeling <br>
 **Yu Zhang**\*, [Songlin Yang\*](https://sustcsonglin.github.io), [Ruijie Zhu](https://ruijie-zhu.github.io), [Yue Zhang](https://hillzhang1999.github.io), [Leyang Cui](https://nealcly.github.io), Yiqiao Wang, Bolun Wang, [Freda Shi](https://home.ttic.edu/~freda), [Bailin Wang](https://berlino.github.io/), Wei Bi, Peng Zhou, Guohong Fu<br>
 **NeurIPS 2024**<br>
