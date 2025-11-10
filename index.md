@@ -18,6 +18,12 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 * Kimi Linear: An Expressive, Eﬀicient Attention Architecture <br>
 **Yu Zhang**, [Zongyu Lin](https://rafa-zy.github.io), [Xingcheng Yao](https://yaoxingcheng.github.io), Jiaxi Hu, Fanqing Meng, Chengyin Liu, Xin Men, [Songlin Yang](https://sustcsonglin.github.io), Zhiyuan Li, Wentao Li, Enzhe Lu, Weizhou Liu, Yanru Chen, Weixin Xu, Longhui Yu, Yejie Wang, Yu Fan, Longguang Zhong, Enming Yuan, Dehao Zhang, Yizhi Zhang, TY Liu, Haiming Wang, Shengjun Fang, Weiran He, Shaowei Liu, Yiwei Li, Jianlin Su, Jiezhong Qiu, Bo Pang, Junjie Yan, Zhejun Jiang, Weixiao Huang, Bohong Yin, Jiacheng You, Chu Wei, Zhengtao Wang, Chao Hong, Yutian Chen, Guanduo Chen, Yucheng Wang, Huabin Zheng, Feng Wang, Yibo Liu, Mengnan Dong, Zheng Zhang, Siyuan Pan, Wenhao Wu, Yuhao Wu, Longyu Guan, Jiawen Tao, Guohong Fu, Xinran Xu, Yuzhi Wang, Guokun Lai, Yuxin Wu, Xinyu Zhou, Zhilin Yang, Yulun Du<br>
+**Preprint**<br>
+[![paper](https://img.shields.io/badge/paper-d6d6d6.svg?style=flat-square&logo=overleaf)](https://yzhang.site/assets/pubs/techreport/2025/kda.pdf)
+[![bib](https://img.shields.io/badge/bib-d6d6d6.svg?style=flat-square)](https://yzhang.site/assets/pubs/techreport/2025/kda.bib)
+[![arxiv](https://img.shields.io/badge/arxiv-d6d6d6.svg?style=flat-square&logo=arxiv&logoColor=b31b1b)](https://arxiv.org/abs/2510.26692)
+[![code](https://img.shields.io/badge/code-d6d6d6.svg?style=flat-square&logo=github&logoColor=181717)](https://github.com/MoonshotAI/Kimi-Linear)
+[![citation](https://img.shields.io/badge/citation-0-d6d6d6.svg?style=flat-square&logo=semanticscholar)](https://www.semanticscholar.org/paper/Kimi-Linear%3A-An-Expressive%2C-Efficient-Attention-Zhang-Lin/fc6412d9ec7a6a07ce9ef15273279a0021d09422)
 
 * Gated Slot Attention for Efficient Linear-Time Sequence Modeling <br>
 **Yu Zhang**\*, [Songlin Yang\*](https://sustcsonglin.github.io), [Ruijie Zhu](https://ruijie-zhu.github.io), [Yue Zhang](https://hillzhang1999.github.io), [Leyang Cui](https://nealcly.github.io), Yiqiao Wang, Bolun Wang, [Freda Shi](https://home.ttic.edu/~freda), [Bailin Wang](https://berlino.github.io/), Wei Bi, Peng Zhou, Guohong Fu<br>
