@@ -1,0 +1,112 @@
+/* Modern Publication Card Layout */
+
+.publications-section {
+  margin-top: 2rem;
+}
+
+.pub-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.pub-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .pub-card {
+    background: #2a2b36;
+    border-color: #3a3b46;
+  }
+
+  .pub-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Publication title */
+.pub-card papertitle {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  color: #043361;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pub-card papertitle {
+    color: rgb(62, 183, 240);
+  }
+}
+
+/* Authors */
+.pub-card .authors {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Venue and awards */
+.pub-card .venue {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.pub-card .venue strong {
+  color: #043361;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pub-card .venue strong {
+    color: rgb(62, 183, 240);
+  }
+}
+
+/* Badge links */
+.pub-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pub-badges img {
+  height: 20px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.pub-badges a:hover img {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .pub-card {
+    padding: 1rem;
+  }
+
+  .pub-card papertitle {
+    font-size: 1rem;
+  }
+
+  .pub-badges {
+    gap: 0.4rem;
+  }
+
+  .pub-badges img {
+    height: 18px;
+  }
+}

@@ -37,7 +37,32 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--gl
 
 .publications ol.bibliography { list-style: none; padding: 0; margin-top: 0; }
 
-.publications ol.bibliography li { min-height: 110px; margin-bottom: 0.5rem; }
+.publications ol.bibliography li {
+  min-height: 110px;
+  margin-bottom: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  list-style: none;
+}
+
+.publications ol.bibliography li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .publications ol.bibliography li {
+    background: #2a2b36;
+    border-color: #3a3b46;
+  }
+
+  .publications ol.bibliography li:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
 
 .publications ol.bibliography li .abbr { height: 8rem; margin-bottom: 0.5rem; }
 
@@ -57,12 +82,31 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--gl
 
 .publications ol.bibliography li .author > em { border-bottom: 1px solid; font-style: normal; }
 
-.publications ol.bibliography li .links a.btn { color: #000000; border: 1px solid #000000; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
+.publications ol.bibliography li .links a.btn {
+  color: #000000;
+  border: 1px solid #000000;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  transition: all 0.2s ease;
+}
 
 @media (prefers-color-scheme: dark) {
-.publications ol.bibliography li .links a.btn { color: #FFFFFF; border: 1px solid #FFFFFF; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
-
+  .publications ol.bibliography li .links a.btn {
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
   }
+}
+
+[data-theme="dark"] .publications ol.bibliography li .links a.btn {
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
 
 .publications ol.bibliography li .links a.btn:hover { color: var(--global-theme-color); border-color: var(--global-theme-color); }
 

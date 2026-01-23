@@ -4,7 +4,7 @@
 body {
   background-color: #fff;
   padding:0px;
-  font: 16.0px/1.5 Crimson Pro, serif; 
+  font: clamp(15px, 1vw + 14px, 18px)/1.6 Crimson Pro, serif;
   color:#595959;
   font-weight:400;
   margin:0
@@ -26,7 +26,15 @@ body {
   line-height:2.5rem;
   margin-right:1rem}
 
-@media (prefers-color-scheme: dark) { .social-icons a {color: #3eb7f0 !important; }}
+@media (prefers-color-scheme: dark) {
+  .social-icons a {
+    color: #3eb7f0 !important;
+  }
+}
+
+[data-theme="dark"] .social-icons a {
+  color: #3eb7f0 !important;
+}
 
 .social-icons a:last-child{margin-right:0}.social-icons a:hover{background-color:white;
     color:black;
@@ -170,6 +178,33 @@ papertitle {
     font-size: 100%;
   }
 
+/* Theme toggle button */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #043361;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode styles with both media query and data attribute */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #20212b;
@@ -192,6 +227,67 @@ papertitle {
     color:#eeeff0;
     }
 
+    #theme-toggle {
+      background: #2a2b36;
+      border-color: #3a3b46;
+      color: #3eb7f0;
+    }
+}
+
+[data-theme="dark"] {
+  body {
+    background-color: #20212b;
+    color: #dadbdf;
+  }
+
+  autocolor{
+    color:#dadbdf;
+  }
+
+  lightonly {
+    visibility: hidden;
+  }
+
+  darkonly {
+    visibility: visible;
+  }
+
+  papertitle {
+    color:#eeeff0;
+  }
+
+  #theme-toggle {
+    background: #2a2b36;
+    border-color: #3a3b46;
+    color: #3eb7f0;
+  }
+}
+
+[data-theme="dark"] body {
+  background-color: #20212b;
+  color: #dadbdf;
+}
+
+[data-theme="dark"] autocolor {
+  color:#dadbdf;
+}
+
+[data-theme="dark"] lightonly {
+  visibility: hidden;
+}
+
+[data-theme="dark"] darkonly {
+  visibility: visible;
+}
+
+[data-theme="dark"] papertitle {
+  color:#eeeff0;
+}
+
+[data-theme="dark"] #theme-toggle {
+  background: #2a2b36;
+  border-color: #3a3b46;
+  color: #3eb7f0;
 }
 
 
@@ -255,8 +351,8 @@ h1 {
 h2 {
   color:#043361;
   font-weight: 500;
-  margin:2px 0px 15px;
-  font-size: 157%;
+  margin:2px 0px 20px;
+  font-size: clamp(20px, 1.5vw + 16px, 28px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -269,6 +365,18 @@ h2 {
   }
 }
 
+[data-theme="dark"] h1,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color:rgb(62, 183, 240);
+}
+
+[data-theme="dark"] h2 {
+  color:rgb(62, 183, 240);
+}
+
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;
 }
@@ -278,7 +386,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size: clamp(24px, 2vw + 18px, 32px);
 }
 
 a {
@@ -296,6 +404,10 @@ a:hover {
   }
 }
 
+[data-theme="dark"] a {
+  color:rgb(62, 183, 240);
+}
+
 a small {
   font-size:11px;
   color:#777;
@@ -308,8 +420,16 @@ a:hover small {
 }
 
 .wrapper {
-  width:960px;
-  margin:0 auto;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 15px;
+  }
 }
 
 blockquote {
@@ -373,7 +493,17 @@ header {
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
   padding-top:4.0em;
-  text-align:center
+  text-align:center;
+}
+
+@media screen and (max-width: 960px) {
+  header {
+    width: 100%;
+    float: none;
+    position: relative;
+    padding-top: 2em;
+    margin-bottom: 2em;
+  }
 }
 
 
@@ -432,6 +562,10 @@ strong {
   }
 }
 
+[data-theme="dark"] strong {
+  color:#eeeff0;
+}
+
 header ul li + li + li {
   border-right:none;
   width:89px;
@@ -444,10 +578,18 @@ header ul a strong {
 }
 
 section {
-  width:650px;
-  float:right;
-  padding-top:4.0em;
-  padding-bottom:50px;
+  width: 650px;
+  float: right;
+  padding-top: 4.0em;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 960px) {
+  section {
+    width: 100%;
+    float: none;
+    padding-top: 2em;
+  }
 }
 
 small {
