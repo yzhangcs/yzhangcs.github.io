@@ -2,8 +2,7 @@
 
 %A Few Useful Packages
 \usepackage{marvosym}
-\usepackage{fontspec} 					%for loading fonts
-\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\usepackage{url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[big]{layaureo} 				%better formatting of the A4 page
@@ -15,7 +14,7 @@
 \usepackage{hyperref}
 \usepackage{multirow}
 \usepackage{tabularx}
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \usepackage{lipsum}
 \usepackage{enumitem}
 % \usepackage{mathptmx}
@@ -75,7 +74,7 @@
 
 \pagestyle{empty} % non-numbered pages
 
-\font\fb=''[cmr10]'' %for use with \LaTeX command
+%\font\fb=''[cmr10]'' %for use with \LaTeX command (XeTeX only)
 
 %--------------------TITLE-------------
 \par{{\LARGE \textsc{Yu Zhang}}\bigskip\par}
@@ -83,19 +82,21 @@
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Data
 
-\begin{tabularx}{\textwidth}{@{}lll}
-      Soochow University                       & \faEnvelope & \href{mailto:yzhang.cs@outlook.com}{\texttt{yzhang.cs@outlook.com}}      \\
-      Institute of Artificial Intelligence     & \faGithub   & \href{https://github.com/yzhangcs}{\texttt{https://github.com/yzhangcs}} \\
-      School of Computer Science \& Technology & \faTwitter  & \href{https://twitter.com/yzhang_cs}{\texttt{https://twitter.com/yzhang\_cs}} \\
-      Suzhou, China                            & \faHome     & \href{https://yzhang.site}{\texttt{https://yzhang.site}}
-\end{tabularx}
+\par{{\large Moonshot AI}\bigskip\par}
+
+\begin{tabular}{@{}p{0.5\textwidth}@{}p{0.5\textwidth}@{}}
+      \makebox[1.5em][l]{\faEnvelope}\href{mailto:yzhang.cs@outlook.com}{\texttt{yzhang.cs@outlook.com}}          &
+      \makebox[1.5em][l]{\faGithub}\href{https://github.com/yzhangcs}{\texttt{https://github.com/yzhangcs}}         \\
+      \makebox[1.5em][l]{\faTwitter}\href{https://twitter.com/yzhang_cs}{\texttt{https://twitter.com/yzhang\_cs}} &
+      \makebox[1.5em][l]{\faHome}\href{https://yzhang.site}{\texttt{https://yzhang.site}}
+\end{tabular}
 
 \section{Profile}
-I am a fourth-year PhD student at HLT@SUDA, advised by Prof. Guohong Fu, and expect to graduate in 2025.
-Prior to this, I received my M. Eng. degree from Soochow University in 2021. 
+ {\color{gray}I am a final-year PhD student at Soochow University, advised by Prof. Guohong Fu.
+  Prior to this, I received my M. Eng. degree from Soochow University in 2021.
 
-\textcolor{gray}{\emph{My early research focused on structured prediction tasks, specifically dependency parsing and constituency parsing.}}
-Currently, my research interests have evolved to focus on developing efficient text generation models.
+  \emph{My early research focused on structured prediction tasks, specifically dependency parsing and constituency parsing.}}
+My research interests have evolved to focus on developing efficient text generation models.
 I am particularly intrigued by the prospect of developing hardware-efficient methods for linear-time sequence modeling.
 As a disciple of parallel programming, I am passionate about exploring techniques that harness the power of parallel computing to develop scalable subquadratic models.
 
