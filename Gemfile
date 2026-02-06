@@ -34,8 +34,15 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "webrick", "~> 1.8"
 
+# Ruby 4.0 removed these from stdlib - now bundled gems
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "ostruct"
+gem "logger"
+
 gem "jekyll-remote-theme"
 
 gem "jekyll-spaceship", group: :jekyll_plugins
-gem "jekyll-last-modified-at", group: :jekyll_plugins
+# gem "jekyll-last-modified-at", group: :jekyll_plugins  # Incompatible with Ruby 4.0
 gem "jekyll-analytics", group: :jekyll_plugins

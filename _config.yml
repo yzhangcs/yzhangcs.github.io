@@ -5,7 +5,6 @@ email: yzhang.cs (at) outlook.com
 
 plugins:
   - jekyll-spaceship
-  - jekyll-last-modified-at
   - jekyll-analytics
 
 keywords: minimal academic

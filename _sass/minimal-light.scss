@@ -4,7 +4,7 @@
 body {
   background-color: #fff;
   padding:0px;
-  font: clamp(15px, 1vw + 14px, 18px)/1.6 Crimson Pro, serif;
+  font: clamp(15px, calc(1vw + 14px), 18px)/1.6 Crimson Pro, serif;
   color:#595959;
   font-weight:400;
   margin:0
@@ -352,7 +352,7 @@ h2 {
   color:#043361;
   font-weight: 500;
   margin:2px 0px 20px;
-  font-size: clamp(20px, 1.5vw + 16px, 28px);
+  font-size: clamp(20px, calc(1.5vw + 16px), 28px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -386,7 +386,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(24px, 2vw + 18px, 32px);
+  font-size: clamp(24px, calc(2vw + 18px), 32px);
 }
 
 a {
