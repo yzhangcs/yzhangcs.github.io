@@ -5,7 +5,7 @@
 .project-card,
 .exp-card {
   background: #ffffff;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #e5e5e5;
   border-radius: 8px;
   padding: 1rem 1.25rem;
   transition: border-color 0.2s ease;
@@ -104,10 +104,12 @@
 
 .venue-badge {
   display: inline-block;
-  padding: 0.25rem 0.6rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 0.02em;
 }
 
 .venue-badge.conf {
@@ -120,16 +122,87 @@
   color: #6b7280;
 }
 
-/* Publication badges */
+/* Publication buttons */
 .pub-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.5rem;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
 }
 
-.pub-badges img {
-  height: 18px;
+.pub-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  color: #4b5563;
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.pub-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+  color: #1f2937;
+}
+
+.pub-btn.active {
+  background: #e5e7eb;
+  border-color: #6b7280;
+  color: #111827;
+}
+
+.pub-btn:hover {
+  opacity: 0.85;
+}
+
+.pub-btn.active {
+  background: #e5e7eb;
+  border-color: #6b7280;
+  color: #111827;
+}
+
+/* Abstract section */
+.pub-abstract {
+  margin-top: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.pub-abstract.hidden {
+  display: none;
+}
+
+/* BibTeX section */
+.pub-bibtex {
+  margin-top: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-family: 'SF Mono', Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #374151;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.pub-bibtex.hidden {
+  display: none;
 }
 
 /* Project header */
@@ -252,12 +325,12 @@
 
   .venue-badge.conf {
     background: rgba(121, 134, 203, 0.15);
-    color: #9fa8da;
+    color: #c5cae9;
   }
 
   .venue-badge.preprint {
     background: rgba(156, 163, 175, 0.15);
-    color: #9ca3af;
+    color: #d1d5db;
   }
 
   .exp-date {
@@ -271,7 +344,37 @@
   .exp-mentor a:hover {
     color: #9fa8da;
   }
-}
+
+  /* Dark mode buttons */
+  .pub-btn {
+    background: #2a2b36;
+    color: #d1d5db;
+    border-color: #4b5563;
+  }
+
+  .pub-btn:hover {
+    background: #374151;
+    border-color: #6b7280;
+    color: #f3f4f6;
+  }
+
+  .pub-btn.active {
+    background: #4b5563;
+    border-color: #9ca3af;
+    color: #fff;
+  }
+
+  .pub-abstract {
+    background: #2a2b36;
+    color: #d1d5db;
+    border-color: #3a3b46;
+  }
+
+  .pub-bibtex {
+    background: #2a2b36;
+    color: #d1d5db;
+    border-color: #3a3b46;
+  }
 
 [data-theme="dark"] .pub-card,
 [data-theme="dark"] .project-card,
@@ -322,12 +425,12 @@
 
 [data-theme="dark"] .venue-badge.conf {
   background: rgba(121, 134, 203, 0.15);
-  color: #9fa8da;
+  color: #c5cae9;
 }
 
 [data-theme="dark"] .venue-badge.preprint {
   background: rgba(156, 163, 175, 0.15);
-  color: #9ca3af;
+  color: #d1d5db;
 }
 
 [data-theme="dark"] .exp-date {
@@ -340,6 +443,36 @@
 
 [data-theme="dark"] .exp-mentor a:hover {
   color: #9fa8da;
+}
+
+[data-theme="dark"] .pub-btn {
+  background: #2a2b36;
+  color: #d1d5db;
+  border-color: #4b5563;
+}
+
+[data-theme="dark"] .pub-btn:hover {
+  background: #374151;
+  border-color: #6b7280;
+  color: #f3f4f6;
+}
+
+[data-theme="dark"] .pub-btn.active {
+  background: #4b5563;
+  border-color: #9ca3af;
+  color: #fff;
+}
+
+[data-theme="dark"] .pub-abstract {
+  background: #2a2b36;
+  color: #d1d5db;
+  border-color: #3a3b46;
+}
+
+[data-theme="dark"] .pub-bibtex {
+  background: #2a2b36;
+  color: #d1d5db;
+  border-color: #3a3b46;
 }
 
 /* Responsive adjustments */
