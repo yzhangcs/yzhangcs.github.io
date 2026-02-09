@@ -159,14 +159,30 @@
   color: #111827;
 }
 
-.pub-btn:hover {
-  opacity: 0.85;
+/* Arxiv button */
+.btn-arxiv {
+  background: #f9fafb;
+  color: #4b5563;
+  border-color: #d1d5db;
 }
 
-.pub-btn.active {
-  background: #e5e7eb;
-  border-color: #6b7280;
-  color: #111827;
+.btn-arxiv:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+  color: #1f2937;
+}
+
+/* Code button */
+.btn-code {
+  background: #f9fafb;
+  color: #4b5563;
+  border-color: #d1d5db;
+}
+
+.btn-code:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+  color: #1f2937;
 }
 
 /* Abstract section */
@@ -176,7 +192,7 @@
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 4px;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
   font-size: 0.95rem;
   line-height: 1.7;
   color: #374151;
