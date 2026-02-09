@@ -103,7 +103,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 </div>
 
 <div class="pub-card">
-  <div class="pub-title">Fast and Accurate End-to-End Span-based Semantic Role Labeling as Word-based Graph Parsing <span class="award-badge">🏆 Best Paper Award</span></div>
+  <div class="pub-title">Fast and Accurate End-to-End Span-based Semantic Role Labeling as Word-based Graph Parsing <span class="award-badge">Best Paper Award</span></div>
   <div class="pub-authors">Shilin Zhou, Qingrong Xia, Zhenghua Li, <strong>Yu Zhang</strong>, Yu Hong, Min Zhang</div>
   <div class="pub-venue"><span class="venue-badge conf">COLING 2022</span></div>
   <div class="pub-badges">
@@ -142,7 +142,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 </div>
 
 <div class="pub-card">
-  <div class="pub-title">Is POS Tagging Necessary or Even Helpful for Neural Dependency Parsing? <span class="award-badge">🏆 Best Paper Award</span></div>
+  <div class="pub-title">Is POS Tagging Necessary or Even Helpful for Neural Dependency Parsing? <span class="award-badge">Best Paper Award</span></div>
   <div class="pub-authors">Houquan Zhou*, <strong>Yu Zhang*</strong>, Zhenghua Li, Min Zhang</div>
   <div class="pub-venue"><span class="venue-badge conf">NLPCC 2020</span></div>
   <div class="pub-badges">
@@ -205,9 +205,31 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 </div>
 
-### Experience
+## Experience
 
-* 2025 - present. AI Researcher at Moonshot AI.
-* 2024 - 2025. Research Intern at Shanghai AI Lab, mentored by [Peng Gao](https://scholar.google.com/citations?user=ZyqFanQAAAAJ).
-* 2023 - 2024. Research Intern at Tencent AI Lab, mentored by [Wei Bi](https://scholar.google.com/citations?user=aSJcgQMAAAAJ).
-* 2020 - 2021. Research Intern at Alibaba DAMO Academy, mentored by [Yong Jiang](http://jiangyong.site).
+<div class="exp-list">
+
+<div class="exp-card">
+  <div class="exp-date">2025 - present</div>
+  <div class="exp-title">AI Researcher at Moonshot AI</div>
+</div>
+
+<div class="exp-card">
+  <div class="exp-date">2024 - 2025</div>
+  <div class="exp-title">Research Intern at Shanghai AI Lab</div>
+  <div class="exp-mentor">mentored by <a href="https://scholar.google.com/citations?user=ZyqFanQAAAAJ">Peng Gao</a></div>
+</div>
+
+<div class="exp-card">
+  <div class="exp-date">2023 - 2024</div>
+  <div class="exp-title">Research Intern at Tencent AI Lab</div>
+  <div class="exp-mentor">mentored by <a href="https://scholar.google.com/citations?user=aSJcgQMAAAAJ">Wei Bi</a></div>
+</div>
+
+<div class="exp-card">
+  <div class="exp-date">2020 - 2021</div>
+  <div class="exp-title">Research Intern at Alibaba DAMO Academy</div>
+  <div class="exp-mentor">mentored by <a href="http://jiangyong.site">Yong Jiang</a></div>
+</div>
+
+</div>

@@ -360,12 +360,11 @@ h1 {
 }
 
 h2 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color:#043361;
   font-weight: 600;
-  margin:2.5rem 0px 1.25rem;
+  margin:2rem 0px 1rem;
   font-size: clamp(20px, calc(1.5vw + 16px), 28px);
-  border-bottom: 2px solid #e5e5e5;
-  padding-bottom: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -375,7 +374,6 @@ h2 {
 
   h2 {
     color:rgb(62, 183, 240);
-    border-bottom-color: #3a3b46;
   }
 
   papertitle a {
@@ -397,7 +395,6 @@ h2 {
 
 [data-theme="dark"] h2 {
   color:rgb(62, 183, 240);
-  border-bottom-color: #3a3b46;
 }
 
 [data-theme="dark"] papertitle a {
