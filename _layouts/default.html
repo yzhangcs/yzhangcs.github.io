@@ -110,7 +110,10 @@
       {{ content }}
 
       <br>
-      <div style="font: 12px/1.2 consolas"><small>Last updated: {{ last_modified_at }}</small></div>
+      <div class="last-updated">Last updated: <span id="last-modified"></span></div>
+<script>
+document.getElementById('last-modified').textContent = new Date(document.lastModified).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'});
+</script>
 
       <br>
       <p hidden><script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?&w=50&d=HV0rAUdAxpfEQLOsVs0FcJTR2rKVI5sEQUZIDM-N_HY"></script></p>

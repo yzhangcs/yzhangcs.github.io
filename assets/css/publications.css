@@ -491,6 +491,51 @@
   border-color: #3a3b46;
 }
 
+/* Last updated footer */
+.last-updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6b7280;
+  letter-spacing: 0.03em;
+  margin-top: 2rem;
+  padding: 0.4rem 0.9rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+
+.last-updated::before {
+  content: "◷";
+  font-size: 0.9em;
+  color: #9ca3af;
+}
+
+@media (prefers-color-scheme: dark) {
+  .last-updated {
+    color: #9ca3af;
+    background: #2a2b36;
+    border-color: #3a3b46;
+  }
+  
+  .last-updated::before {
+    color: #6b7280;
+  }
+}
+
+[data-theme="dark"] .last-updated {
+  color: #9ca3af;
+  background: #2a2b36;
+  border-color: #3a3b46;
+}
+
+[data-theme="dark"] .last-updated::before {
+  color: #6b7280;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .pub-card,
