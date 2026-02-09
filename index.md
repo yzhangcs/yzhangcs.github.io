@@ -3,13 +3,14 @@ layout: default
 ---
 
 Hi, my name is Yu Zhang ([jy tʃɑŋ], 張宇/张宇 in traditional/simplified Chinese).
-I am currently a third-year PhD student at [HLT@SUDA](http://hlt.suda.edu.cn), advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/).
-I expect to graduate in 2025. 
-Prior to this, I received my M. Eng. degree from Soochow University in 2021.
-  
+I am a researcher at [Moonshot AI](https://www.moonshot.cn/).
+
+I received my Ph.D. degree from Soochow University in 2025, advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/).
+Prior to this, I received my M. Eng. and B. Eng. degrees from Soochow University in 2021 and 2018, respectively.
+
 ~~*My early research focused on structured prediction tasks, specifically dependency parsing and constituency parsing.*~~
-Currently, my research interests have evolved to focus on developing efficient text generation models. 
-I am particularly intrigued by the prospect of developing hardware-efficient methods for linear-time sequence modeling. 
+Currently, my research interests have evolved to focus on developing efficient text generation models.
+I am particularly intrigued by the prospect of developing hardware-efficient methods for linear-time sequence modeling.
 As a disciple of parallel programming, I am passionate about exploring techniques that harness the power of parallel computing to develop scalable subquadratic models.
 
 ### Publications:
@@ -130,7 +131,7 @@ A Python package designed for structured prediction, including reproductions of 
 
 ### Experience
 
-* 2021 - present. PhD student at Soochow University, advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/).
-* 2023 - 2024. Research Intern at Tencent AI Lab, mentored by [Wei Bi](https://scholar.google.com/citations?user=aSJcgQMAAAAJ&hl=en).
+* 2025 - present. AI Researcher at Moonshot AI.
+* 2024 - 2025. Research Intern at Shanghai AI Lab, mentored by [Peng Gao](https://scholar.google.com/citations?user=ZyqFanQAAAAJ).
+* 2023 - 2024. Research Intern at Tencent AI Lab, mentored by [Wei Bi](https://scholar.google.com/citations?user=aSJcgQMAAAAJ).
 * 2020 - 2021. Research Intern at Alibaba DAMO Academy, mentored by [Yong Jiang](http://jiangyong.site).
-* 2018 - 2021: M.S. student at Soochow University, advised by [Prof. Zhenghua Li](http://hlt.suda.edu.cn/~zhli).

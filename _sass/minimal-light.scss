@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
 body {
   background-color: #fff;
   padding:0px;
-  font: clamp(15px, calc(1vw + 14px), 18px)/1.6 Crimson Pro, serif;
+  font: clamp(15px, calc(1vw + 14px), 18px)/1.6 Crimson Pro, "LXGW WenKai", "霞鹜文楷", "Noto Serif SC", "Noto Serif CJK SC", "SimSun", serif;
   color:#595959;
   font-weight:400;
   margin:0
@@ -19,7 +20,7 @@ body {
   height:2.4rem;
   width:2.4rem;
   background-color:transparent;
-  color:#043361!important;
+  color:#059669!important;
   border-radius:100%;
   text-align:center;
   font-size:1.15rem;
@@ -28,12 +29,12 @@ body {
 
 @media (prefers-color-scheme: dark) {
   .social-icons a {
-    color: #3eb7f0 !important;
+    color: #a78bfa !important;
   }
 }
 
 [data-theme="dark"] .social-icons a {
-  color: #3eb7f0 !important;
+  color: #a78bfa !important;
 }
 
 .social-icons a:last-child{margin-right:0}.social-icons a:hover{background-color:white;
@@ -177,6 +178,14 @@ papertitle {
     font-weight: 600;
     font-size: 100%;
   }
+
+papertitle a {
+    color: #0891b2;
+}
+
+papertitle a:hover {
+    color: #0e7490;
+}
 
 /* Theme toggle button */
 #theme-toggle {
@@ -343,9 +352,11 @@ h3, h4, h5, h6 {
 }
 
 h1 {
+  font-family: "Crimson Pro", Georgia, serif;
   font-weight: 500;
   color:#043361;
   margin:0 0 20px;
+  letter-spacing: 0;
 }
 
 h2 {
@@ -363,6 +374,14 @@ h2 {
   h2 {
     color:rgb(62, 183, 240);
   }
+
+  papertitle a {
+    color: #22d3ee;
+  }
+
+  papertitle a:hover {
+    color: #67e8f9;
+  }
 }
 
 [data-theme="dark"] h1,
@@ -375,6 +394,14 @@ h2 {
 
 [data-theme="dark"] h2 {
   color:rgb(62, 183, 240);
+}
+
+[data-theme="dark"] papertitle a {
+  color: #22d3ee;
+}
+
+[data-theme="dark"] papertitle a:hover {
+  color: #67e8f9;
 }
 
 p, ul, ol, table, pre, dl {
@@ -390,22 +417,22 @@ h1 {
 }
 
 a {
-  color:#39c;
+  color:#2563eb;
   text-decoration:none;
 }
 
 a:hover {
-  color:#069;
+  color:#1d4ed8;
 }
 
 @media (prefers-color-scheme: dark) {
   a {
-    color:rgb(62, 183, 240);
+    color:#60a5fa;
   }
 }
 
 [data-theme="dark"] a {
-  color:rgb(62, 183, 240);
+  color:#60a5fa;
 }
 
 a small {
