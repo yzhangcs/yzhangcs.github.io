@@ -38,7 +38,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-abstract hidden">
     We introduce Kimi Linear, a novel attention architecture that achieves expressive power comparable to softmax attention while maintaining linear time complexity. Our approach combines the delta rule with gated slot attention to enable efficient sequence modeling. Experimental results demonstrate competitive performance on language modeling benchmarks with significantly improved inference efficiency.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/techreport/2025/kda.bib"></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/techreport/2025/kda.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 <div class="pub-card">
@@ -55,7 +55,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-abstract hidden">
     Linear attention has emerged as a promising alternative to softmax attention for its efficient computation and comparable performance. In this work, we propose Gated Slot Attention (GSA), a new linear attention mechanism that combines the benefits of gated linear attention and slot-based memory. GSA achieves strong performance on language modeling tasks while maintaining linear complexity with respect to sequence length.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/neurips/2024/gsa.bib"></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/neurips/2024/gsa.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 <div class="pub-card">
@@ -72,7 +72,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-abstract hidden">
     Linear attention mechanisms offer efficient sequence modeling but lack the expressive power of softmax attention. We propose a novel parallelization scheme for linear transformers using the delta rule, enabling efficient training while maintaining the benefits of linear complexity. Our approach allows for effective modeling of sequential dependencies with significantly reduced computational cost.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/neurips/2024/deltanet.bib"></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/neurips/2024/deltanet.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 <div class="pub-card">
@@ -89,7 +89,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-abstract hidden">
     Matrix multiplication (MatMul) dominates the computational cost of language models. We propose a scalable MatMul-free language modeling approach that eliminates expensive matrix multiplications while maintaining competitive performance. Our method enables efficient deployment on hardware with limited resources.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/neurips/2024/mmf.bib"></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/neurips/2024/mmf.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 <div class="pub-card">
@@ -106,7 +106,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-abstract hidden">
     Non-autoregressive text editing models offer efficient text generation by predicting edits rather than tokens. We propose copy-aware latent alignments to improve the accuracy of edit-based models by better handling copy operations. Our approach achieves state-of-the-art results on text editing benchmarks with significantly faster inference.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/emnlp/2023/ctc.bib"></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/emnlp/2023/ctc.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 <div class="pub-card">
@@ -123,7 +123,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-abstract hidden">
     Semantic role labeling (SRL) is typically treated as a sequence labeling or span prediction task. We explore an alternative formulation where SRL is cast as dependency parsing, revealing latent tree structures inside semantic arguments. Our approach leverages dependency parsing techniques to capture hierarchical relationships between arguments.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/coling/2022/crfsrl.bib"></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/coling/2022/crfsrl.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 <div class="pub-card">
@@ -140,7 +140,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-abstract hidden">
     Span-based semantic role labeling has achieved great success but often requires complex pipeline architectures. We reformulate SRL as word-based graph parsing, enabling fast and accurate end-to-end processing. Our approach won the Best Paper Award at COLING 2022 for its elegant formulation and strong empirical results.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/coling/2022/graphsrl.bib"></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/coling/2022/graphsrl.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 <div class="pub-card">
@@ -157,7 +157,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-abstract hidden">
     Constituency parsing is a fundamental NLP task requiring both accuracy and efficiency. We propose a fast and accurate neural CRF approach that achieves state-of-the-art results with significantly reduced computational cost. Our method combines neural encoding with efficient CRF inference for optimal performance.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/ijcai/2020/crfpar.bib"></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/ijcai/2020/crfpar.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 <div class="pub-card">
@@ -174,7 +174,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-abstract hidden">
     Dependency parsing benefits from structured prediction with TreeCRFs, but second-order models are computationally expensive. We propose efficient algorithms for second-order TreeCRF inference that maintain accuracy while significantly reducing training time. Our approach enables practical use of rich structural features.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/acl/2020/crfpar.bib"></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/acl/2020/crfpar.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 <div class="pub-card">
@@ -191,7 +191,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-abstract hidden">
     Part-of-speech (POS) tagging has long been considered essential for dependency parsing. We investigate whether POS tagging is still necessary in the era of neural networks, providing empirical analysis on the contribution of POS tags to parsing performance. Our findings challenge conventional wisdom and won the Best Paper Award at NLPCC 2020.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/nlpcc/2020/posdep.bib"></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/nlpcc/2020/posdep.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 <div class="pub-card">
@@ -208,7 +208,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-abstract hidden">
     Universal Conceptual Cognitive Annotation (UCCA) provides a cross-lingual semantic representation. We approach UCCA graph parsing by reducing it to constituent tree parsing, leveraging existing parsing techniques for tree structures. Our system achieved competitive results at the SemEval-2019 shared task.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/semeval/2019/const.bib"></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/semeval/2019/const.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 </div>

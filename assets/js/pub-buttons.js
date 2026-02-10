@@ -77,7 +77,7 @@ function closeAllExpanded() {
 }
 
 function loadBibContent(container, url) {
-  container.textContent = 'Loading...';
+  container.innerHTML = '<pre><code class="language-bibtex">Loading...</code></pre>';
   
   fetch(url)
     .then(function(response) {
@@ -87,12 +87,17 @@ function loadBibContent(container, url) {
       return response.text();
     })
     .then(function(text) {
-      container.textContent = text;
+      var codeEl = container.querySelector('code');
+      codeEl.textContent = text;
       container.setAttribute('data-loaded', 'true');
+      // Highlight the code
+      if (window.Prism) {
+        Prism.highlightElement(codeEl);
+      }
     })
     .catch(function(error) {
       console.error('Error loading bib:', error);
-      container.textContent = 'Error loading bib file';
+      container.innerHTML = '<pre><code class="language-bibtex">Error loading bib file</code></pre>';
     });
 }
 

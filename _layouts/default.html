@@ -29,6 +29,7 @@
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin=anonymous>
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/pub.css">
     <link rel="stylesheet" href="./assets/css/publications.css">
@@ -37,6 +38,8 @@
     <script src="./assets/js/theme-toggle.js"></script>
     <script src="./assets/js/arxiv-pagination.js"></script>
     <script src="./assets/js/pub-buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bibtex.min.js"></script>
 
   </head>
   <body>
@@ -112,7 +115,7 @@
       <br>
       <div class="last-updated">Last updated: <span id="last-modified"></span></div>
 <script>
-document.getElementById('last-modified').textContent = new Date(document.lastModified).toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'});
+document.getElementById('last-modified').textContent = new Date(document.lastModified).toISOString().split('T')[0];
 </script>
 
       <br>
