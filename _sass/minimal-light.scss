@@ -5,7 +5,7 @@
 body {
   background-color: #fff;
   padding:0px;
-  font: clamp(15px, calc(1vw + 14px), 18px)/1.6 Crimson Pro, "LXGW WenKai", "霞鹜文楷", "Noto Serif SC", "Noto Serif CJK SC", "SimSun", serif;
+  font: clamp(14px, calc(1vw + 13px), 17px)/1.6 "Spectral", "LXGW WenKai", "霞鹜文楷", "Noto Serif SC", "Noto Serif CJK SC", "SimSun", serif;
   color:#595959;
   font-weight:400;
   margin:0
@@ -180,7 +180,7 @@ education {
     font-size: 115%;
   }
 papertitle {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 100%;
   }
 
@@ -351,22 +351,22 @@ papertitle a:hover {
     }
 
 h3, h4, h5, h6 {
-  font-weight: 600;
-  color:#043361;
+  font-weight: 400;
+  color:#1e3a5f;
   margin:0 0 20px;
 }
 
 h1 {
-  font-family: "Crimson Pro", Georgia, serif;
-  font-weight: 500;
-  color:#043361;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: 600;
+  color:#1e3a5f;
   margin:0 0 20px;
   letter-spacing: 0;
 }
 
 h2 {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  color:#043361;
+  color:#1e3a5f;
   font-weight: 600;
   margin:2rem 0px 1rem;
   font-size: clamp(20px, calc(1.5vw + 16px), 28px);

@@ -30,7 +30,7 @@
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin=anonymous>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/pub.css">
@@ -143,10 +143,10 @@
         <h1>{{ site.title }}</h1>
 
         {% if site.position %}
-        <position style="font-size:1.10rem;">{{ site.position }}</position>
+        <position style="font-size:15px; font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 400; letter-spacing: 0.03em;">{{ site.position }}</position>
         <br>
         {% endif %}
-        <a href="{{ site.affiliation_link }}" rel="noopener"><autocolor>{{ site.affiliation }}</autocolor></a>
+        <a href="{{ site.affiliation_link }}" rel="noopener" style="font-size:15px; font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif; font-weight: 400; letter-spacing: 0.03em;"><autocolor>{{ site.affiliation }}</autocolor></a>
         <br>
         <email>{{ site.email }}</email>
 
