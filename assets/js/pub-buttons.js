@@ -1,6 +1,6 @@
 // Publication buttons interaction - global single expand
 document.addEventListener('DOMContentLoaded', function() {
-  // Toggle abstract
+  // Toggle abstract (for index page with bib support)
   document.querySelectorAll('.btn-paper').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
@@ -13,15 +13,66 @@ document.addEventListener('DOMContentLoaded', function() {
       
       const isHidden = abstract.classList.contains('hidden');
       
-      // Close all other expanded content first
-      closeAllExpanded();
+      if (isHidden) {
+        // Open this abstract
+        abstract.classList.remove('hidden');
+        this.classList.add('active');
+      } else {
+        // Close this abstract (toggle behavior)
+        abstract.classList.add('hidden');
+        this.classList.remove('active');
+      }
+    });
+  });
+
+  // Toggle abstract (for arxiv page without bib)
+  document.querySelectorAll('.btn-abstract').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const card = this.closest('.pub-card');
+      const abstract = card.querySelector('.pub-abstract');
+      
+      if (!abstract) return;
+      
+      const isHidden = abstract.classList.contains('hidden');
       
       if (isHidden) {
         // Open this abstract
         abstract.classList.remove('hidden');
         this.classList.add('active');
+        this.textContent = 'hide';
+      } else {
+        // Close this abstract (toggle behavior)
+        abstract.classList.add('hidden');
+        this.classList.remove('active');
+        this.textContent = 'abstract';
       }
-      // If already open, just close it (toggle behavior)
+    });
+  });
+
+  // Toggle expand/collapse abstract full text
+  document.querySelectorAll('.btn-expand').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const card = this.closest('.pub-card');
+      const abstractText = card.querySelector('.abstract-text');
+      const abstractFull = card.querySelector('.abstract-full');
+      
+      if (!abstractText || !abstractFull) return;
+      
+      const isFullHidden = abstractFull.classList.contains('hidden');
+      
+      if (isFullHidden) {
+        // Show full abstract
+        abstractText.classList.add('hidden');
+        abstractFull.classList.remove('hidden');
+        this.textContent = 'less';
+      } else {
+        // Show truncated abstract
+        abstractText.classList.remove('hidden');
+        abstractFull.classList.add('hidden');
+        this.textContent = 'more';
+      }
     });
   });
 
@@ -38,9 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
       
       const isHidden = bibContainer.classList.contains('hidden');
       
-      // Close all other expanded content first
-      closeAllExpanded();
-      
       if (isHidden) {
         // Check if bib content needs to be loaded
         const bibUrl = bibContainer.getAttribute('data-bib-url');
@@ -50,8 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Open this bib
         bibContainer.classList.remove('hidden');
         this.classList.add('active');
+      } else {
+        // Close this bib (toggle behavior)
+        bibContainer.classList.add('hidden');
+        this.classList.remove('active');
       }
-      // If already open, just close it (toggle behavior)
     });
   });
 
@@ -59,20 +110,26 @@ document.addEventListener('DOMContentLoaded', function() {
   loadCitationCounts();
 });
 
-function closeAllExpanded() {
-  // Close all abstracts with animation
+function closeAllExpanded(excludeCard) {
+  // Close all abstracts except those in the excluded card
   document.querySelectorAll('.pub-abstract:not(.hidden)').forEach(function(el) {
-    el.classList.add('hidden');
+    if (!excludeCard || !excludeCard.contains(el)) {
+      el.classList.add('hidden');
+    }
   });
   
-  // Close all bibtex with animation
+  // Close all bibtex except those in the excluded card
   document.querySelectorAll('.pub-bibtex:not(.hidden)').forEach(function(el) {
-    el.classList.add('hidden');
+    if (!excludeCard || !excludeCard.contains(el)) {
+      el.classList.add('hidden');
+    }
   });
   
-  // Remove active class from all buttons
+  // Remove active class from all buttons except those in the excluded card
   document.querySelectorAll('.pub-btn.active').forEach(function(el) {
-    el.classList.remove('active');
+    if (!excludeCard || !excludeCard.contains(el)) {
+      el.classList.remove('active');
+    }
   });
 }
 

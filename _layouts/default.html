@@ -57,21 +57,87 @@
     </script>
     <style>
         #back-to-top {
-          border: 1px solid #ccc;
-          border-radius: 0;
-          font-size: 15px;
-          width: 100px;
+          border: 1px solid #e5e7eb;
+          border-radius: 8px;
+          font-size: 13px;
+          font-family: "Alegreya Sans SC", sans-serif;
+          width: auto;
+          padding: 0 16px;
           text-align: center;
-          line-height: 30px;
-          height: 30px;
+          line-height: 32px;
+          height: 32px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        #back-to-bottom {
+          position: fixed;
+          right: 20px;
+          bottom: 60px;
+          border: 1px solid #e5e7eb;
+          border-radius: 8px;
+          font-size: 13px;
+          font-family: "Alegreya Sans SC", sans-serif;
+          padding: 0 16px;
+          text-align: center;
+          line-height: 32px;
+          height: 32px;
+          background: #fff;
+          color: #333;
+          cursor: pointer;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+          z-index: 1000;
+          opacity: 0;
+          transition: opacity 0.2s;
+        }
+        #back-to-bottom.visible {
+          opacity: 1;
+        }
+        @media (prefers-color-scheme: dark) {
+          #back-to-top {
+            border-color: #3a3b46;
+            background: #2a2b36;
+            color: #d1d5db;
+          }
+          #back-to-bottom {
+            border-color: #3a3b46;
+            background: #2a2b36;
+            color: #d1d5db;
+          }
         }
     </style>
+    <script>
+      // Add scroll to bottom button
+      document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.createElement('div');
+        btn.id = 'back-to-bottom';
+        btn.textContent = 'To Bottom';
+        document.body.appendChild(btn);
+        
+        btn.addEventListener('click', function() {
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        });
+        
+        // Show/hide based on scroll position
+        window.addEventListener('scroll', function() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+          // Show when near top, hide when near bottom
+          if (scrollTop < 200 && scrollHeight > 500) {
+            btn.classList.add('visible');
+          } else {
+            btn.classList.remove('visible');
+          }
+        });
+        
+        // Initial check
+        window.dispatchEvent(new Event('scroll'));
+      });
+    </script>
 
     <div class="wrapper">
       <header>
 
         {% if site.avatar %}
-        <a href="{{ site.canonical }}" class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
+        <a href="./" class="image avatar"><img src="{{ site.avatar }}" alt="avatar" /></a>
         {% endif %}
 
         <h1>{{ site.title }}</h1>

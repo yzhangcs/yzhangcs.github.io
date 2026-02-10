@@ -1,199 +1,159 @@
+// Daily pagination for arxiv page - one date per page
 (function() {
   'use strict';
 
-  const ITEMS_PER_PAGE = 50;
-  let currentPage = 1;
-  let totalPages = 1;
-  let allItems = [];
+  let currentPage = 0;
+  let dateGroups = []; // Array of { heading, cards, dateText }
+
+  // Convert "2026 Feb 10, Tue" to "2026-02-10"
+  function toISODate(dateText) {
+    const match = dateText.match(/(\d{4})\s+(\w{3})\s+(\d{1,2})/);
+    if (!match) return dateText;
+    const [, year, month, day] = match;
+    const monthMap = {
+      'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04',
+      'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08',
+      'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'
+    };
+    const monthNum = monthMap[month] || '01';
+    const dayNum = day.padStart(2, '0');
+    return `${year}-${monthNum}-${dayNum}`;
+  }
 
   function initPagination() {
-    // Only run on arxiv page
-    if (!window.location.pathname.includes('arxiv')) {
-      return;
-    }
+    if (!window.location.pathname.includes('arxiv')) return;
 
-    // Get all paper entries (assuming they're in list items or sections)
-    const contentContainer = document.querySelector('section');
-    if (!contentContainer) return;
+    const section = document.querySelector('section');
+    if (!section) return;
 
-    // Find all paper entries - adjust selector based on actual structure
-    const papers = contentContainer.querySelectorAll('h3, h4, li.paper, .paper-entry');
-    if (papers.length === 0) {
-      // Try to find entries by looking for headings with dates
-      const allHeadings = Array.from(contentContainer.querySelectorAll('h2, h3, h4'));
-      allItems = allHeadings.filter(h => {
-        // Check if heading looks like a paper entry (has links, arxiv URLs, etc)
-        const nextElement = h.nextElementSibling;
-        return nextElement && (
-          nextElement.innerHTML.includes('arxiv.org') ||
-          nextElement.innerHTML.includes('paper')
-        );
-      }).map(h => {
-        // Group heading with its content
-        const content = [];
-        let el = h;
-        while (el && el.nextElementSibling && !el.nextElementSibling.matches('h2, h3, h4')) {
-          el = el.nextElementSibling;
-          content.push(el);
-        }
-        return { heading: h, content: content };
-      });
-    } else {
-      allItems = Array.from(papers);
-    }
+    // Group cards by date heading
+    const headings = section.querySelectorAll('.date-heading');
+    dateGroups = [];
 
-    if (allItems.length === 0) return;
-
-    totalPages = Math.ceil(allItems.length / ITEMS_PER_PAGE);
-
-    // Create pagination controls
-    createPaginationControls(contentContainer);
-
-    // Show first page
-    showPage(1);
-  }
-
-  function createPaginationControls(container) {
-    const paginationDiv = document.createElement('div');
-    paginationDiv.id = 'arxiv-pagination';
-    paginationDiv.style.cssText = `
-      margin: 2rem 0;
-      padding: 1.5rem;
-      background: #f8f8f8;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-    `;
-
-    const info = document.createElement('div');
-    info.id = 'page-info';
-    info.style.cssText = 'font-size: 0.95rem; color: #595959;';
-
-    const controls = document.createElement('div');
-    controls.style.cssText = 'display: flex; gap: 0.5rem; align-items: center;';
-
-    const firstBtn = createButton('First', () => showPage(1));
-    const prevBtn = createButton('← Prev', () => showPage(currentPage - 1));
-    const nextBtn = createButton('Next →', () => showPage(currentPage + 1));
-    const lastBtn = createButton('Last', () => showPage(totalPages));
-
-    const pageInput = document.createElement('input');
-    pageInput.type = 'number';
-    pageInput.id = 'page-input';
-    pageInput.min = 1;
-    pageInput.max = totalPages;
-    pageInput.value = currentPage;
-    pageInput.style.cssText = `
-      width: 60px;
-      padding: 0.4rem;
-      border: 1px solid #e5e5e5;
-      border-radius: 4px;
-      text-align: center;
-      font-size: 0.9rem;
-    `;
-    pageInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        const page = parseInt(pageInput.value);
-        if (page >= 1 && page <= totalPages) {
-          showPage(page);
-        }
+    headings.forEach(heading => {
+      const cards = [];
+      let sibling = heading.nextElementSibling;
+      while (sibling && sibling.classList.contains('pub-list')) {
+        const listCards = sibling.querySelectorAll('.arxiv-card');
+        cards.push(...listCards);
+        sibling = sibling.nextElementSibling;
       }
-    });
-
-    controls.appendChild(firstBtn);
-    controls.appendChild(prevBtn);
-    controls.appendChild(pageInput);
-    controls.appendChild(document.createTextNode(' / ' + totalPages));
-    controls.appendChild(nextBtn);
-    controls.appendChild(lastBtn);
-
-    paginationDiv.appendChild(info);
-    paginationDiv.appendChild(controls);
-
-    // Insert at the top and bottom of content
-    container.insertBefore(paginationDiv, container.firstChild);
-    container.appendChild(paginationDiv.cloneNode(true));
-
-    // Update buttons in the cloned pagination
-    const clonedPagination = container.lastChild;
-    clonedPagination.querySelectorAll('button').forEach((btn, idx) => {
-      const actions = [
-        () => showPage(1),
-        () => showPage(currentPage - 1),
-        () => showPage(currentPage + 1),
-        () => showPage(totalPages)
-      ];
-      btn.onclick = actions[idx];
-    });
-  }
-
-  function createButton(text, onClick) {
-    const btn = document.createElement('button');
-    btn.textContent = text;
-    btn.onclick = onClick;
-    btn.style.cssText = `
-      padding: 0.5rem 1rem;
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: all 0.2s ease;
-    `;
-    btn.onmouseover = () => {
-      btn.style.background = '#043361';
-      btn.style.color = '#fff';
-      btn.style.borderColor = '#043361';
-    };
-    btn.onmouseout = () => {
-      btn.style.background = '#fff';
-      btn.style.color = '#000';
-      btn.style.borderColor = '#e5e5e5';
-    };
-    return btn;
-  }
-
-  function showPage(page) {
-    if (page < 1 || page > totalPages) return;
-
-    currentPage = page;
-    const start = (page - 1) * ITEMS_PER_PAGE;
-    const end = start + ITEMS_PER_PAGE;
-
-    // Hide all items
-    allItems.forEach((item, idx) => {
-      if (item.heading) {
-        // Complex item with heading and content
-        item.heading.style.display = (idx >= start && idx < end) ? '' : 'none';
-        item.content.forEach(el => {
-          el.style.display = (idx >= start && idx < end) ? '' : 'none';
+      if (cards.length > 0) {
+        dateGroups.push({ 
+          heading, 
+          cards: Array.from(cards),
+          dateText: heading.textContent.trim()
         });
-      } else {
-        // Simple item
-        item.style.display = (idx >= start && idx < end) ? '' : 'none';
       }
     });
 
-    // Update page info
-    const infos = document.querySelectorAll('#page-info');
-    infos.forEach(info => {
-      info.textContent = `Showing ${start + 1}-${Math.min(end, allItems.length)} of ${allItems.length} papers`;
-    });
+    if (dateGroups.length <= 1) return;
 
-    // Update page inputs
-    const inputs = document.querySelectorAll('#page-input');
-    inputs.forEach(input => {
-      input.value = currentPage;
-    });
-
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Show first date, hide others
+    updateDisplay();
+    createPaginationControls();
   }
 
-  // Initialize when DOM is ready
+  function createPaginationControls() {
+    const section = document.querySelector('section');
+    if (!section) return;
+
+    // Remove existing pagination
+    const existing = section.querySelector('.arxiv-pagination');
+    if (existing) existing.remove();
+
+    const prevLabel = currentPage > 0 ? `PREV (${toISODate(dateGroups[currentPage - 1].dateText)})` : 'PREV';
+    const nextLabel = currentPage < dateGroups.length - 1 ? `NEXT (${toISODate(dateGroups[currentPage + 1].dateText)})` : 'NEXT';
+
+    const paginationDiv = document.createElement('div');
+    paginationDiv.className = 'arxiv-pagination';
+    paginationDiv.innerHTML = `
+      <button class="pub-btn" id="prev-page" ${currentPage === 0 ? 'disabled' : ''}>${prevLabel}</button>
+      <span class="page-info">${currentPage + 1} / ${dateGroups.length}</span>
+      <button class="pub-btn" id="next-page" ${currentPage === dateGroups.length - 1 ? 'disabled' : ''}>${nextLabel}</button>
+    `;
+
+    // Insert before last-updated
+    const lastUpdated = section.querySelector('.last-updated');
+    if (lastUpdated) {
+      section.insertBefore(paginationDiv, lastUpdated);
+    } else {
+      section.appendChild(paginationDiv);
+    }
+
+    document.getElementById('prev-page').addEventListener('click', () => {
+      if (currentPage > 0) {
+        currentPage--;
+        updateDisplay();
+        updateControls();
+      }
+    });
+
+    document.getElementById('next-page').addEventListener('click', () => {
+      if (currentPage < dateGroups.length - 1) {
+        currentPage++;
+        updateDisplay();
+        updateControls();
+      }
+    });
+  }
+
+  function updateDisplay() {
+    dateGroups.forEach((group, idx) => {
+      const isActive = idx === currentPage;
+      // Hide/show heading
+      group.heading.style.display = isActive ? '' : 'none';
+      // Hide/show the entire pub-list container
+      const pubList = group.heading.nextElementSibling;
+      if (pubList && pubList.classList.contains('pub-list')) {
+        pubList.style.display = isActive ? '' : 'none';
+      }
+    });
+
+    // Quick scroll to top
+    window.scrollTo(0, 0);
+  }
+
+  function updateControls() {
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
+    const pageInfo = document.querySelector('.page-info');
+
+    const prevLabel = currentPage > 0 ? `PREV (${toISODate(dateGroups[currentPage - 1].dateText)})` : 'PREV';
+    const nextLabel = currentPage < dateGroups.length - 1 ? `NEXT (${toISODate(dateGroups[currentPage + 1].dateText)})` : 'NEXT';
+
+    if (prevBtn) {
+      prevBtn.disabled = currentPage === 0;
+      prevBtn.textContent = prevLabel;
+    }
+    if (nextBtn) {
+      nextBtn.disabled = currentPage === dateGroups.length - 1;
+      nextBtn.textContent = nextLabel;
+    }
+    if (pageInfo) pageInfo.textContent = `${currentPage + 1} / ${dateGroups.length}`;
+  }
+
+  // Handle Jump to Date links
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.date-list a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetIndex = dateGroups.findIndex(g => {
+          const headingId = g.heading.id || g.heading.getAttribute('id');
+          return headingId === targetId;
+        });
+        if (targetIndex !== -1) {
+          currentPage = targetIndex;
+          updateDisplay();
+          updateControls();
+          // Scroll to top
+          window.scrollTo(0, 0);
+        }
+      });
+    });
+  });
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initPagination);
   } else {
