@@ -60,12 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function closeAllExpanded() {
-  // Close all abstracts
+  // Close all abstracts with animation
   document.querySelectorAll('.pub-abstract:not(.hidden)').forEach(function(el) {
     el.classList.add('hidden');
   });
   
-  // Close all bibtex
+  // Close all bibtex with animation
   document.querySelectorAll('.pub-bibtex:not(.hidden)').forEach(function(el) {
     el.classList.add('hidden');
   });
