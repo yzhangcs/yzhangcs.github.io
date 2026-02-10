@@ -40,12 +40,14 @@
 }
 
 .pub-links a {
+  font-family: "Alegreya Sans SC", sans-serif;
   color: #3949ab;
   font-weight: 500;
-  padding: 0.3rem 0.8rem;
+  padding: 0.25rem 0.75rem;
   border: 1px solid #3949ab;
-  border-radius: 16px;
-  font-size: 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
   transition: all 0.2s ease;
 }
 
@@ -56,10 +58,12 @@
 }
 
 .pub-note {
-  font-size: 0.9rem;
+  font-family: "Source Sans Pro", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.85rem;
   color: #666;
   margin-top: -0.5rem;
   margin-bottom: 0.75rem;
+  letter-spacing: 0.03em;
 }
 
 /* Publication title */
@@ -70,7 +74,7 @@
   line-height: 1.5;
   margin-bottom: 0.5rem;
   color: #1a1a1a;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.03em;
 }
 
 /* Award badge */
@@ -85,11 +89,12 @@
 
 /* Publication authors */
 .pub-authors {
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-family: "Source Sans Pro", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
   color: #4a4a4a;
   margin-bottom: 0.4rem;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.03em;
 }
 
 .pub-authors strong {
@@ -102,7 +107,8 @@
   margin-bottom: 0.5rem;
 }
 
-.venue-badge {
+a.venue-badge,
+span.venue-badge {
   display: inline-block;
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
@@ -110,16 +116,29 @@
   font-weight: 500;
   font-family: "Alegreya Sans SC", sans-serif;
   letter-spacing: 0.02em;
+  text-decoration: none;
 }
 
-.venue-badge.conf {
+a.venue-badge.conf,
+span.venue-badge.conf {
   background: #e8eaf6;
   color: #3949ab;
 }
 
-.venue-badge.preprint {
+a.venue-badge.conf:hover {
+  background: #3949ab;
+  color: #fff;
+}
+
+a.venue-badge.preprint,
+span.venue-badge.preprint {
   background: #f3f4f6;
   color: #6b7280;
+}
+
+a.venue-badge.preprint:hover {
+  background: #6b7280;
+  color: #fff;
 }
 
 /* Publication buttons */
@@ -243,13 +262,15 @@
 /* Project header */
 .project-header {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.4rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   margin-bottom: 0.4rem;
 }
 
 .project-name {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: 600;
   font-size: 1.05rem;
   color: #1a1a1a;
@@ -257,19 +278,56 @@
 
 .project-badges {
   display: flex;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 
-.project-badges img {
-  height: 18px;
+.proj-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.proj-badge i {
+  font-size: 0.7rem;
+}
+
+.badge-code {
+  background: transparent;
+  color: #ea580c;
+  border: 1.5px solid #ea580c;
+}
+
+.badge-code:hover {
+  background: #ea580c;
+  color: #fff;
+}
+
+.badge-ver {
+  background: transparent;
+  color: #0891b2;
+  border: 1.5px solid #0891b2;
+}
+
+.badge-ver:hover {
+  background: #0891b2;
+  color: #fff;
 }
 
 /* Project description */
 .project-desc {
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-family: "Source Sans Pro", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
   color: #4a4a4a;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.03em;
 }
 
 /* Experience card */
@@ -280,25 +338,28 @@
 }
 
 .exp-date {
-  font-size: 0.9rem;
-  color: #6b7280;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 0.8rem;
+  color: #9ca3af;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
 }
 
 .exp-title {
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #1a1a1a;
   line-height: 1.5;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.015em;
 }
 
 .exp-mentor {
-  font-size: 0.95rem;
+  font-family: "Source Sans Pro", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9rem;
   color: #4a4a4a;
-  line-height: 1.4;
-  letter-spacing: 0.01em;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
 }
 
 .exp-mentor a {
@@ -307,6 +368,18 @@
 
 .exp-mentor a:hover {
   color: #283593;
+}
+
+/* Last updated footer */
+.last-updated {
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #9ca3af;
+  letter-spacing: 0.05em;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
 }
 
 /* Dark mode support */
@@ -358,18 +431,50 @@
     color: #1f2937;
   }
 
-  .venue-badge.conf {
+  a.venue-badge.conf,
+  span.venue-badge.conf {
     background: rgba(121, 134, 203, 0.15);
     color: #c5cae9;
   }
 
-  .venue-badge.preprint {
+  a.venue-badge.conf:hover {
+    background: #7986cb;
+    color: #1f2937;
+  }
+
+  a.venue-badge.preprint,
+  span.venue-badge.preprint {
     background: rgba(156, 163, 175, 0.15);
     color: #d1d5db;
   }
 
+  a.venue-badge.preprint:hover {
+    background: #9ca3af;
+    color: #1f2937;
+  }
+
+  .badge-code {
+    color: #fb923c;
+    border-color: #fb923c;
+  }
+
+  .badge-code:hover {
+    background: #fb923c;
+    color: #1f2937;
+  }
+
+  .badge-ver {
+    color: #22d3ee;
+    border-color: #22d3ee;
+  }
+
+  .badge-ver:hover {
+    background: #22d3ee;
+    color: #1f2937;
+  }
+
   .exp-date {
-    color: #9ca3af;
+    color: #6b7280;
   }
 
   .exp-mentor a {
@@ -380,7 +485,6 @@
     color: #9fa8da;
   }
 
-  /* Dark mode buttons */
   .pub-btn {
     background: #2a2b36;
     color: #d1d5db;
@@ -403,15 +507,20 @@
     background: #2a2b36;
     color: #d1d5db;
     border-color: #3a3b46;
-    opacity: 1;
   }
 
   .pub-bibtex pre {
     background: #1f2937;
     border-color: #3a3b46;
   }
+
+  .last-updated {
+    color: #6b7280;
+    border-top-color: #3a3b46;
+  }
 }
 
+/* data-theme dark mode (for JS toggle) */
 [data-theme="dark"] .pub-card,
 [data-theme="dark"] .project-card,
 [data-theme="dark"] .exp-card {
@@ -449,6 +558,26 @@
   color: #9ca3af;
 }
 
+[data-theme="dark"] .badge-code {
+  color: #fb923c;
+  border-color: #fb923c;
+}
+
+[data-theme="dark"] .badge-code:hover {
+  background: #fb923c;
+  color: #1f2937;
+}
+
+[data-theme="dark"] .badge-ver {
+  color: #22d3ee;
+  border-color: #22d3ee;
+}
+
+[data-theme="dark"] .badge-ver:hover {
+  background: #22d3ee;
+  color: #1f2937;
+}
+
 [data-theme="dark"] .pub-links a {
   color: #7986cb;
   border-color: #7986cb;
@@ -459,18 +588,30 @@
   color: #1f2937;
 }
 
-[data-theme="dark"] .venue-badge.conf {
+[data-theme="dark"] a.venue-badge.conf,
+[data-theme="dark"] span.venue-badge.conf {
   background: rgba(121, 134, 203, 0.15);
   color: #c5cae9;
 }
 
-[data-theme="dark"] .venue-badge.preprint {
+[data-theme="dark"] a.venue-badge.conf:hover {
+  background: #7986cb;
+  color: #1f2937;
+}
+
+[data-theme="dark"] a.venue-badge.preprint,
+[data-theme="dark"] span.venue-badge.preprint {
   background: rgba(156, 163, 175, 0.15);
   color: #d1d5db;
 }
 
+[data-theme="dark"] a.venue-badge.preprint:hover {
+  background: #9ca3af;
+  color: #1f2937;
+}
+
 [data-theme="dark"] .exp-date {
-  color: #9ca3af;
+  color: #6b7280;
 }
 
 [data-theme="dark"] .exp-mentor a {
@@ -503,31 +644,11 @@
   background: #2a2b36;
   color: #d1d5db;
   border-color: #3a3b46;
-  opacity: 1;
 }
 
 [data-theme="dark"] .pub-bibtex pre {
   background: #1f2937;
   border-color: #3a3b46;
-}
-
-/* Last updated footer */
-.last-updated {
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #9ca3af;
-  letter-spacing: 0.05em;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid #e5e7eb;
-}
-
-@media (prefers-color-scheme: dark) {
-  .last-updated {
-    color: #6b7280;
-    border-top-color: #3a3b46;
-  }
 }
 
 [data-theme="dark"] .last-updated {
@@ -547,6 +668,12 @@
     font-size: 0.95rem;
   }
 
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
   .project-name {
     font-size: 1rem;
   }
@@ -555,10 +682,5 @@
   .project-desc,
   .exp-mentor {
     font-size: 0.9rem;
-  }
-
-  .pub-badges img,
-  .project-badges img {
-    height: 16px;
   }
 }

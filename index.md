@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 Hi, my name is Yu Zhang ([jy tʃɑŋ], 張宇/张宇 in traditional/simplified Chinese).
 I am a researcher at [Moonshot AI](https://www.moonshot.cn/).
 
@@ -16,9 +15,9 @@ As a disciple of parallel programming, I am passionate about exploring technique
 ## Publications
 
 <div class="pub-links">
-  <a href="https://www.semanticscholar.org/author/Yu-Zhang/49890808">Semantic Scholar</a>
-  <a href="https://scholar.google.com/citations?user=y3JK-1oAAAAJ">Google Scholar</a>
-  <a href="https://dblp.org/pid/50/671-92.html">DBLP</a>
+  <a href="https://www.semanticscholar.org/author/Yu-Zhang/49890808"><i class="ai ai-semantic-scholar"></i> Semantic Scholar</a>
+  <a href="https://scholar.google.com/citations?user=y3JK-1oAAAAJ"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+  <a href="https://dblp.org/pid/50/671-92.html"><i class="ai ai-dblp"></i> DBLP</a>
 </div>
 <p class="pub-note">* denotes equal contributions</p>
 
@@ -27,7 +26,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">Kimi Linear: An Expressive, Eﬀicient Attention Architecture</div>
   <div class="pub-authors"><strong>Yu Zhang</strong>, Zongyu Lin, Xingcheng Yao, Jiaxi Hu, Fanqing Meng, Chengyin Liu, Xin Men, Songlin Yang, Zhiyuan Li, Wentao Li, Enzhe Lu, Weizhou Liu, Yanru Chen, Weixin Xu, Longhui Yu, Yejie Wang, Yu Fan, Longguang Zhong, Enming Yuan, Dehao Zhang, Yizhi Zhang, TY Liu, Haiming Wang, Shengjun Fang, Weiran He, Shaowei Liu, Yiwei Li, Jianlin Su, Jiezhong Qiu, Bo Pang, Junjie Yan, Zhejun Jiang, Weixiao Huang, Bohong Yin, Jiacheng You, Chu Wei, Zhengtao Wang, Chao Hong, Yutian Chen, Guanduo Chen, Yucheng Wang, Huabin Zheng, Feng Wang, Yibo Liu, Mengnan Dong, Zheng Zhang, Siyuan Pan, Wenhao Wu, Yuhao Wu, Longyu Guan, Jiawen Tao, Guohong Fu, Xinran Xu, Yuzhi Wang, Guokun Lai, Yuxin Wu, Xinyu Zhou, Zhilin Yang, Yulun Du</div>
-  <div class="pub-venue"><span class="venue-badge preprint">Preprint</span></div>
+  <div class="pub-venue"><a href="./assets/pubs/techreport/2025/kda.pdf" class="venue-badge preprint">Preprint</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
@@ -44,7 +43,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">Gated Slot Attention for Efficient Linear-Time Sequence Modeling</div>
   <div class="pub-authors"><strong>Yu Zhang*</strong>, Songlin Yang*, Ruijie Zhu, Yue Zhang, Leyang Cui, Yiqiao Wang, Bolun Wang, Freda Shi, Bailin Wang, Wei Bi, Peng Zhou, Guohong Fu</div>
-  <div class="pub-venue"><span class="venue-badge conf">NeurIPS 2024</span></div>
+  <div class="pub-venue"><a href="./assets/pubs/neurips/2024/gsa.pdf" class="venue-badge conf">NeurIPS 2024</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
@@ -61,7 +60,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">Parallelizing Linear Transformers with the Delta Rule over Sequence Length</div>
   <div class="pub-authors">Songlin Yang, Bailin Wang, <strong>Yu Zhang</strong>, Yikang Shen, Yoon Kim</div>
-  <div class="pub-venue"><span class="venue-badge conf">NeurIPS 2024</span></div>
+  <div class="pub-venue"><a href="./assets/pubs/neurips/2024/deltanet.pdf" class="venue-badge conf">NeurIPS 2024</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
@@ -78,7 +77,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">Scalable MatMul-free Language Modeling</div>
   <div class="pub-authors">Ruijie Zhu, <strong>Yu Zhang</strong>, Ethan Sifferman, Tyler Sheaves, Yiqiao Wang, Dustin Richmond, Peng Zhou, Jason K. Eshraghian</div>
-  <div class="pub-venue"><span class="venue-badge preprint">Preprint</span></div>
+  <div class="pub-venue"><a href="./assets/pubs/neurips/2024/mmf.pdf" class="venue-badge preprint">Preprint</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
@@ -95,7 +94,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">Non-autoregressive Text Editing with Copy-aware Latent Alignments</div>
   <div class="pub-authors"><strong>Yu Zhang*</strong>, Yue Zhang*, Leyang Cui, Guohong Fu</div>
-  <div class="pub-venue"><span class="venue-badge conf">EMNLP 2023</span></div>
+  <div class="pub-venue"><a href="./assets/pubs/emnlp/2023/ctc.pdf" class="venue-badge conf">EMNLP 2023</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
@@ -112,7 +111,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">Semantic Role Labeling as Dependency Parsing: Exploring Latent Tree Structures Inside Arguments</div>
   <div class="pub-authors"><strong>Yu Zhang</strong>, Qingrong Xia, Shilin Zhou, Yong Jiang, Guohong Fu, Min Zhang</div>
-  <div class="pub-venue"><span class="venue-badge conf">COLING 2022</span></div>
+  <div class="pub-venue"><a href="./assets/pubs/coling/2022/crfsrl.pdf" class="venue-badge conf">COLING 2022</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
@@ -129,7 +128,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">Fast and Accurate End-to-End Span-based Semantic Role Labeling as Word-based Graph Parsing <span class="award-badge">Best Paper Award</span></div>
   <div class="pub-authors">Shilin Zhou, Qingrong Xia, Zhenghua Li, <strong>Yu Zhang</strong>, Yu Hong, Min Zhang</div>
-  <div class="pub-venue"><span class="venue-badge conf">COLING 2022</span></div>
+  <div class="pub-venue"><a href="./assets/pubs/coling/2022/graphsrl.pdf" class="venue-badge conf">COLING 2022</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
@@ -146,7 +145,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">Fast and Accurate Neural CRF Constituency Parsing</div>
   <div class="pub-authors"><strong>Yu Zhang*</strong>, Houquan Zhou*, Zhenghua Li</div>
-  <div class="pub-venue"><span class="venue-badge conf">IJCAI 2020</span></div>
+  <div class="pub-venue"><a href="./assets/pubs/ijcai/2020/crfpar.pdf" class="venue-badge conf">IJCAI 2020</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
@@ -163,7 +162,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">Efficient Second-Order TreeCRF for Neural Dependency Parsing</div>
   <div class="pub-authors"><strong>Yu Zhang</strong>, Zhenghua Li, Min Zhang</div>
-  <div class="pub-venue"><span class="venue-badge conf">ACL 2020</span></div>
+  <div class="pub-venue"><a href="./assets/pubs/acl/2020/crfpar.pdf" class="venue-badge conf">ACL 2020</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
@@ -180,7 +179,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">Is POS Tagging Necessary or Even Helpful for Neural Dependency Parsing? <span class="award-badge">Best Paper Award</span></div>
   <div class="pub-authors">Houquan Zhou*, <strong>Yu Zhang*</strong>, Zhenghua Li, Min Zhang</div>
-  <div class="pub-venue"><span class="venue-badge conf">NLPCC 2020</span></div>
+  <div class="pub-venue"><a href="./assets/pubs/nlpcc/2020/posdep.pdf" class="venue-badge conf">NLPCC 2020</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
@@ -197,7 +196,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">HLT@SUDA at SemEval-2019 Task 1: UCCA Graph Parsing as Constituent Tree Parsing</div>
   <div class="pub-authors">Wei Jiang, Zhenghua Li, <strong>Yu Zhang</strong>, Min Zhang</div>
-  <div class="pub-venue"><span class="venue-badge conf">SemEval 2019</span></div>
+  <div class="pub-venue"><a href="./assets/pubs/semeval/2019/const.pdf" class="venue-badge conf">SemEval 2019</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
@@ -221,27 +220,19 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="project-header">
     <span class="project-name">FLA</span>
     <div class="project-badges">
-      <a href="https://github.com/fla-org/flash-linear-attention">
-        <img src="https://img.shields.io/badge/code-orange?style=flat-square&logo=github" alt="code">
-      </a>
-      <a href="https://github.com/fla-org/flash-linear-attention/releases">
-        <img src="https://img.shields.io/github/v/release/fla-org/flash-linear-attention?style=flat-square" alt="release">
-      </a>
+      <a href="https://github.com/fla-org/flash-linear-attention" class="proj-badge badge-code"><i class="fab fa-github"></i> code</a>
+      <a href="https://github.com/fla-org/flash-linear-attention/releases" class="proj-badge badge-ver">v0.2.0</a>
     </div>
   </div>
-  <div class="project-desc">A Triton-Based Library for Hardware-Efficient Implementations of Linear Attention Mechanism</div>
+  <div class="project-desc">A Triton-Based Library for Hardware-Efficient Implementations of Linear Attention Mechanism.</div>
 </div>
 
 <div class="project-card">
   <div class="project-header">
     <span class="project-name">SuPar</span>
     <div class="project-badges">
-      <a href="https://github.com/yzhangcs/parser">
-        <img src="https://img.shields.io/badge/code-orange?style=flat-square&logo=github" alt="code">
-      </a>
-      <a href="https://github.com/yzhangcs/parser/releases">
-        <img src="https://img.shields.io/github/v/release/yzhangcs/parser?style=flat-square" alt="release">
-      </a>
+      <a href="https://github.com/yzhangcs/parser" class="proj-badge badge-code"><i class="fab fa-github"></i> code</a>
+      <a href="https://github.com/yzhangcs/parser/releases" class="proj-badge badge-ver">v1.1.4</a>
     </div>
   </div>
   <div class="project-desc">State-of-the-art syntactic/semantic parsers. A Python package designed for structured prediction, including reproductions of many state-of-the-art syntactic/semantic parsers (with pretrained models for more than 19 languages), and highly-parallelized implementations of several well-known structured prediction algorithms.</div>
