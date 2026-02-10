@@ -87,6 +87,7 @@ function loadBibContent(container, url) {
       return response.text();
     })
     .then(function(text) {
+      container.innerHTML = '<button class="btn-copy" title="Copy to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button><pre><code class="language-bibtex"></code></pre>';
       var codeEl = container.querySelector('code');
       codeEl.textContent = text;
       container.setAttribute('data-loaded', 'true');
@@ -94,6 +95,22 @@ function loadBibContent(container, url) {
       if (window.Prism) {
         Prism.highlightElement(codeEl);
       }
+      // Add copy functionality
+      var copyBtn = container.querySelector('.btn-copy');
+      var originalIcon = copyBtn.innerHTML;
+      var checkIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+      copyBtn.addEventListener('click', function() {
+        navigator.clipboard.writeText(text).then(function() {
+          copyBtn.innerHTML = checkIcon;
+          copyBtn.classList.add('copied');
+          setTimeout(function() {
+            copyBtn.innerHTML = originalIcon;
+            copyBtn.classList.remove('copied');
+          }, 2000);
+        }).catch(function(err) {
+          console.error('Failed to copy:', err);
+        });
+      });
     })
     .catch(function(error) {
       console.error('Error loading bib:', error);

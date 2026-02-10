@@ -3,9 +3,7 @@ layout: default
 ---
 Hi, my name is Yu Zhang ([jy tʃɑŋ], 張宇/张宇 in traditional/simplified Chinese).
 I am a researcher at [Moonshot AI](https://www.moonshot.cn/).
-
-I received my Ph.D. degree from Soochow University in 2025, advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/).
-Prior to this, I received my M. Eng. and B. Eng. degrees from Soochow University in 2021 and 2018, respectively.
+Prior to this, I received my Ph.D. degree from Soochow University in 2026, advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/).
 
 ~~*My early research focused on structured prediction tasks, specifically dependency parsing and constituency parsing.*~~
 Currently, my research interests have evolved to focus on developing efficient text generation models.
@@ -25,7 +23,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 <div class="pub-card">
   <div class="pub-title">Kimi Linear: An Expressive, Eﬀicient Attention Architecture</div>
-  <div class="pub-authors"><strong>Yu Zhang</strong>, Zongyu Lin, Xingcheng Yao, Jiaxi Hu, Fanqing Meng, Chengyin Liu, Xin Men, Songlin Yang, Zhiyuan Li, Wentao Li, Enzhe Lu, Weizhou Liu, Yanru Chen, Weixin Xu, Longhui Yu, Yejie Wang, Yu Fan, Longguang Zhong, Enming Yuan, Dehao Zhang, Yizhi Zhang, TY Liu, Haiming Wang, Shengjun Fang, Weiran He, Shaowei Liu, Yiwei Li, Jianlin Su, Jiezhong Qiu, Bo Pang, Junjie Yan, Zhejun Jiang, Weixiao Huang, Bohong Yin, Jiacheng You, Chu Wei, Zhengtao Wang, Chao Hong, Yutian Chen, Guanduo Chen, Yucheng Wang, Huabin Zheng, Feng Wang, Yibo Liu, Mengnan Dong, Zheng Zhang, Siyuan Pan, Wenhao Wu, Yuhao Wu, Longyu Guan, Jiawen Tao, Guohong Fu, Xinran Xu, Yuzhi Wang, Guokun Lai, Yuxin Wu, Xinyu Zhou, Zhilin Yang, Yulun Du</div>
+  <div class="pub-authors"><strong>Yu Zhang</strong>, <a href="https://rafa-zy.github.io">Zongyu Lin</a>, <a href="https://yaoxingcheng.github.io">Xingcheng Yao</a>, Jiaxi Hu, Fanqing Meng, Chengyin Liu, Xin Men, <a href="https://sustcsonglin.github.io">Songlin Yang</a>, Zhiyuan Li, Wentao Li, Enzhe Lu, Weizhou Liu, Yanru Chen, Weixin Xu, Longhui Yu, Yejie Wang, Yu Fan, Longguang Zhong, Enming Yuan, Dehao Zhang, Yizhi Zhang, TY Liu, Haiming Wang, Shengjun Fang, Weiran He, Shaowei Liu, Yiwei Li, <a href="https://jianlin.su">Jianlin Su</a>, Jiezhong Qiu, Bo Pang, Junjie Yan, Zhejun Jiang, Weixiao Huang, Bohong Yin, Jiacheng You, Chu Wei, Zhengtao Wang, Chao Hong, Yutian Chen, Guanduo Chen, Yucheng Wang, Huabin Zheng, Feng Wang, Yibo Liu, Mengnan Dong, Zheng Zhang, Siyuan Pan, Wenhao Wu, Yuhao Wu, Longyu Guan, Jiawen Tao, Guohong Fu, Xinran Xu, Yuzhi Wang, Guokun Lai, Yuxin Wu, Xinyu Zhou, Zhilin Yang, Yulun Du</div>
   <div class="pub-venue"><a href="./assets/pubs/techreport/2025/kda.pdf" class="venue-badge preprint">Preprint</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
@@ -42,7 +40,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 <div class="pub-card">
   <div class="pub-title">Gated Slot Attention for Efficient Linear-Time Sequence Modeling</div>
-  <div class="pub-authors"><strong>Yu Zhang*</strong>, Songlin Yang*, Ruijie Zhu, Yue Zhang, Leyang Cui, Yiqiao Wang, Bolun Wang, Freda Shi, Bailin Wang, Wei Bi, Peng Zhou, Guohong Fu</div>
+  <div class="pub-authors"><strong>Yu Zhang*</strong>, <a href="https://sustcsonglin.github.io">Songlin Yang*</a>, <a href="https://ruijie-zhu.github.io">Ruijie Zhu</a>, <a href="https://hillzhang1999.github.io">Yue Zhang</a>, <a href="https://nealcly.github.io">Leyang Cui</a>, Yiqiao Wang, Bolun Wang, <a href="https://home.ttic.edu/~freda">Freda Shi</a>, <a href="https://berlino.github.io/">Bailin Wang</a>, Wei Bi, Peng Zhou, Guohong Fu</div>
   <div class="pub-venue"><a href="./assets/pubs/neurips/2024/gsa.pdf" class="venue-badge conf">NeurIPS 2024</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
@@ -59,7 +57,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 <div class="pub-card">
   <div class="pub-title">Parallelizing Linear Transformers with the Delta Rule over Sequence Length</div>
-  <div class="pub-authors">Songlin Yang, Bailin Wang, <strong>Yu Zhang</strong>, Yikang Shen, Yoon Kim</div>
+  <div class="pub-authors"><a href="https://sustcsonglin.github.io">Songlin Yang</a>, <a href="https://berlino.github.io/">Bailin Wang</a>, <strong>Yu Zhang</strong>, <a href="https://mitibmwatsonailab.mit.edu/people/yikang-shen">Yikang Shen</a>, <a href="https://people.csail.mit.edu/yoonkim">Yoon Kim</a></div>
   <div class="pub-venue"><a href="./assets/pubs/neurips/2024/deltanet.pdf" class="venue-badge conf">NeurIPS 2024</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
@@ -76,7 +74,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 <div class="pub-card">
   <div class="pub-title">Scalable MatMul-free Language Modeling</div>
-  <div class="pub-authors">Ruijie Zhu, <strong>Yu Zhang</strong>, Ethan Sifferman, Tyler Sheaves, Yiqiao Wang, Dustin Richmond, Peng Zhou, Jason K. Eshraghian</div>
+  <div class="pub-authors"><a href="https://ruijie-zhu.github.io">Ruijie Zhu</a>, <strong>Yu Zhang</strong>, Ethan Sifferman, Tyler Sheaves, Yiqiao Wang, Dustin Richmond, Peng Zhou, Jason K. Eshraghian</div>
   <div class="pub-venue"><a href="./assets/pubs/neurips/2024/mmf.pdf" class="venue-badge preprint">Preprint</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
@@ -93,7 +91,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 <div class="pub-card">
   <div class="pub-title">Non-autoregressive Text Editing with Copy-aware Latent Alignments</div>
-  <div class="pub-authors"><strong>Yu Zhang*</strong>, Yue Zhang*, Leyang Cui, Guohong Fu</div>
+  <div class="pub-authors"><strong>Yu Zhang*</strong>, <a href="https://hillzhang1999.github.io">Yue Zhang*</a>, <a href="https://nealcly.github.io">Leyang Cui</a>, Guohong Fu</div>
   <div class="pub-venue"><a href="./assets/pubs/emnlp/2023/ctc.pdf" class="venue-badge conf">EMNLP 2023</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
@@ -110,7 +108,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 <div class="pub-card">
   <div class="pub-title">Semantic Role Labeling as Dependency Parsing: Exploring Latent Tree Structures Inside Arguments</div>
-  <div class="pub-authors"><strong>Yu Zhang</strong>, Qingrong Xia, Shilin Zhou, Yong Jiang, Guohong Fu, Min Zhang</div>
+  <div class="pub-authors"><strong>Yu Zhang</strong>, Qingrong Xia, Shilin Zhou, <a href="https://jiangyong.site">Yong Jiang</a>, Guohong Fu, Min Zhang</div>
   <div class="pub-venue"><a href="./assets/pubs/coling/2022/crfsrl.pdf" class="venue-badge conf">COLING 2022</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
@@ -144,7 +142,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 <div class="pub-card">
   <div class="pub-title">Fast and Accurate Neural CRF Constituency Parsing</div>
-  <div class="pub-authors"><strong>Yu Zhang*</strong>, Houquan Zhou*, Zhenghua Li</div>
+  <div class="pub-authors"><strong>Yu Zhang*</strong>, <a href="https://cv.hqzhou.com">Houquan Zhou*</a>, Zhenghua Li</div>
   <div class="pub-venue"><a href="./assets/pubs/ijcai/2020/crfpar.pdf" class="venue-badge conf">IJCAI 2020</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
@@ -178,7 +176,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
 
 <div class="pub-card">
   <div class="pub-title">Is POS Tagging Necessary or Even Helpful for Neural Dependency Parsing? <span class="award-badge">Best Paper Award</span></div>
-  <div class="pub-authors">Houquan Zhou*, <strong>Yu Zhang*</strong>, Zhenghua Li, Min Zhang</div>
+  <div class="pub-authors"><a href="https://cv.hqzhou.com">Houquan Zhou*</a>, <strong>Yu Zhang*</strong>, Zhenghua Li, Min Zhang</div>
   <div class="pub-venue"><a href="./assets/pubs/nlpcc/2020/posdep.pdf" class="venue-badge conf">NLPCC 2020</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>

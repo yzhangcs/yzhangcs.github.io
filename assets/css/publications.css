@@ -242,13 +242,19 @@ a.venue-badge.preprint:hover {
   background: #f8f9fa;
   border: 1px solid #e5e7eb;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 13px;
   line-height: 1.6;
+  max-width: none;
 }
 
 .pub-bibtex code {
-  font-family: 'SF Mono', Monaco, Consolas, monospace;
-  font-size: inherit;
+  font-family: 'Source Code Pro', 'SF Mono', Monaco, Consolas, monospace !important;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
 }
 
 .pub-bibtex.hidden {
@@ -257,6 +263,42 @@ a.venue-badge.preprint:hover {
   height: 0;
   margin-top: 0;
   overflow: hidden;
+}
+
+/* Copy button - minimal floating style */
+.btn-copy {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  color: #9ca3af;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  opacity: 0.6;
+}
+
+.btn-copy:hover {
+  opacity: 1;
+  color: #4b5563;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.btn-copy.copied {
+  opacity: 1;
+  color: #059669;
+  background: rgba(5, 150, 105, 0.1);
+}
+
+.pub-bibtex {
+  position: relative;
 }
 
 /* Project header */
@@ -510,8 +552,33 @@ a.venue-badge.preprint:hover {
   }
 
   .pub-bibtex pre {
-    background: #1f2937;
+    background: #1a1d29;
     border-color: #3a3b46;
+    font-size: 13px;
+  }
+
+  .pub-bibtex code {
+    color: #f0f0f5 !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    -moz-osx-font-smoothing: auto !important;
+    text-shadow: none !important;
+  }
+
+  .btn-copy {
+    color: #6b7280;
+  }
+
+  .btn-copy:hover {
+    opacity: 1;
+    color: #a1a1aa;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .btn-copy.copied {
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.15);
   }
 
   .last-updated {
@@ -647,8 +714,32 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .pub-bibtex pre {
-  background: #1f2937;
+  background: #1a1d29;
   border-color: #3a3b46;
+  font-size: 13px;
+}
+
+[data-theme="dark"] .pub-bibtex code {
+  color: #f0f0f5 !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -moz-osx-font-smoothing: auto !important;
+  text-shadow: none !important;
+}
+
+[data-theme="dark"] .btn-copy {
+  color: #6b7280;
+}
+
+[data-theme="dark"] .btn-copy:hover {
+  color: #a1a1aa;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .btn-copy.copied {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.15);
 }
 
 [data-theme="dark"] .last-updated {
