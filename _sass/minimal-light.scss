@@ -15,17 +15,22 @@ body {
   display: flex; 
   align-items: center;}
 
-.social-icons a{
-  display:inline-block;
-  height:2.4rem;
-  width:2.4rem;
-  background-color:transparent;
-  color:#059669!important;
-  border-radius:100%;
-  text-align:center;
-  font-size:1.15rem;
-  line-height:2.5rem;
-  margin-right:1rem}
+.social-icons a {
+  display: inline-block;
+  height: 2.2rem;
+  width: 2.2rem;
+  background-color: transparent;
+  color: #059669 !important;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 2.3rem;
+  margin-right: 0.5rem;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
 
 @media (prefers-color-scheme: dark) {
   .social-icons a {
@@ -126,7 +131,7 @@ body {
 
 email {
     font-size: 14px;
-    font-family: "Ubuntu Mono";
+    font-family: 'Source Code Pro', 'SF Mono', Monaco, Consolas, monospace;
 }
 
 .icon-button i{
@@ -448,15 +453,19 @@ a:hover small {
 }
 
 .wrapper {
-  max-width: 960px;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
+  display: flex;
+  gap: 80px;
 }
 
 @media screen and (max-width: 768px) {
   .wrapper {
     padding: 0 15px;
+    flex-direction: column;
+    gap: 0;
   }
 }
 
@@ -520,19 +529,22 @@ img {
 }
 
 header {
-  width:232px;
-  float:left;
-  position:fixed;
-  -webkit-font-smoothing:subpixel-antialiased;
-  padding-top:4.0em;
-  text-align:center;
+  width: 220px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  -webkit-font-smoothing: subpixel-antialiased;
+  padding-top: 4.0em;
+  text-align: center;
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 960px) {
   header {
     width: 100%;
-    float: none;
     position: relative;
+    height: auto;
     padding-top: 2em;
     margin-bottom: 2em;
   }
@@ -615,16 +627,18 @@ header ul a strong {
 }
 
 section {
-  width: 650px;
-  float: right;
+  flex: 1;
+  max-width: 720px;
+  margin: 0 auto;
   padding-top: 4.0em;
   padding-bottom: 50px;
+  min-width: 0;
 }
 
 @media screen and (max-width: 960px) {
   section {
     width: 100%;
-    float: none;
+    max-width: 100%;
     padding-top: 2em;
   }
 }
@@ -641,123 +655,112 @@ hr {
 }
 
 footer {
-  width:232px;
-  float:left;
-  position:fixed;
-  bottom:30px;
-  -webkit-font-smoothing:subpixel-antialiased;
-  text-align:center;
+  display: none;
 }
 
 @media print, screen and (max-width: 960px) {
 
   .pub-row {
-  display: flex; 
-  align-items: center;}
-
-  div.wrapper {
-    width:auto;
-    margin:0;
+    display: flex; 
+    align-items: center;
   }
 
+  div.wrapper {
+    width: auto;
+    margin: 0;
+    flex-direction: column;
+    gap: 0;
+  }
 
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
+  header, section {
+    width: 100%;
+    position: static;
+    height: auto;
   }
 
   header {
-    padding-right:320px;
+    padding-top: 2em;
+    margin-bottom: 2em;
+    padding-right: 0;
   }
 
   section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
+    border: 1px solid #e5e5e5;
+    border-width: 1px 0;
+    padding: 20px 0;
+    margin: 0 0 20px;
+    max-width: 100%;
   }
 
   header a small {
-    display:inline;
+    display: inline;
   }
 
   header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
+    position: absolute;
+    right: 50px;
+    top: 52px;
   }
 
-
-   .image.avatar img {
-        border-radius: 100%;
-        width: 117px;
-        padding:20px;
-      }
-  #head1o2 {
-    visibility: hidden;
+  .image.avatar img {
+    border-radius: 100%;
+    width: 117px;
+    padding: 20px;
   }
-      
+
+  #head1o2,
   #head2o2 {
     visibility: hidden;
   }
-  
 }
 
 @media print, screen and (max-width: 960px) {
   body {
-    word-wrap:break-word;
-    padding:15px;
+    word-wrap: break-word;
+    padding: 15px;
   }
 
   .pub-row {
-  display: flex; 
-  align-items: center;}
-
-  header {
-    padding:0;
+    display: flex;
+    align-items: center;
   }
 
-  header ul, header p.view {
-    
+  header {
+    padding: 0;
   }
 
   pre, code {
-    word-wrap:normal;
+    word-wrap: normal;
   }
 }
 
 @media print, screen and (max-width: 480px) {
-
   .pub-row {
-    display: block; 
-    align-items: center;}
+    display: block;
+  }
 
   body {
-    padding:15px;
+    padding: 15px;
   }
 
   header ul {
-    width:99%;
+    width: 99%;
   }
 
   header li, header ul li + li + li {
-    width:33%;
+    width: 33%;
   }
 
   .image.avatar img {
-      border-radius: 100%;
-      width: 95px;
-      padding:20px;
+    border-radius: 100%;
+    width: 95px;
+    padding: 20px;
   }
-  #head1o2 {
-    visibility: hidden;
-  }
-  
+
+  #head1o2,
   #head2o2 {
     visibility: hidden;
   }
-
 }
 
 @media print {
