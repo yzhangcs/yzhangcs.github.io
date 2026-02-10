@@ -33,7 +33,7 @@ KEYS = [
     'hardware-aware', 'hazyresearch', 'high-order', 'higher-order', 'hmm', 'hsmm', 'hypergraph',
     'induction', 'invertible',
     'latent', 'levenshtein', 'lexicalized', 'linear-attention', 'low-rank',
-    'marginal', 'markov', 'masking', 
+    'marginal', 'markov', 'masking',
     'mcmc', 'mean-field', 'message-passing',
     'mixture of expert', 'mixture of experts', 'moe', 'moes', 'muon', 'mutual',
     'non-projective', 'normalizing',
@@ -45,7 +45,7 @@ KEYS = [
     'recurrence', 'recurrent', 'reparameterization', 're-parameterization', 'rnn', 'rnns', 'rnnt', 'rnn-t',
     'scaling',
     'semi-amortized', 'semiring', 'semi-markov',
-    'seq2seq', 'sequence', 'sequence to sequence', 'sequence-to-sequence',
+    'seq2seq', 'sequence', 'sequence modeling', 'sequence to sequence', 'sequence-to-sequence',
     'sinkhorn', 'sparse', 'sparsemap', 'sparsemax', 'state-space', 'stochastic',
     'stochasticity', 'struct', 'structural', 'structure', 'structured', 'sum-product', 'syntax',
     'transducer', 'transduction', 'transformer', 'translation', 'transport', 'tree', 'treecrf',
@@ -153,10 +153,20 @@ def process_paper(paper: arxiv.Result) -> Tuple[str, dict] | None | type:
     title, title_matched = match(paper.title, KEYS)
     any_match |= title_matched
 
-    author_names = ', '.join([a.name for a in paper.authors[:5]])
-    if len(paper.authors) > 5:
-        author_names += f', +{len(paper.authors) - 5} more'
-    authors, author_matched = match(author_names, AUTHORS)
+    # Process authors - create short and full versions for expand functionality
+    all_author_names = [a.name for a in paper.authors]
+    if len(all_author_names) <= 5:
+        # No need for expand if 5 or fewer authors
+        author_names_short = ', '.join(all_author_names)
+        author_names_full = None
+        authors_short, author_matched = match(author_names_short, AUTHORS)
+    else:
+        # Create short version (first 5) and full version for expand
+        author_names_short = ', '.join(all_author_names[:5])
+        author_names_full = ', '.join(all_author_names)
+        # Match on both short and full for author keywords
+        authors_short, _ = match(author_names_short, AUTHORS)
+        _, author_matched = match(author_names_full, AUTHORS)
     any_match |= author_matched
 
     abstract_raw = paper.summary.replace('\n', ' ')
@@ -175,7 +185,8 @@ def process_paper(paper: arxiv.Result) -> Tuple[str, dict] | None | type:
 
     data = {
         'title': title,
-        'authors': authors,
+        'authors_short': authors_short,
+        'authors_full': author_names_full,
         'abstract_raw': abstract_raw,  # Store raw for truncation check
         'abstract_truncated': abstract_truncated,
         'abstract_full': abstract_full,
@@ -193,16 +204,17 @@ def process_paper(paper: arxiv.Result) -> Tuple[str, dict] | None | type:
 def linkify(text: str) -> str:
     """Convert URLs in text to clickable links with monospace font."""
     import re as re_module
+
     # Match http/https URLs
     url_pattern = r'https?://[^\s\)\]\>]+'
-    
+
     def replace_url(match: re_module.Match) -> str:
         url = match.group(0)
         # Remove trailing punctuation
         while url[-1] in '.,;:!?)\'\"':
             url = url[:-1]
         return f'<a href="{url}" class="link-mono" target="_blank">{url}</a>'
-    
+
     return re_module.sub(url_pattern, replace_url, text)
 
 
@@ -225,9 +237,17 @@ def render_paper_card(data: dict) -> str:
     is_truncated = len(abstract_raw) > ABSTRACT_MAX_LEN if abstract_raw else False
     expand_btn = '<button class="pub-btn btn-expand">more</button>' if is_truncated else ''
 
+    # Render authors with expand functionality if there are more authors
+    authors_full = data.get('authors_full')
+    if authors_full:
+        more_count = len(authors_full.split(', ')) - 5
+        authors_html = f'''<span class="authors-text">{data['authors_short']}</span><span class="authors-full hidden">{authors_full}</span><button class="pub-btn btn-expand-authors">+{more_count} more</button>'''
+    else:
+        authors_html = data['authors_short']
+
     return f'''  <div class="pub-card arxiv-card">
     <div class="pub-title">{data['title']}</div>
-    <div class="pub-authors">{data['authors']}</div>
+    <div class="pub-authors">{authors_html}</div>
     {comments_html}
     <div class="arxiv-meta">
       <a href="{data['entry_id']}" class="arxiv-id" target="_blank">arXiv:{data['arxiv_id']}</a>

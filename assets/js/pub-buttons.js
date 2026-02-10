@@ -74,6 +74,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Toggle expand/collapse authors full list
+  document.querySelectorAll('.btn-expand-authors').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const card = this.closest('.pub-card');
+      const authorsText = card.querySelector('.authors-text');
+      const authorsFull = card.querySelector('.authors-full');
+      
+      if (!authorsText || !authorsFull) return;
+      
+      const isFullHidden = authorsFull.classList.contains('hidden');
+      
+      if (isFullHidden) {
+        // Show full authors
+        authorsText.classList.add('hidden');
+        authorsFull.classList.remove('hidden');
+        // Update button text - extract original more count or default
+        const match = this.textContent.match(/\+(\d+)\s+more/);
+        this.setAttribute('data-more-count', match ? match[1] : '');
+        this.textContent = 'collapse';
+      } else {
+        // Show truncated authors
+        authorsText.classList.remove('hidden');
+        authorsFull.classList.add('hidden');
+        // Restore original more count
+        const moreCount = this.getAttribute('data-more-count') || '';
+        this.textContent = moreCount ? '+' + moreCount + ' more' : '+more';
+      }
+    });
+  });
+
   // Toggle bib
   document.querySelectorAll('.btn-bib').forEach(function(btn) {
     btn.addEventListener('click', function(e) {

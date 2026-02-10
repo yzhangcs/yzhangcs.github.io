@@ -1,5 +1,10 @@
 /* Unified Card Layout for Publications, Projects, and Experience */
 
+/* Utility classes */
+.hidden {
+  display: none;
+}
+
 /* Common card styles */
 .pub-card,
 .project-card,
@@ -219,6 +224,7 @@ a.venue-badge.preprint:hover {
 }
 
 .pub-abstract.hidden {
+  display: block;
   opacity: 0;
   pointer-events: none;
   height: 0;
@@ -294,6 +300,7 @@ a.venue-badge.preprint:hover {
 }
 
 .pub-bibtex.hidden {
+  display: block;
   opacity: 0;
   pointer-events: none;
   height: 0;
@@ -764,6 +771,40 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .btn-expand:hover {
+  color: #f87171;
+  background: none;
+  border: none;
+}
+
+/* Expand/collapse button for authors */
+.btn-expand-authors {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  margin-left: 0.25rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.btn-expand-authors:hover {
+  color: #dc2626;
+  background: none;
+  border: none;
+}
+
+[data-theme="dark"] .btn-expand-authors {
+  color: #9ca3af;
+  background: none;
+  border: none;
+}
+
+[data-theme="dark"] .btn-expand-authors:hover {
   color: #f87171;
   background: none;
   border: none;
