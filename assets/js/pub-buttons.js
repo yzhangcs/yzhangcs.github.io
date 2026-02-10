@@ -40,12 +40,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Open this abstract
         abstract.classList.remove('hidden');
         this.classList.add('active');
-        this.textContent = 'hide';
       } else {
         // Close this abstract (toggle behavior)
         abstract.classList.add('hidden');
         this.classList.remove('active');
-        this.textContent = 'abstract';
       }
     });
   });

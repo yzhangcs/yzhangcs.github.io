@@ -230,7 +230,7 @@ def render_paper_card(data: dict) -> str:
       {categories_html}
     </div>
     <div class="pub-badges">
-      <button class="pub-btn btn-abstract active">hide</button>
+      <button class="pub-btn btn-abstract active">abstract</button>
       <a href="{data['entry_id'].replace('abs', 'pdf')}.pdf" class="pub-btn btn-code" target="_blank">pdf</a>
     </div>
     <div class="pub-abstract">
