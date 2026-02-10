@@ -127,7 +127,7 @@ def collect(name: str) -> Iterable[arxiv.Result]:
         logger.warning('Error fetching papers for %s: %s', name, exc)
 
 
-def truncate_abstract(text: str, max_len: int = 600) -> str:
+def truncate_abstract(text: str, max_len: int = 2000) -> str:
     """Truncate abstract to max length."""
     if len(text) <= max_len:
         return text
@@ -218,7 +218,7 @@ def render_paper_card(data: dict) -> str:
 
     # Check if abstract is truncated (need to show expand button)
     # Use original raw abstract length to determine if truncation occurred
-    ABSTRACT_MAX_LEN = 600
+    ABSTRACT_MAX_LEN = 2000
     abstract_raw = data.get('abstract_raw', '')
     is_truncated = len(abstract_raw) > ABSTRACT_MAX_LEN if abstract_raw else False
     expand_btn = '<button class="pub-btn btn-expand">more</button>' if is_truncated else ''
