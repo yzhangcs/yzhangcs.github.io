@@ -170,8 +170,8 @@ def process_paper(paper: arxiv.Result) -> Tuple[str, dict] | None | type:
     any_match |= author_matched
 
     abstract_raw = paper.summary.replace('\n', ' ')
-    abstract_truncated = truncate_abstract(abstract_raw)
     abstract_full, abstract_matched = match(abstract_raw, KEYS)
+    abstract_truncated = truncate_abstract(abstract_full)
     any_match |= abstract_matched
 
     comments, comment_matched = match(paper.comment or '', CONFS)
