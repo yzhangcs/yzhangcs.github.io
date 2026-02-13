@@ -453,19 +453,16 @@ a:hover small {
 }
 
 .wrapper {
-  max-width: 1100px;
-  width: 100%;
+  max-width: 830px;
   margin: 0 auto;
   padding: 0 40px;
-  display: flex;
-  gap: 80px;
+  position: relative;
+  box-sizing: border-box;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   .wrapper {
     padding: 0 15px;
-    flex-direction: column;
-    gap: 0;
   }
 }
 
@@ -529,9 +526,9 @@ img {
 }
 
 header {
-  width: 220px;
-  flex-shrink: 0;
-  position: sticky;
+  width: 240px;
+  position: fixed;
+  left: calc(50% - 375px - 240px - 40px);
   top: 0;
   height: 100vh;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -540,10 +537,17 @@ header {
   overflow-y: auto;
 }
 
+@media screen and (max-width: 1100px) {
+  header {
+    left: 20px;
+  }
+}
+
 @media screen and (max-width: 960px) {
   header {
     width: 100%;
     position: relative;
+    left: 0;
     height: auto;
     padding-top: 2em;
     margin-bottom: 2em;
@@ -627,18 +631,14 @@ header ul a strong {
 }
 
 section {
-  flex: 1;
-  max-width: 720px;
-  margin: 0 auto;
+  width: 100%;
   padding-top: 4.0em;
   padding-bottom: 50px;
-  min-width: 0;
 }
 
 @media screen and (max-width: 960px) {
   section {
     width: 100%;
-    max-width: 100%;
     padding-top: 2em;
   }
 }
@@ -668,8 +668,6 @@ footer {
   div.wrapper {
     width: auto;
     margin: 0;
-    flex-direction: column;
-    gap: 0;
   }
 
   header, section {

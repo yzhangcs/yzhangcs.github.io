@@ -98,7 +98,7 @@
   line-height: 1.6;
   color: #4a4a4a;
   margin-bottom: 0.4rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 }
 
 .pub-authors strong {
@@ -408,7 +408,7 @@ a.venue-badge.preprint:hover {
   font-size: 0.9rem;
   line-height: 1.6;
   color: #4a4a4a;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 }
 
 /* Experience card */
