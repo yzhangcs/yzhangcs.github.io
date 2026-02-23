@@ -1,7 +1,8 @@
-title: Yu Zhang
+title: "<strong>Yu</strong> Zhang"
 position: Researcher
 affiliation: Moonshot AI
-email: yzhang.cs (at) outlook.com
+email: yzhang [dot] cs [at] outlook [dot] com
+bio: "Hi, my name is Yu Zhang ([jy tʃɑŋ], 張宇/张宇 in traditional/simplified Chinese). I am a researcher at [Moonshot AI](https://www.moonshot.cn/). Prior to this, I received my Ph.D. degree from Soochow University in 2026, advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/)."
 
 plugins:
   - jekyll-spaceship

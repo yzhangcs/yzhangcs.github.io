@@ -1,10 +1,6 @@
 ---
 layout: default
 ---
-Hi, my name is Yu Zhang ([jy tʃɑŋ], 張宇/张宇 in traditional/simplified Chinese).
-I am a researcher at [Moonshot AI](https://www.moonshot.cn/).
-Prior to this, I received my Ph.D. degree from Soochow University in 2026, advised by [Prof. Guohong Fu](http://web.suda.edu.cn/ghfu/).
-
 ~~*My early research focused on structured prediction tasks, specifically dependency parsing and constituency parsing.*~~
 Currently, my research interests have evolved to focus on developing efficient text generation models.
 I am particularly intrigued by the prospect of developing hardware-efficient methods for linear-time sequence modeling.
