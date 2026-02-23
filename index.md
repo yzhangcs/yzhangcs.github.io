@@ -170,7 +170,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
   <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/acl/2020/crfpar.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
-<div class="pub-card">
+<!-- <div class="pub-card">
   <div class="pub-title">Is POS Tagging Necessary or Even Helpful for Neural Dependency Parsing? <span class="award-badge">Best Paper Award</span></div>
   <div class="pub-authors"><a href="https://cv.hqzhou.com">Houquan Zhou*</a>, <strong>Yu Zhang*</strong>, Zhenghua Li, Min Zhang</div>
   <div class="pub-venue"><a href="./assets/pubs/nlpcc/2020/posdep.pdf" class="venue-badge conf">NLPCC 2020</a></div>
@@ -202,7 +202,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
     Universal Conceptual Cognitive Annotation (UCCA) provides a cross-lingual semantic representation. We approach UCCA graph parsing by reducing it to constituent tree parsing, leveraging existing parsing techniques for tree structures. Our system achieved competitive results at the SemEval-2019 shared task.
   </div>
   <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/semeval/2019/const.bib"><pre><code class="language-bibtex"></code></pre></div>
-</div>
+</div> -->
 
 </div>
 

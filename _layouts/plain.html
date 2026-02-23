@@ -7,9 +7,10 @@
     <!-- Main Content (No Header) -->
     <main class="content plain-layout">
       {{ content }}
+
+      {% include last-updated.html %}
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer"></footer>
+    {% include footer.html %}
   </body>
 </html>

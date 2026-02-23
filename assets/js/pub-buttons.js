@@ -139,29 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
   loadCitationCounts();
 });
 
-function closeAllExpanded(excludeCard) {
-  // Close all abstracts except those in the excluded card
-  document.querySelectorAll('.pub-abstract:not(.hidden)').forEach(function(el) {
-    if (!excludeCard || !excludeCard.contains(el)) {
-      el.classList.add('hidden');
-    }
-  });
-  
-  // Close all bibtex except those in the excluded card
-  document.querySelectorAll('.pub-bibtex:not(.hidden)').forEach(function(el) {
-    if (!excludeCard || !excludeCard.contains(el)) {
-      el.classList.add('hidden');
-    }
-  });
-  
-  // Remove active class from all buttons except those in the excluded card
-  document.querySelectorAll('.pub-btn.active').forEach(function(el) {
-    if (!excludeCard || !excludeCard.contains(el)) {
-      el.classList.remove('active');
-    }
-  });
-}
-
 function loadBibContent(container, url) {
   container.innerHTML = '<pre><code class="language-bibtex">Loading...</code></pre>';
   

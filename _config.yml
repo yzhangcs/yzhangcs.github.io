@@ -8,9 +8,16 @@ plugins:
   - jekyll-spaceship
   - jekyll-analytics
 
+jekyll-spaceship:
+  processors:
+    - mathjax-processor
+    - polyfill-processor
+    - media-processor
+    - emoji-processor
+
 keywords: minimal academic
 description:
-  AI Researcher @ [Moonshot AI](https://www.moonshot.cn/)
+  AI Researcher @ [Moonshot AI](https://www.moonshot.ai/)
 canonical: https://yzhang.site
 
 semantic_scholar: https://www.semanticscholar.org/author/Yu-Zhang/49890808

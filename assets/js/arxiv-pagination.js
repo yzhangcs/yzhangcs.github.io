@@ -23,7 +23,7 @@
   function initPagination() {
     if (!window.location.pathname.includes('arxiv')) return;
 
-    const section = document.querySelector('section');
+    const section = document.querySelector('main.content') || document.querySelector('section');
     if (!section) return;
 
     // Group cards by date heading
@@ -55,7 +55,7 @@
   }
 
   function createPaginationControls() {
-    const section = document.querySelector('section');
+    const section = document.querySelector('main.content') || document.querySelector('section');
     if (!section) return;
 
     // Remove existing pagination

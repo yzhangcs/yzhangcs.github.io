@@ -38,17 +38,12 @@
     <main class="content">
       {{ content }}
 
-      <br>
-      <div class="last-updated">Last updated: <span id="last-modified"></span></div>
-      <script>
-        document.getElementById('last-modified').textContent = new Date(document.lastModified).toISOString().split('T')[0];
-      </script>
+      {% include last-updated.html %}
 
       <br>
       <p hidden><script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?&w=50&d=HV0rAUdAxpfEQLOsVs0FcJTR2rKVI5sEQUZIDM-N_HY"></script></p>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer"></footer>
+    {% include footer.html %}
   </body>
 </html>
