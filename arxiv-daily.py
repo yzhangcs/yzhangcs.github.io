@@ -270,7 +270,7 @@ def generate_html(papers: dict) -> str:
     """Generate HTML output from papers dict."""
     lines = [
         '---',
-        'layout: default',
+        'layout: plain',
         '---',
         '',
         '<div class="arxiv-header">',

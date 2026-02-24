@@ -635,6 +635,11 @@ papertitle a:hover {
   .header-top {
     align-items: center;
   }
+
+  .header-icons {
+    justify-content: center;
+    gap: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
