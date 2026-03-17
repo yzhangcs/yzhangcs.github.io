@@ -231,7 +231,7 @@ As a disciple of parallel programming, I am passionate about exploring technique
     <span class="project-name">FLA</span>
     <div class="project-badges">
       <a href="https://github.com/fla-org/flash-linear-attention" class="proj-badge badge-code"><i class="fab fa-github"></i> code</a>
-      <a href="https://github.com/fla-org/flash-linear-attention/releases" class="proj-badge badge-ver">v0.2.0</a>
+      <a href="https://github.com/fla-org/flash-linear-attention/releases" class="proj-badge badge-ver">v0.4.2</a>
     </div>
   </div>
   <div class="project-desc">A Triton-Based Library for Hardware-Efficient Implementations of Linear Attention Mechanism.</div>
