@@ -20,17 +20,18 @@ As a disciple of parallel programming, I am passionate about exploring technique
 <div class="pub-card">
   <div class="pub-title">Attention Residuals</div>
   <div class="pub-authors"><a href="https://nathanchen.me/">Guangyu Chen*</a>, <strong>Yu Zhang*</strong>, <a href="https://jianlin.su">Jianlin Su*</a>, Weixin Xu, Siyuan Pan, Yaoyu Wang, Yucheng Wang, Guanduo Chen, Bohong Yin, Yutian Chen, Junjie Yan, Ming Wei, Fanqing Meng, Chao Hong, Xiaotong Xie, Shaowei Liu, Enzhe Lu, Yunpeng Tai, Yanru Chen, Xin Men, Haiqing Guo, Haoyu Lu, Lin Sui, Jinguo Zhu, Zaida Zhou, Weiran He, Weixiao Huang, Xinran Xu, Yuzhi Wang, Guokun Lai, Yulun Du, Yuxin Wu, Zhilin Yang, Xinyu Zhou</div>
-  <div class="pub-venue"><a href="./assets/pubs/techreport/2025/attnres.pdf" class="venue-badge preprint">Preprint</a></div>
+  <div class="pub-venue"><a href="./assets/pubs/techreport/2026/attnres.pdf" class="venue-badge preprint">Preprint</a></div>
   <div class="pub-badges">
     <button class="pub-btn btn-paper">abstract</button>
     <button class="pub-btn btn-bib">bib</button>
     <a href="https://arxiv.org/abs/2603.15031" class="pub-btn btn-arxiv">arxiv</a>
     <a href="https://github.com/MoonshotAI/Attention-Residuals/" class="pub-btn btn-code">code</a>
+    <a href="https://www.semanticscholar.org/paper/101549ed507f18e10044d127c99a495bb176956f" class="pub-btn btn-citation" data-paper-id="101549ed507f18e10044d127c99a495bb176956f" target="_blank">citation</a>
   </div>
   <div class="pub-abstract hidden">
     Residual connections with PreNorm are standard in modern LLMs, yet they accumulate all layer outputs with fixed unit weights. This uniform aggregation causes uncontrolled hidden-state growth with depth, progressively diluting each layer's contribution. We propose Attention Residuals (AttnRes), which replaces this fixed accumulation with softmax attention over preceding layer outputs, allowing each layer to selectively aggregate earlier representations with learned, input-dependent weights. To address the memory and communication overhead of attending over all preceding layer outputs for large-scale model training, we introduce Block AttnRes, which partitions layers into blocks and attends over block-level representations, reducing the memory footprint while preserving most of the gains of full AttnRes. Combined with cache-based pipeline communication and a two-phase computation strategy, Block AttnRes becomes a practical drop-in replacement for standard residual connections with minimal overhead. Scaling law experiments confirm that the improvement is consistent across model sizes, and ablations validate the benefit of content-dependent depth-wise selection. We further integrate AttnRes into the Kimi Linear architecture (48B total / 3B activated parameters) and pre-train on 1.4T tokens, where AttnRes mitigates PreNorm dilution, yielding more uniform output magnitudes and gradient distribution across depth, and improves downstream performance across all evaluated tasks.
   </div>
-  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/techreport/2025/attnres.bib"><pre><code class="language-bibtex"></code></pre></div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/techreport/2026/attnres.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div>
 
 <div class="pub-card">
