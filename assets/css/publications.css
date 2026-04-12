@@ -44,14 +44,14 @@
 }
 
 .pub-links a {
-  font-family: "Alegreya Sans SC", sans-serif;
+  font-family: "Source Sans Pro", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   color: #3949ab;
   font-weight: 500;
-  padding: 0.25rem 0.75rem;
+  padding: 0.3rem 0.85rem;
   border: 1px solid #3949ab;
   border-radius: 9999px;
-  font-size: 0.8rem;
-  letter-spacing: 0.02em;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
   transition: all 0.2s ease;
 }
 

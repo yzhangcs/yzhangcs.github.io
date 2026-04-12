@@ -1,11 +1,9 @@
 ---
 layout: default
 ---
-~~*My early research focused on structured prediction tasks, specifically dependency parsing and constituency parsing.*~~
-Currently, my research interests have evolved to focus on developing efficient text generation models.
-I am particularly intrigued by the prospect of developing hardware-efficient methods for linear-time sequence modeling.
-As a disciple of parallel programming, I am passionate about exploring techniques that harness the power of parallel computing to develop scalable subquadratic models.
-I am also a primary maintainer of [Flash Linear Attention](https://github.com/fla-org/flash-linear-attention), an efficient and extensible library for building efficient model architectures.
+My research focuses on efficient sequence modeling, with a particular interest in hardware-efficient linear-time architectures.
+I enjoy building fast parallel algorithms to make subquadratic models practical at scale.
+I am a primary maintainer of [Flash Linear Attention](https://github.com/fla-org/flash-linear-attention), a library for efficient implementations of emerging sequence modeling architectures.
 
 ## Publications
 
