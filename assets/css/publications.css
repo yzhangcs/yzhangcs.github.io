@@ -343,7 +343,7 @@ a.venue-badge.preprint:hover {
 /* Project header */
 .featured-project {
   display: grid;
-  grid-template-columns: 174px 1fr;
+  grid-template-columns: 108px 1fr;
   align-items: center;
   gap: 1rem;
   padding: 1.15rem 1.3rem;
@@ -358,13 +358,13 @@ a.venue-badge.preprint:hover {
 
 .project-logo {
   display: block;
-  width: 174px;
-  height: 64px;
+  width: 108px;
+  height: 108px;
   min-height: 0;
   border: 0;
-  border-radius: 4px;
+  border-radius: 6px;
   background-color: #fff;
-  background-image: url("../files/fla-logo-wide.png");
+  background-image: url("../files/fla-logo-square.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -514,7 +514,7 @@ a.venue-badge.preprint:hover {
 
   .project-logo {
     background-color: #000;
-    background-image: url("../files/fla-logo-wide-dark.png");
+    background-image: url("../files/fla-logo-dark-square.png");
     border: 0;
   }
 
@@ -688,13 +688,13 @@ a.venue-badge.preprint:hover {
 
 [data-theme="dark"] .project-logo {
   background-color: #000;
-  background-image: url("../files/fla-logo-wide-dark.png");
+  background-image: url("../files/fla-logo-dark-square.png");
   border: 0;
 }
 
 [data-theme="light"] .project-logo {
   background-color: #fff;
-  background-image: url("../files/fla-logo-wide.png");
+  background-image: url("../files/fla-logo-square.png");
   border: 0;
 }
 
@@ -922,8 +922,8 @@ a.venue-badge.preprint:hover {
   }
 
   .project-logo {
-    width: min(100%, 174px);
-    height: 64px;
+    width: 96px;
+    height: 96px;
     min-height: 0;
   }
 
@@ -1283,7 +1283,7 @@ a.venue-badge.preprint:hover {
 
 [data-theme="light"] .project-logo {
   background-color: #fff;
-  background-image: url("../files/fla-logo-wide.png");
+  background-image: url("../files/fla-logo-square.png");
   border: 0;
 }
 
