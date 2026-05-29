@@ -1,9 +1,28 @@
 ---
 layout: default
 ---
-My research focuses on efficient sequence modeling, with a particular interest in hardware-efficient linear-time architectures.
-I enjoy building fast parallel algorithms to make subquadratic models practical at scale.
-I am a primary maintainer of [Flash Linear Attention](https://github.com/fla-org/flash-linear-attention), a library for efficient implementations of emerging sequence modeling architectures.
+My research centers on scalable and hardware-efficient architectures for large language models, especially the co-design of model architectures and systems for long-context sequence modeling.
+I enjoy building fast parallel algorithms and systems that turn efficient model designs into practical large-scale implementations.
+
+## Projects
+
+<div class="project-list">
+
+<div class="project-card featured-project">
+  <a href="https://github.com/fla-org/flash-linear-attention" class="project-logo" aria-label="Flash Linear Attention"></a>
+  <div class="project-content">
+    <div class="project-header">
+      <span class="project-name">Flash Linear Attention</span>
+      <div class="project-badges">
+        <a href="https://github.com/fla-org/flash-linear-attention" class="proj-badge badge-code"><i class="fab fa-github"></i> code</a>
+        <a href="https://github.com/fla-org/flash-linear-attention/releases" class="proj-badge badge-ver">v0.5.0</a>
+      </div>
+    </div>
+    <div class="project-desc">A library of hardware-efficient kernels, layers, and model components for emerging sequence modeling architectures, spanning linear attention, sparse attention, state-space models, and hybrid LLMs.</div>
+  </div>
+</div>
+
+</div>
 
 ## Publications
 
@@ -219,34 +238,6 @@ I am a primary maintainer of [Flash Linear Attention](https://github.com/fla-org
   </div>
   <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/semeval/2019/const.bib"><pre><code class="language-bibtex"></code></pre></div>
 </div> -->
-
-</div>
-
-## Projects
-
-<div class="project-list">
-
-<div class="project-card">
-  <div class="project-header">
-    <span class="project-name">FLA</span>
-    <div class="project-badges">
-      <a href="https://github.com/fla-org/flash-linear-attention" class="proj-badge badge-code"><i class="fab fa-github"></i> code</a>
-      <a href="https://github.com/fla-org/flash-linear-attention/releases" class="proj-badge badge-ver">v0.4.2</a>
-    </div>
-  </div>
-  <div class="project-desc">A Triton-Based Library for Hardware-Efficient Implementations of Linear Attention Mechanism.</div>
-</div>
-
-<div class="project-card">
-  <div class="project-header">
-    <span class="project-name">SuPar</span>
-    <div class="project-badges">
-      <a href="https://github.com/yzhangcs/parser" class="proj-badge badge-code"><i class="fab fa-github"></i> code</a>
-      <a href="https://github.com/yzhangcs/parser/releases" class="proj-badge badge-ver">v1.1.4</a>
-    </div>
-  </div>
-  <div class="project-desc">State-of-the-art syntactic/semantic parsers. A Python package designed for structured prediction, including reproductions of many state-of-the-art syntactic/semantic parsers (with pretrained models for more than 19 languages), and highly-parallelized implementations of several well-known structured prediction algorithms.</div>
-</div>
 
 </div>
 

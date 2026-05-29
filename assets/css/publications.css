@@ -341,6 +341,39 @@ a.venue-badge.preprint:hover {
 }
 
 /* Project header */
+.featured-project {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1.15rem 1.3rem;
+  background: #ffffff;
+  border-color: #e5e5e5;
+  box-shadow: none;
+}
+
+.featured-project:hover {
+  border-color: #3949ab;
+}
+
+.project-logo {
+  display: block;
+  width: 108px;
+  height: 100%;
+  min-height: 96px;
+  border: 0;
+  border-radius: 6px;
+  background-color: #fff;
+  background-image: url("../files/fla-logo-square.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.project-content {
+  min-width: 0;
+}
+
 .project-header {
   display: flex;
   flex-direction: row;
@@ -353,8 +386,9 @@ a.venue-badge.preprint:hover {
 .project-name {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   color: #1a1a1a;
+  line-height: 1.35;
 }
 
 .project-badges {
@@ -405,10 +439,10 @@ a.venue-badge.preprint:hover {
 /* Project description */
 .project-desc {
   font-family: "Source Sans Pro", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   color: #4a4a4a;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.015em;
 }
 
 /* Experience card */
@@ -470,6 +504,18 @@ a.venue-badge.preprint:hover {
   .exp-card {
     background: #2a2b36;
     border-color: #3a3b46;
+  }
+
+  .featured-project {
+    background: #252633;
+    border-color: rgba(121, 134, 203, 0.45);
+    box-shadow: none;
+  }
+
+  .project-logo {
+    background-color: #000;
+    background-image: url("../files/fla-logo-dark-square.png");
+    border: 0;
   }
 
   .pub-card:hover,
@@ -632,6 +678,24 @@ a.venue-badge.preprint:hover {
 [data-theme="dark"] .exp-card {
   background: #2a2b36;
   border-color: #3a3b46;
+}
+
+[data-theme="dark"] .featured-project {
+  background: #252633;
+  border-color: rgba(121, 134, 203, 0.45);
+  box-shadow: none;
+}
+
+[data-theme="dark"] .project-logo {
+  background-color: #000;
+  background-image: url("../files/fla-logo-dark-square.png");
+  border: 0;
+}
+
+[data-theme="light"] .project-logo {
+  background-color: #fff;
+  background-image: url("../files/fla-logo-square.png");
+  border: 0;
 }
 
 [data-theme="dark"] .pub-card:hover,
@@ -850,6 +914,17 @@ a.venue-badge.preprint:hover {
   .project-card,
   .exp-card {
     padding: 0.875rem 1rem;
+  }
+
+  .featured-project {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .project-logo {
+    width: 96px;
+    height: 96px;
+    min-height: 96px;
   }
 
   .pub-title {
@@ -1190,4 +1265,256 @@ a.venue-badge.preprint:hover {
 
 [data-theme="dark"] .match-highlight {
   color: #f87171;
+}
+
+/* Manual light mode overrides system dark preference */
+[data-theme="light"] .pub-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .exp-card {
+  background: #ffffff;
+  border-color: #e5e5e5;
+}
+
+[data-theme="light"] .featured-project {
+  background: #ffffff;
+  border-color: #e5e5e5;
+  box-shadow: none;
+}
+
+[data-theme="light"] .project-logo {
+  background-color: #fff;
+  background-image: url("../files/fla-logo-square.png");
+  border: 0;
+}
+
+[data-theme="light"] .pub-card:hover,
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .exp-card:hover {
+  border-color: #3949ab;
+}
+
+[data-theme="light"] .pub-title,
+[data-theme="light"] .project-name,
+[data-theme="light"] .exp-title {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .pub-authors,
+[data-theme="light"] .project-desc,
+[data-theme="light"] .exp-mentor {
+  color: #4a4a4a;
+}
+
+[data-theme="light"] .pub-authors strong {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .award-badge {
+  color: #dc2626;
+}
+
+[data-theme="light"] .pub-note {
+  color: #666;
+}
+
+[data-theme="light"] .pub-links a {
+  color: #3949ab;
+  border-color: #3949ab;
+}
+
+[data-theme="light"] .pub-links a:hover {
+  background: #3949ab;
+  color: #fff;
+}
+
+[data-theme="light"] a.venue-badge.conf,
+[data-theme="light"] span.venue-badge.conf {
+  background: #e8eaf6;
+  color: #3949ab;
+}
+
+[data-theme="light"] a.venue-badge.conf:hover {
+  background: #3949ab;
+  color: #fff;
+}
+
+[data-theme="light"] a.venue-badge.preprint,
+[data-theme="light"] span.venue-badge.preprint {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+[data-theme="light"] a.venue-badge.preprint:hover {
+  background: #6b7280;
+  color: #fff;
+}
+
+[data-theme="light"] .badge-code {
+  color: #ea580c;
+  border-color: #ea580c;
+}
+
+[data-theme="light"] .badge-code:hover {
+  background: #ea580c;
+  color: #fff;
+}
+
+[data-theme="light"] .badge-ver {
+  color: #0891b2;
+  border-color: #0891b2;
+}
+
+[data-theme="light"] .badge-ver:hover {
+  background: #0891b2;
+  color: #fff;
+}
+
+[data-theme="light"] .exp-date,
+[data-theme="light"] .last-updated {
+  color: #9ca3af;
+}
+
+[data-theme="light"] .exp-mentor a {
+  color: #3949ab;
+}
+
+[data-theme="light"] .exp-mentor a:hover {
+  color: #283593;
+}
+
+[data-theme="light"] .pub-btn {
+  background: #f9fafb;
+  color: #4b5563;
+  border-color: #d1d5db;
+}
+
+[data-theme="light"] .pub-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+  color: #1f2937;
+}
+
+[data-theme="light"] .pub-btn.active {
+  background: #e5e7eb;
+  border-color: #6b7280;
+  color: #111827;
+}
+
+[data-theme="light"] .btn-code {
+  background: #fef2f2;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+[data-theme="light"] .btn-code:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #fff;
+}
+
+[data-theme="light"] .pub-abstract {
+  background: #f9fafb;
+  color: #4a4a4a;
+  border-color: #e5e7eb;
+}
+
+[data-theme="light"] .pub-bibtex pre {
+  background: #f8f8f8;
+  border-color: #e5e5e5;
+}
+
+[data-theme="light"] .pub-bibtex code {
+  color: #333 !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] .btn-copy {
+  color: #9ca3af;
+}
+
+[data-theme="light"] .btn-copy:hover {
+  color: #4b5563;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .btn-copy.copied {
+  color: #059669;
+  background: rgba(5, 150, 105, 0.1);
+}
+
+[data-theme="light"] .last-updated {
+  border-top-color: #e5e7eb;
+}
+
+[data-theme="light"] .arxiv-header h2 {
+  color: #043361;
+}
+
+[data-theme="light"] .arxiv-desc {
+  color: #666;
+}
+
+[data-theme="light"] .date-nav {
+  background: #f8f9fa;
+  border-color: #e5e7eb;
+}
+
+[data-theme="light"] .date-nav summary {
+  color: #3949ab;
+}
+
+[data-theme="light"] .date-list a {
+  background: #fff;
+  color: #4b5563;
+  border-color: #d1d5db;
+}
+
+[data-theme="light"] .date-list a:hover {
+  background: #3949ab;
+  color: #fff;
+  border-color: #3949ab;
+}
+
+[data-theme="light"] .date-heading {
+  color: #1e3a5f;
+  border-bottom-color: #e5e7eb;
+}
+
+[data-theme="light"] .arxiv-id {
+  color: #9ca3af;
+}
+
+[data-theme="light"] .arxiv-id:hover {
+  color: #6b7280;
+}
+
+[data-theme="light"] .arxiv-cat {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+[data-theme="light"] .arxiv-conference {
+  border-left-color: #d1d5db;
+  color: #6b7280;
+}
+
+[data-theme="light"] .arxiv-conference a {
+  color: #3949ab;
+  border-bottom-color: #3949ab;
+}
+
+[data-theme="light"] .arxiv-conference .link-mono {
+  color: inherit;
+}
+
+[data-theme="light"] .arxiv-pagination {
+  border-top-color: #e5e7eb;
+}
+
+[data-theme="light"] .arxiv-pagination .page-info {
+  color: #6b7280;
+}
+
+[data-theme="light"] .match-highlight {
+  color: #dc2626;
 }

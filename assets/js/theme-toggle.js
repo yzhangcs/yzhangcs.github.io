@@ -10,13 +10,9 @@
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   };
 
-  const setPreference = (theme) => {
-    localStorage.setItem(STORAGE_KEY, theme);
-    reflectPreference(theme);
-  };
-
   const reflectPreference = (theme) => {
     document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.style.colorScheme = theme;
 
     const button = document.querySelector('#theme-toggle');
     if (button) {
@@ -29,27 +25,43 @@
     }
   };
 
-  // Set initial theme
-  const theme = getColorPreference();
-  reflectPreference(theme);
+  const setPreference = (theme) => {
+    localStorage.setItem(STORAGE_KEY, theme);
+    reflectPreference(theme);
+  };
 
-  // Toggle on button click
-  window.addEventListener('DOMContentLoaded', () => {
-    const button = document.querySelector('#theme-toggle');
-    if (button) {
-      button.addEventListener('click', () => {
-        const currentTheme = localStorage.getItem(STORAGE_KEY) ||
-          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        setPreference(newTheme);
-      });
+  reflectPreference(getColorPreference());
+
+  const syncButtonWhenAvailable = () => {
+    if (document.querySelector('#theme-toggle')) {
+      reflectPreference(document.documentElement.getAttribute('data-theme') || getColorPreference());
+    } else {
+      window.setTimeout(syncButtonWhenAvailable, 25);
     }
+  };
+
+  syncButtonWhenAvailable();
+
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest && event.target.closest('#theme-toggle');
+    if (!button) return;
+
+    const currentTheme = document.documentElement.getAttribute('data-theme') || getColorPreference();
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setPreference(newTheme);
   });
 
   // Listen for system theme changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({matches: isDark}) => {
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const handleSystemThemeChange = ({matches: isDark}) => {
     if (!localStorage.getItem(STORAGE_KEY)) {
-      setPreference(isDark ? 'dark' : 'light');
+      reflectPreference(isDark ? 'dark' : 'light');
     }
-  });
+  };
+
+  if (mediaQuery.addEventListener) {
+    mediaQuery.addEventListener('change', handleSystemThemeChange);
+  } else if (mediaQuery.addListener) {
+    mediaQuery.addListener(handleSystemThemeChange);
+  }
 })();

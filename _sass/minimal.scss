@@ -496,7 +496,7 @@ papertitle a:hover {
   }
 
   .header-bio {
-    color: #a1a1aa;
+    color: #dadbdf;
   }
 
   #back-to-top,
@@ -581,7 +581,7 @@ papertitle a:hover {
   }
 
   .header-bio {
-    color: #a1a1aa;
+    color: #dadbdf;
   }
 
   #back-to-top,
@@ -589,6 +589,95 @@ papertitle a:hover {
     border-color: #3a3b46;
     background: #2a2b36;
     color: #d1d5db;
+  }
+}
+
+/* ==========================================================================
+   Light Mode (manual override)
+   ========================================================================== */
+
+[data-theme="light"] {
+  body {
+    background-color: #fff;
+    color: #595959;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #1e3a5f;
+  }
+
+  a {
+    color: #2563eb;
+  }
+
+  strong {
+    color: #222;
+  }
+
+  dt, th {
+    color: #444;
+  }
+
+  code, pre {
+    color: #333;
+  }
+
+  autocolor {
+    color: #595959;
+  }
+
+  lightonly {
+    visibility: visible;
+  }
+
+  darkonly {
+    visibility: hidden;
+  }
+
+  papertitle {
+    color: inherit;
+  }
+
+  papertitle a {
+    color: #0891b2;
+  }
+
+  papertitle a:hover {
+    color: #0e7490;
+  }
+
+  #theme-toggle {
+    background: #fff;
+    border-color: #e5e5e5;
+    color: #043361;
+  }
+
+  .header-name {
+    color: #000;
+  }
+
+  .header-icons a {
+    color: #059669 !important;
+  }
+
+  .header-meta,
+  .header-meta .affiliation {
+    color: #595959;
+  }
+
+  .header-divider {
+    border-top-color: #e5e5e5;
+  }
+
+  .header-bio {
+    color: #595959;
+  }
+
+  #back-to-top,
+  #back-to-bottom {
+    border-color: #e5e7eb;
+    background: #fff;
+    color: #333;
   }
 }
 
