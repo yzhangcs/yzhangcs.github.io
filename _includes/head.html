@@ -29,8 +29,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Spectral:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/publications.css">
+  {% assign cache_bust = site.time | date: '%s' %}
+  <link rel="stylesheet" href="./assets/css/style.css?v={{ cache_bust }}">
+  <link rel="stylesheet" href="./assets/css/publications.css?v={{ cache_bust }}">
 
   <!-- Scripts -->
   <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
