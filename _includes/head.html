@@ -21,6 +21,10 @@
   <link rel="canonical" href="{{ site.canonical }}"/>
   <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
   <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
+  {% assign cache_bust = site.time | date: '%s' %}
+
+  <!-- Core interactions -->
+  <script defer src="{{ '/assets/js/pub-buttons.js' | relative_url }}?v={{ cache_bust }}"></script>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
@@ -29,15 +33,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Spectral:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
-  {% assign cache_bust = site.time | date: '%s' %}
-  <link rel="stylesheet" href="./assets/css/style.css?v={{ cache_bust }}">
-  <link rel="stylesheet" href="./assets/css/publications.css?v={{ cache_bust }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ cache_bust }}">
+  <link rel="stylesheet" href="{{ '/assets/css/publications.css' | relative_url }}?v={{ cache_bust }}">
 
   <!-- Scripts -->
-  <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
-  <script src="./assets/js/theme-toggle.js"></script>
-  <script src="./assets/js/arxiv-pagination.js"></script>
-  <script src="./assets/js/pub-buttons.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bibtex.min.js"></script>
+  <script defer src="{{ '/assets/js/favicon-switcher.js' | relative_url }}?v={{ cache_bust }}" type="application/javascript"></script>
+  <script defer src="{{ '/assets/js/theme-toggle.js' | relative_url }}?v={{ cache_bust }}"></script>
+  <script defer src="{{ '/assets/js/arxiv-pagination.js' | relative_url }}?v={{ cache_bust }}"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bibtex.min.js"></script>
 </head>

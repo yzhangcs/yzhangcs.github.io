@@ -1,254 +1,180 @@
-// Publication buttons interaction - global single expand
-document.addEventListener('DOMContentLoaded', function() {
-  // Toggle abstract (for index page with bib support)
-  document.querySelectorAll('.btn-paper').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const card = this.closest('.pub-card');
-      const abstract = card.querySelector('.pub-abstract');
-      const bibContainer = card.querySelector('.pub-bibtex');
-      const bibBtn = card.querySelector('.btn-bib');
-      
-      if (!abstract) return;
-      
-      const isHidden = abstract.classList.contains('hidden');
-      
-      if (isHidden) {
-        // Open this abstract
-        abstract.classList.remove('hidden');
-        this.classList.add('active');
-      } else {
-        // Close this abstract (toggle behavior)
-        abstract.classList.add('hidden');
-        this.classList.remove('active');
-      }
-    });
-  });
+// Publication button interactions.
+(function() {
+  'use strict';
 
-  // Toggle abstract (for arxiv page without bib)
-  document.querySelectorAll('.btn-abstract').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const card = this.closest('.pub-card');
-      const abstract = card.querySelector('.pub-abstract');
-      
-      if (!abstract) return;
-      
-      const isHidden = abstract.classList.contains('hidden');
-      
-      if (isHidden) {
-        // Open this abstract
-        abstract.classList.remove('hidden');
-        this.classList.add('active');
-      } else {
-        // Close this abstract (toggle behavior)
-        abstract.classList.add('hidden');
-        this.classList.remove('active');
-      }
-    });
-  });
+  const BUTTON_SELECTOR = '.btn-paper, .btn-abstract, .btn-expand, .btn-expand-authors, .btn-bib';
+  const COPY_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+  const CHECK_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+  const CITATION_PLACEHOLDER = 'citation –';
+  const CITATION_RETRIES = 3;
 
-  // Toggle expand/collapse abstract full text
-  document.querySelectorAll('.btn-expand').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const card = this.closest('.pub-card');
-      const abstractText = card.querySelector('.abstract-text');
-      const abstractFull = card.querySelector('.abstract-full');
-      
-      if (!abstractText || !abstractFull) return;
-      
-      const isFullHidden = abstractFull.classList.contains('hidden');
-      
-      if (isFullHidden) {
-        // Show full abstract
-        abstractText.classList.add('hidden');
-        abstractFull.classList.remove('hidden');
-        this.textContent = 'less';
-      } else {
-        // Show truncated abstract
-        abstractText.classList.remove('hidden');
-        abstractFull.classList.add('hidden');
-        this.textContent = 'more';
-      }
-    });
-  });
+  document.addEventListener('click', handlePublicationClick);
+  onReady(loadCitationCounts);
 
-  // Toggle expand/collapse authors full list
-  document.querySelectorAll('.btn-expand-authors').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const card = this.closest('.pub-card');
-      const authorsText = card.querySelector('.authors-text');
-      const authorsFull = card.querySelector('.authors-full');
-      
-      if (!authorsText || !authorsFull) return;
-      
-      const isFullHidden = authorsFull.classList.contains('hidden');
-      
-      if (isFullHidden) {
-        // Show full authors
-        authorsText.classList.add('hidden');
-        authorsFull.classList.remove('hidden');
-        // Update button text - extract original more count or default
-        const match = this.textContent.match(/\+(\d+)\s+more/);
-        this.setAttribute('data-more-count', match ? match[1] : '');
-        this.textContent = 'collapse';
-      } else {
-        // Show truncated authors
-        authorsText.classList.remove('hidden');
-        authorsFull.classList.add('hidden');
-        // Restore original more count
-        const moreCount = this.getAttribute('data-more-count') || '';
-        this.textContent = moreCount ? '+' + moreCount + ' more' : '+more';
-      }
-    });
-  });
+  function handlePublicationClick(event) {
+    const btn = event.target.closest && event.target.closest(BUTTON_SELECTOR);
+    if (!btn) return;
 
-  // Toggle bib
-  document.querySelectorAll('.btn-bib').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const card = this.closest('.pub-card');
-      const bibContainer = card.querySelector('.pub-bibtex');
-      const abstract = card.querySelector('.pub-abstract');
-      const paperBtn = card.querySelector('.btn-paper');
-      
-      if (!bibContainer) return;
-      
-      const isHidden = bibContainer.classList.contains('hidden');
-      
-      if (isHidden) {
-        // Check if bib content needs to be loaded
-        const bibUrl = bibContainer.getAttribute('data-bib-url');
-        if (bibUrl && bibContainer.getAttribute('data-loaded') !== 'true') {
-          loadBibContent(bibContainer, bibUrl);
-        }
-        // Open this bib
-        bibContainer.classList.remove('hidden');
-        this.classList.add('active');
-      } else {
-        // Close this bib (toggle behavior)
-        bibContainer.classList.add('hidden');
-        this.classList.remove('active');
-      }
-    });
-  });
+    const card = btn.closest('.pub-card');
+    if (!card) return;
 
-  // Load citation counts from Semantic Scholar
-  loadCitationCounts();
-});
+    event.preventDefault();
 
-function loadBibContent(container, url) {
-  container.innerHTML = '<pre><code class="language-bibtex">Loading...</code></pre>';
-  
-  fetch(url)
-    .then(function(response) {
-      if (!response.ok) {
-        throw new Error('Failed to load bib');
+    if (btn.matches('.btn-paper, .btn-abstract')) {
+      togglePanel(card.querySelector('.pub-abstract'), btn);
+    } else if (btn.matches('.btn-expand')) {
+      toggleFullAbstract(card, btn);
+    } else if (btn.matches('.btn-expand-authors')) {
+      toggleAuthors(card, btn);
+    } else if (btn.matches('.btn-bib')) {
+      toggleBib(card, btn);
+    }
+  }
+
+  function togglePanel(panel, btn) {
+    if (!panel) return;
+
+    const shouldShow = panel.classList.contains('hidden');
+    panel.classList.toggle('hidden', !shouldShow);
+    btn.classList.toggle('active', shouldShow);
+  }
+
+  function toggleFullAbstract(card, btn) {
+    const abstractText = card.querySelector('.abstract-text');
+    const abstractFull = card.querySelector('.abstract-full');
+    if (!abstractText || !abstractFull) return;
+
+    const shouldShowFull = abstractFull.classList.contains('hidden');
+    abstractText.classList.toggle('hidden', shouldShowFull);
+    abstractFull.classList.toggle('hidden', !shouldShowFull);
+    btn.textContent = shouldShowFull ? 'less' : 'more';
+  }
+
+  function toggleAuthors(card, btn) {
+    const authorsText = card.querySelector('.authors-text');
+    const authorsFull = card.querySelector('.authors-full');
+    if (!authorsText || !authorsFull) return;
+
+    const shouldShowFull = authorsFull.classList.contains('hidden');
+    authorsText.classList.toggle('hidden', shouldShowFull);
+    authorsFull.classList.toggle('hidden', !shouldShowFull);
+
+    if (shouldShowFull) {
+      const match = btn.textContent.match(/\+(\d+)\s+more/);
+      btn.dataset.moreCount = match ? match[1] : '';
+      btn.textContent = 'collapse';
+    } else {
+      btn.textContent = btn.dataset.moreCount ? `+${btn.dataset.moreCount} more` : '+more';
+    }
+  }
+
+  function toggleBib(card, btn) {
+    const bibContainer = card.querySelector('.pub-bibtex');
+    if (!bibContainer) return;
+
+    const shouldShow = bibContainer.classList.contains('hidden');
+    if (shouldShow) {
+      const bibUrl = bibContainer.dataset.bibUrl;
+      if (bibUrl && bibContainer.dataset.loaded !== 'true') {
+        loadBibContent(bibContainer, bibUrl);
       }
-      return response.text();
-    })
-    .then(function(text) {
-      container.innerHTML = '<button class="btn-copy" title="Copy to clipboard"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button><pre><code class="language-bibtex"></code></pre>';
-      var codeEl = container.querySelector('code');
+    }
+
+    bibContainer.classList.toggle('hidden', !shouldShow);
+    btn.classList.toggle('active', shouldShow);
+  }
+
+  async function loadBibContent(container, url) {
+    container.innerHTML = '<pre><code class="language-bibtex">Loading...</code></pre>';
+
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error('Failed to load bib');
+
+      const text = await response.text();
+      container.innerHTML = `<button class="btn-copy" title="Copy to clipboard">${COPY_ICON}</button><pre><code class="language-bibtex"></code></pre>`;
+
+      const codeEl = container.querySelector('code');
       codeEl.textContent = text;
-      container.setAttribute('data-loaded', 'true');
-      // Highlight the code
+      container.dataset.loaded = 'true';
+
       if (window.Prism) {
-        Prism.highlightElement(codeEl);
+        window.Prism.highlightElement(codeEl);
       }
-      // Add copy functionality
-      var copyBtn = container.querySelector('.btn-copy');
-      var originalIcon = copyBtn.innerHTML;
-      var checkIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-      copyBtn.addEventListener('click', function() {
-        navigator.clipboard.writeText(text).then(function() {
-          copyBtn.innerHTML = checkIcon;
-          copyBtn.classList.add('copied');
-          setTimeout(function() {
-            copyBtn.innerHTML = originalIcon;
-            copyBtn.classList.remove('copied');
-          }, 2000);
-        }).catch(function(err) {
-          console.error('Failed to copy:', err);
-        });
-      });
-    })
-    .catch(function(error) {
+
+      setupCopyButton(container.querySelector('.btn-copy'), text);
+    } catch (error) {
       console.error('Error loading bib:', error);
       container.innerHTML = '<pre><code class="language-bibtex">Error loading bib file</code></pre>';
-    });
-}
-
-function loadCitationCounts() {
-  // Find all citation buttons that need to be updated
-  const citationBtns = document.querySelectorAll('.btn-citation[data-paper-id]');
-  
-  citationBtns.forEach(function(btn) {
-    const paperId = btn.getAttribute('data-paper-id');
-    if (paperId) {
-      // Set initial loading state
-      btn.textContent = 'citation –';
-      btn.style.opacity = '0.6';
-      
-      // Try to fetch with retries
-      fetchWithRetry(paperId, 10, function(count) {
-        if (count !== null && count >= 0) {
-          btn.textContent = 'citation ' + count;
-          btn.style.opacity = '1';
-        } else {
-          // Keep button but show dash if failed after retries
-          btn.textContent = 'citation –';
-          btn.style.opacity = '0.6';
-        }
-      });
-    } else {
-      // No paper ID, show placeholder
-      btn.textContent = 'citation –';
-      btn.style.opacity = '0.6';
     }
-  });
-}
+  }
 
-function fetchWithRetry(paperId, maxRetries, callback, attempt) {
-  attempt = attempt || 1;
-  
-  fetchSemanticScholarCitation(paperId, function(count) {
-    if (count !== null) {
-      callback(count);
-    } else if (attempt < maxRetries) {
-      // Retry after delay (exponential backoff)
-      var delay = Math.pow(2, attempt) * 500;
-      setTimeout(function() {
-        fetchWithRetry(paperId, maxRetries, callback, attempt + 1);
-      }, delay);
-    } else {
-      // All retries failed
-      callback(null);
-    }
-  });
-}
-
-function fetchSemanticScholarCitation(paperId, callback) {
-  // Semantic Scholar API endpoint
-  var url = 'https://api.semanticscholar.org/graph/v1/paper/' + paperId + '?fields=citationCount';
-  
-  fetch(url)
-    .then(function(response) {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+  function setupCopyButton(copyBtn, text) {
+    copyBtn.addEventListener('click', async function() {
+      try {
+        await navigator.clipboard.writeText(text);
+        copyBtn.innerHTML = CHECK_ICON;
+        copyBtn.classList.add('copied');
+        window.setTimeout(function() {
+          copyBtn.innerHTML = COPY_ICON;
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      } catch (error) {
+        console.error('Failed to copy:', error);
       }
-      return response.json();
-    })
-    .then(function(data) {
-      if (data && typeof data.citationCount !== 'undefined') {
-        callback(data.citationCount);
-      } else {
-        callback(null);
-      }
-    })
-    .catch(function(error) {
-      callback(null);
     });
-}
+  }
+
+  function onReady(callback) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', callback, { once: true });
+    } else {
+      callback();
+    }
+  }
+
+  function loadCitationCounts() {
+    document.querySelectorAll('.btn-citation[data-paper-id]').forEach(updateCitationButton);
+  }
+
+  async function updateCitationButton(btn) {
+    setCitationButton(btn);
+
+    const count = await fetchCitationCountWithRetry(btn.dataset.paperId);
+    setCitationButton(btn, count);
+  }
+
+  function setCitationButton(btn, count) {
+    const hasCount = Number.isInteger(count) && count >= 0;
+    btn.textContent = hasCount ? `citation ${count}` : CITATION_PLACEHOLDER;
+    btn.style.opacity = hasCount ? '1' : '0.6';
+  }
+
+  async function fetchCitationCountWithRetry(paperId) {
+    for (let attempt = 1; attempt <= CITATION_RETRIES; attempt += 1) {
+      const count = await fetchSemanticScholarCitation(paperId);
+      if (count !== null) return count;
+      if (attempt < CITATION_RETRIES) await delay((2 ** attempt) * 500);
+    }
+    return null;
+  }
+
+  async function fetchSemanticScholarCitation(paperId) {
+    try {
+      const url = `https://api.semanticscholar.org/graph/v1/paper/${paperId}?fields=citationCount`;
+      const response = await fetch(url);
+      if (!response.ok) throw new Error('Network response was not ok');
+
+      const data = await response.json();
+      return Number.isInteger(data.citationCount) ? data.citationCount : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function delay(ms) {
+    return new Promise(function(resolve) {
+      window.setTimeout(resolve, ms);
+    });
+  }
+})();
