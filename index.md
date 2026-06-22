@@ -15,7 +15,7 @@ I enjoy building fast parallel algorithms and systems that turn efficient model 
       <span class="project-name">Flash Linear Attention</span>
       <div class="project-badges">
         <a href="https://github.com/fla-org/flash-linear-attention" class="proj-badge badge-code"><i class="fab fa-github"></i> code</a>
-        <a href="https://github.com/fla-org/flash-linear-attention/releases" class="proj-badge badge-ver">v0.5.0</a>
+        <a href="https://github.com/fla-org/flash-linear-attention/releases" class="proj-badge badge-ver" id="fla-version">v-.-.-</a>
       </div>
     </div>
     <div class="project-desc">A library of hardware-efficient kernels, layers, and model components for emerging sequence modeling architectures, spanning linear attention, sparse attention, state-space models, and hybrid LLMs.</div>
