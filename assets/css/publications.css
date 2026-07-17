@@ -19,7 +19,7 @@
 .pub-card:hover,
 .project-card:hover,
 .exp-card:hover {
-  border-color: #3949ab;
+  border-color: #2563eb;
 }
 
 /* List containers */
@@ -45,10 +45,10 @@
 
 .pub-links a {
   font-family: "Source Sans Pro", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #3949ab;
+  color: #2563eb;
   font-weight: 500;
   padding: 0.3rem 0.85rem;
-  border: 1px solid #3949ab;
+  border: 1px solid #2563eb;
   border-radius: 9999px;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
@@ -56,7 +56,7 @@
 }
 
 .pub-links a:hover {
-  background: #3949ab;
+  background: #2563eb;
   color: #fff;
   text-decoration: none;
 }
@@ -84,7 +84,7 @@
 /* Award badge */
 .award-badge {
   display: block;
-  color: #dc2626;
+  color: #b45309;
   font-size: 0.85em;
   font-style: italic;
   font-weight: 500;
@@ -125,12 +125,12 @@ span.venue-badge {
 
 a.venue-badge.conf,
 span.venue-badge.conf {
-  background: #e8eaf6;
-  color: #3949ab;
+  background: #dbeafe;
+  color: #2563eb;
 }
 
 a.venue-badge.conf:hover {
-  background: #3949ab;
+  background: #2563eb;
   color: #fff;
 }
 
@@ -195,16 +195,16 @@ a.venue-badge.preprint:hover {
   color: #1f2937;
 }
 
-/* PDF button */
+/* Code button */
 .btn-code {
-  background: #fef2f2;
-  color: #dc2626;
-  border-color: #fecaca;
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
 }
 
 .btn-code:hover {
-  background: #dc2626;
-  border-color: #dc2626;
+  background: #2563eb;
+  border-color: #2563eb;
   color: #fff;
 }
 
@@ -253,7 +253,7 @@ a.venue-badge.preprint:hover {
 }
 
 .btn-expand:hover {
-  color: #dc2626;
+  color: #2563eb;
   background: none;
   border: none;
 }
@@ -353,7 +353,7 @@ a.venue-badge.preprint:hover {
 }
 
 .featured-project:hover {
-  border-color: #3949ab;
+  border-color: #2563eb;
 }
 
 .project-logo {
@@ -416,23 +416,23 @@ a.venue-badge.preprint:hover {
 
 .badge-code {
   background: transparent;
-  color: #ea580c;
-  border: 1.5px solid #ea580c;
+  color: #2563eb;
+  border: 1.5px solid #2563eb;
 }
 
 .badge-code:hover {
-  background: #ea580c;
+  background: #2563eb;
   color: #fff;
 }
 
 .badge-ver {
   background: transparent;
-  color: #0891b2;
-  border: 1.5px solid #0891b2;
+  color: #6b7280;
+  border: 1.5px solid #6b7280;
 }
 
 .badge-ver:hover {
-  background: #0891b2;
+  background: #6b7280;
   color: #fff;
 }
 
@@ -478,11 +478,11 @@ a.venue-badge.preprint:hover {
 }
 
 .exp-mentor a {
-  color: #3949ab;
+  color: #2563eb;
 }
 
 .exp-mentor a:hover {
-  color: #283593;
+  color: #1d4ed8;
 }
 
 /* Last updated footer */
@@ -508,7 +508,7 @@ a.venue-badge.preprint:hover {
 
   .featured-project {
     background: #252633;
-    border-color: rgba(121, 134, 203, 0.45);
+    border-color: rgba(96, 165, 250, 0.45);
     box-shadow: none;
   }
 
@@ -521,7 +521,7 @@ a.venue-badge.preprint:hover {
   .pub-card:hover,
   .project-card:hover,
   .exp-card:hover {
-    border-color: #7986cb;
+    border-color: #60a5fa;
   }
 
   .pub-title,
@@ -541,7 +541,7 @@ a.venue-badge.preprint:hover {
   }
 
   .award-badge {
-    color: #f87171;
+    color: #fbbf24;
   }
 
   .pub-note {
@@ -549,23 +549,23 @@ a.venue-badge.preprint:hover {
   }
 
   .pub-links a {
-    color: #7986cb;
-    border-color: #7986cb;
+    color: #60a5fa;
+    border-color: #60a5fa;
   }
 
   .pub-links a:hover {
-    background: #7986cb;
+    background: #60a5fa;
     color: #1f2937;
   }
 
   a.venue-badge.conf,
   span.venue-badge.conf {
-    background: rgba(121, 134, 203, 0.15);
-    color: #c5cae9;
+    background: rgba(96, 165, 250, 0.15);
+    color: #bfdbfe;
   }
 
   a.venue-badge.conf:hover {
-    background: #7986cb;
+    background: #60a5fa;
     color: #1f2937;
   }
 
@@ -581,22 +581,22 @@ a.venue-badge.preprint:hover {
   }
 
   .badge-code {
-    color: #fb923c;
-    border-color: #fb923c;
+    color: #60a5fa;
+    border-color: #60a5fa;
   }
 
   .badge-code:hover {
-    background: #fb923c;
+    background: #60a5fa;
     color: #1f2937;
   }
 
   .badge-ver {
-    color: #22d3ee;
-    border-color: #22d3ee;
+    color: #9ca3af;
+    border-color: #9ca3af;
   }
 
   .badge-ver:hover {
-    background: #22d3ee;
+    background: #9ca3af;
     color: #1f2937;
   }
 
@@ -605,11 +605,11 @@ a.venue-badge.preprint:hover {
   }
 
   .exp-mentor a {
-    color: #7986cb;
+    color: #60a5fa;
   }
 
   .exp-mentor a:hover {
-    color: #9fa8da;
+    color: #93c5fd;
   }
 
   .pub-btn {
@@ -682,7 +682,7 @@ a.venue-badge.preprint:hover {
 
 [data-theme="dark"] .featured-project {
   background: #252633;
-  border-color: rgba(121, 134, 203, 0.45);
+  border-color: rgba(96, 165, 250, 0.45);
   box-shadow: none;
 }
 
@@ -701,7 +701,7 @@ a.venue-badge.preprint:hover {
 [data-theme="dark"] .pub-card:hover,
 [data-theme="dark"] .project-card:hover,
 [data-theme="dark"] .exp-card:hover {
-  border-color: #7986cb;
+  border-color: #60a5fa;
 }
 
 [data-theme="dark"] .pub-title,
@@ -721,7 +721,7 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .award-badge {
-  color: #f87171;
+  color: #fbbf24;
 }
 
 [data-theme="dark"] .pub-note {
@@ -729,43 +729,43 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .badge-code {
-  color: #fb923c;
-  border-color: #fb923c;
+  color: #60a5fa;
+  border-color: #60a5fa;
 }
 
 [data-theme="dark"] .badge-code:hover {
-  background: #fb923c;
+  background: #60a5fa;
   color: #1f2937;
 }
 
 [data-theme="dark"] .badge-ver {
-  color: #22d3ee;
-  border-color: #22d3ee;
+  color: #9ca3af;
+  border-color: #9ca3af;
 }
 
 [data-theme="dark"] .badge-ver:hover {
-  background: #22d3ee;
+  background: #9ca3af;
   color: #1f2937;
 }
 
 [data-theme="dark"] .pub-links a {
-  color: #7986cb;
-  border-color: #7986cb;
+  color: #60a5fa;
+  border-color: #60a5fa;
 }
 
 [data-theme="dark"] .pub-links a:hover {
-  background: #7986cb;
+  background: #60a5fa;
   color: #1f2937;
 }
 
 [data-theme="dark"] a.venue-badge.conf,
 [data-theme="dark"] span.venue-badge.conf {
-  background: rgba(121, 134, 203, 0.15);
-  color: #c5cae9;
+  background: rgba(96, 165, 250, 0.15);
+  color: #bfdbfe;
 }
 
 [data-theme="dark"] a.venue-badge.conf:hover {
-  background: #7986cb;
+  background: #60a5fa;
   color: #1f2937;
 }
 
@@ -785,11 +785,11 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .exp-mentor a {
-  color: #7986cb;
+  color: #60a5fa;
 }
 
 [data-theme="dark"] .exp-mentor a:hover {
-  color: #9fa8da;
+  color: #93c5fd;
 }
 
 [data-theme="dark"] .pub-btn {
@@ -811,15 +811,15 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .btn-code {
-  background: rgba(220, 38, 38, 0.15);
-  color: #f87171;
-  border-color: rgba(248, 113, 113, 0.4);
+  background: rgba(96, 165, 250, 0.15);
+  color: #60a5fa;
+  border-color: rgba(96, 165, 250, 0.4);
 }
 
 [data-theme="dark"] .btn-code:hover {
-  background: #ef4444;
-  border-color: #ef4444;
-  color: #fff;
+  background: #60a5fa;
+  border-color: #60a5fa;
+  color: #1f2937;
 }
 
 [data-theme="dark"] .pub-abstract {
@@ -835,7 +835,7 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .btn-expand:hover {
-  color: #f87171;
+  color: #60a5fa;
   background: none;
   border: none;
 }
@@ -857,7 +857,7 @@ a.venue-badge.preprint:hover {
 }
 
 .btn-expand-authors:hover {
-  color: #dc2626;
+  color: #2563eb;
   background: none;
   border: none;
 }
@@ -869,7 +869,7 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .btn-expand-authors:hover {
-  color: #f87171;
+  color: #60a5fa;
   background: none;
   border: none;
 }
@@ -985,7 +985,7 @@ a.venue-badge.preprint:hover {
 .date-nav summary {
   font-family: "Alegreya Sans SC", sans-serif;
   font-weight: 500;
-  color: #3949ab;
+  color: #2563eb;
   font-size: 0.9rem;
   letter-spacing: 0.02em;
 }
@@ -1017,9 +1017,9 @@ a.venue-badge.preprint:hover {
 }
 
 .date-list a:hover {
-  background: #3949ab;
+  background: #2563eb;
   color: #fff;
-  border-color: #3949ab;
+  border-color: #2563eb;
 }
 
 /* Date heading */
@@ -1083,13 +1083,13 @@ a.venue-badge.preprint:hover {
 }
 
 .arxiv-conference a {
-  color: #3949ab;
+  color: #2563eb;
   text-decoration: none;
-  border-bottom: 1px dotted #3949ab;
+  border-bottom: 1px dotted #2563eb;
 }
 
 .arxiv-conference a:hover {
-  color: #283593;
+  color: #1d4ed8;
   border-bottom-style: solid;
 }
 
@@ -1100,7 +1100,7 @@ a.venue-badge.preprint:hover {
 
 /* Keyword highlight */
 .match-highlight {
-  color: #dc2626;
+  color: #b45309;
   font-weight: 600;
 }
 
@@ -1120,7 +1120,7 @@ a.venue-badge.preprint:hover {
   }
 
   .date-nav summary {
-    color: #7986cb;
+    color: #60a5fa;
   }
 
   .date-list a {
@@ -1130,9 +1130,9 @@ a.venue-badge.preprint:hover {
   }
 
   .date-list a:hover {
-    background: #7986cb;
+    background: #60a5fa;
     color: #1f2937;
-    border-color: #7986cb;
+    border-color: #60a5fa;
   }
 
   .date-heading {
@@ -1156,7 +1156,7 @@ a.venue-badge.preprint:hover {
   }
 
   .match-highlight {
-    color: #f87171;
+    color: #fbbf24;
   }
 }
 
@@ -1174,7 +1174,7 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .date-nav summary {
-  color: #7986cb;
+  color: #60a5fa;
 }
 
 [data-theme="dark"] .date-list a {
@@ -1184,9 +1184,9 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .date-list a:hover {
-  background: #7986cb;
+  background: #60a5fa;
   color: #1f2937;
-  border-color: #7986cb;
+  border-color: #60a5fa;
 }
 
 [data-theme="dark"] .date-heading {
@@ -1213,12 +1213,12 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .arxiv-conference a {
-  color: #7986cb;
-  border-bottom-color: #7986cb;
+  color: #60a5fa;
+  border-bottom-color: #60a5fa;
 }
 
 [data-theme="dark"] .arxiv-conference .link-mono {
-  color: #a78bfa;
+  color: #93c5fd;
 }
 
 /* Arxiv pagination */
@@ -1264,7 +1264,7 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .match-highlight {
-  color: #f87171;
+  color: #fbbf24;
 }
 
 /* Manual light mode overrides system dark preference */
@@ -1290,7 +1290,7 @@ a.venue-badge.preprint:hover {
 [data-theme="light"] .pub-card:hover,
 [data-theme="light"] .project-card:hover,
 [data-theme="light"] .exp-card:hover {
-  border-color: #3949ab;
+  border-color: #2563eb;
 }
 
 [data-theme="light"] .pub-title,
@@ -1310,7 +1310,7 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="light"] .award-badge {
-  color: #dc2626;
+  color: #b45309;
 }
 
 [data-theme="light"] .pub-note {
@@ -1318,23 +1318,23 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="light"] .pub-links a {
-  color: #3949ab;
-  border-color: #3949ab;
+  color: #2563eb;
+  border-color: #2563eb;
 }
 
 [data-theme="light"] .pub-links a:hover {
-  background: #3949ab;
+  background: #2563eb;
   color: #fff;
 }
 
 [data-theme="light"] a.venue-badge.conf,
 [data-theme="light"] span.venue-badge.conf {
-  background: #e8eaf6;
-  color: #3949ab;
+  background: #dbeafe;
+  color: #2563eb;
 }
 
 [data-theme="light"] a.venue-badge.conf:hover {
-  background: #3949ab;
+  background: #2563eb;
   color: #fff;
 }
 
@@ -1350,22 +1350,22 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="light"] .badge-code {
-  color: #ea580c;
-  border-color: #ea580c;
+  color: #2563eb;
+  border-color: #2563eb;
 }
 
 [data-theme="light"] .badge-code:hover {
-  background: #ea580c;
+  background: #2563eb;
   color: #fff;
 }
 
 [data-theme="light"] .badge-ver {
-  color: #0891b2;
-  border-color: #0891b2;
+  color: #6b7280;
+  border-color: #6b7280;
 }
 
 [data-theme="light"] .badge-ver:hover {
-  background: #0891b2;
+  background: #6b7280;
   color: #fff;
 }
 
@@ -1375,11 +1375,11 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="light"] .exp-mentor a {
-  color: #3949ab;
+  color: #2563eb;
 }
 
 [data-theme="light"] .exp-mentor a:hover {
-  color: #283593;
+  color: #1d4ed8;
 }
 
 [data-theme="light"] .pub-btn {
@@ -1401,14 +1401,14 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="light"] .btn-code {
-  background: #fef2f2;
-  color: #dc2626;
-  border-color: #fecaca;
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #bfdbfe;
 }
 
 [data-theme="light"] .btn-code:hover {
-  background: #dc2626;
-  border-color: #dc2626;
+  background: #2563eb;
+  border-color: #2563eb;
   color: #fff;
 }
 
@@ -1460,7 +1460,7 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="light"] .date-nav summary {
-  color: #3949ab;
+  color: #2563eb;
 }
 
 [data-theme="light"] .date-list a {
@@ -1470,9 +1470,9 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="light"] .date-list a:hover {
-  background: #3949ab;
+  background: #2563eb;
   color: #fff;
-  border-color: #3949ab;
+  border-color: #2563eb;
 }
 
 [data-theme="light"] .date-heading {
@@ -1499,8 +1499,8 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="light"] .arxiv-conference a {
-  color: #3949ab;
-  border-bottom-color: #3949ab;
+  color: #2563eb;
+  border-bottom-color: #2563eb;
 }
 
 [data-theme="light"] .arxiv-conference .link-mono {
@@ -1516,5 +1516,5 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="light"] .match-highlight {
-  color: #dc2626;
+  color: #b45309;
 }
