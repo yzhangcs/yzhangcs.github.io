@@ -36,6 +36,22 @@ I enjoy building fast parallel algorithms and systems that turn efficient model 
 <div class="pub-list">
 
 <div class="pub-card">
+  <div class="pub-title">Kimi K3: Open Frontier Intelligence</div>
+  <div class="pub-authors">Kimi Team (including <strong>Yu Zhang</strong>)</div>
+  <div class="pub-venue"><a href="./assets/pubs/techreport/2026/k3.pdf" class="venue-badge preprint">Preprint</a></div>
+  <div class="pub-badges">
+    <button class="pub-btn btn-paper">abstract</button>
+    <button class="pub-btn btn-bib">bib</button>
+    <a href="https://arxiv.org/abs/2607.24653" class="pub-btn btn-arxiv">arxiv</a>
+    <a href="https://github.com/MoonshotAI/Kimi-K3" class="pub-btn btn-code">code</a>
+  </div>
+  <div class="pub-abstract hidden">
+    We introduce Kimi K3, a 2.8T parameter Mixture-of-Experts model with 104 billion activated parameters, native vision capabilities, and a 1-million-token context window. Kimi K3 is built on Kimi Delta Attention and Attention Residuals, which improve information flow across sequence length and model depth. Together with Stable LatentMoE, which effectively activates 16 of 896 routed experts per token, and refined training and data recipes, these advances yield an approximately 2.5x improvement in overall scaling efficiency over Kimi K2. Post-training highlights reinforcement learning across general, agentic, and coding domains and multiple reasoning-effort levels, enabling compositional generalization and robust long-horizon execution. At 2.8T scale, Kimi K3 is supported by infrastructure advances in multiple areas: algorithm-system co-design for KDA, perfectly balanced expert-parallel training with efficient memory management, million-token agentic RL with persistent rollout and sandbox states, and deployment innovations. Extensive evaluations show that Kimi K3 achieves frontier-level performance across long-horizon coding, agentic, knowledge, reasoning, and vision tasks. While its overall performance still trails the most powerful proprietary models, namely Claude Fable 5 and GPT-5.6 Sol, Kimi K3 consistently outperforms other open and proprietary models evaluated in our suite. We release the full Kimi K3 model weights to facilitate future research and accelerate the broader deployment and adoption of frontier intelligence.
+  </div>
+  <div class="pub-bibtex hidden" data-bib-url="/assets/pubs/techreport/2026/k3.bib"><pre><code class="language-bibtex"></code></pre></div>
+</div>
+
+<div class="pub-card">
   <div class="pub-title">Attention Residuals</div>
   <div class="pub-authors"><a href="https://nathanchen.me/">Guangyu Chen*</a>, <strong>Yu Zhang*</strong>, <a href="https://jianlin.su">Jianlin Su*</a>, Weixin Xu, Siyuan Pan, Yaoyu Wang, Yucheng Wang, Guanduo Chen, Bohong Yin, Yutian Chen, Junjie Yan, Ming Wei, Fanqing Meng, Chao Hong, Xiaotong Xie, Shaowei Liu, Enzhe Lu, Yunpeng Tai, Yanru Chen, Xin Men, Haiqing Guo, Haoyu Lu, Lin Sui, Jinguo Zhu, Zaida Zhou, Weiran He, Weixiao Huang, Xinran Xu, Yuzhi Wang, Guokun Lai, Yulun Du, Yuxin Wu, Zhilin Yang, Xinyu Zhou</div>
   <div class="pub-venue"><a href="./assets/pubs/techreport/2026/attnres.pdf" class="venue-badge preprint">Preprint</a></div>
