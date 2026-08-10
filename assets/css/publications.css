@@ -469,10 +469,18 @@ a.venue-badge.preprint:hover {
   letter-spacing: 0.015em;
 }
 
+.exp-sep {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #d1d5db;
+  margin: 0 0.55rem;
+}
+
 .exp-mentor {
   font-family: "Source Sans Pro", "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 0.9rem;
-  color: #4a4a4a;
+  font-weight: 400;
+  color: #9ca3af;
   line-height: 1.6;
   letter-spacing: 0.03em;
 }
@@ -531,9 +539,16 @@ a.venue-badge.preprint:hover {
   }
 
   .pub-authors,
-  .project-desc,
-  .exp-mentor {
+  .project-desc {
     color: #a1a1aa;
+  }
+
+  .exp-mentor {
+    color: #6b7280;
+  }
+
+  .exp-sep {
+    color: #6b7280;
   }
 
   .pub-authors strong {
@@ -711,9 +726,20 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="dark"] .pub-authors,
-[data-theme="dark"] .project-desc,
-[data-theme="dark"] .exp-mentor {
+[data-theme="dark"] .project-desc {
   color: #a1a1aa;
+}
+
+[data-theme="dark"] .exp-mentor {
+  color: #6b7280;
+}
+
+[data-theme="dark"] .exp-sep {
+  color: #6b7280;
+}
+
+[data-theme="dark"] .exp-sep {
+  color: #4b5563;
 }
 
 [data-theme="dark"] .pub-authors strong {
@@ -1300,9 +1326,16 @@ a.venue-badge.preprint:hover {
 }
 
 [data-theme="light"] .pub-authors,
-[data-theme="light"] .project-desc,
-[data-theme="light"] .exp-mentor {
+[data-theme="light"] .project-desc {
   color: #4a4a4a;
+}
+
+[data-theme="light"] .exp-mentor {
+  color: #9ca3af;
+}
+
+[data-theme="light"] .exp-sep {
+  color: #d1d5db;
 }
 
 [data-theme="light"] .pub-authors strong {

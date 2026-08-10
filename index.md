@@ -269,20 +269,17 @@ I enjoy building fast parallel algorithms and systems that turn efficient model 
 
 <div class="exp-card">
   <div class="exp-date">2024 - 2025</div>
-  <div class="exp-title">Research Intern at Shanghai AI Lab</div>
-  <div class="exp-mentor">mentored by <a href="https://scholar.google.com/citations?user=ZyqFanQAAAAJ">Peng Gao</a></div>
+  <div class="exp-title">Research Intern at Shanghai AI Lab<span class="exp-sep">·</span><span class="exp-mentor">mentored by <a href="https://scholar.google.com/citations?user=ZyqFanQAAAAJ">Peng Gao</a></span></div>
 </div>
 
 <div class="exp-card">
   <div class="exp-date">2023 - 2024</div>
-  <div class="exp-title">Research Intern at Tencent AI Lab</div>
-  <div class="exp-mentor">mentored by <a href="https://scholar.google.com/citations?user=aSJcgQMAAAAJ">Wei Bi</a></div>
+  <div class="exp-title">Research Intern at Tencent AI Lab<span class="exp-sep">·</span><span class="exp-mentor">mentored by <a href="https://scholar.google.com/citations?user=aSJcgQMAAAAJ">Wei Bi</a></span></div>
 </div>
 
 <div class="exp-card">
   <div class="exp-date">2020 - 2021</div>
-  <div class="exp-title">Research Intern at Alibaba DAMO Academy</div>
-  <div class="exp-mentor">mentored by <a href="http://jiangyong.site">Yong Jiang</a></div>
+  <div class="exp-title">Research Intern at Alibaba DAMO Academy<span class="exp-sep">·</span><span class="exp-mentor">mentored by <a href="http://jiangyong.site">Yong Jiang</a></span></div>
 </div>
 
 </div>
